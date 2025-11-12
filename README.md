@@ -47,3 +47,7 @@ topic :
 node :
 /rqt_gui_py_node_83791
 /tello
+
+ros2 topic pub /takeoff std_msgs/msg/Empty {} --once
+ros2 topic pub /land std_msgs/msg/Empty {} --once
+
