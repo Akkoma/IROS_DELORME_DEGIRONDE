@@ -1,1 +1,49 @@
 # IROS_DELORME_DEGIRONDE
+
+## Question 1
+
+Après lecture de cet extrait, répondez aux questions suivantes :
+Quelles sont les quatre commandes classiques d’un drone quadrirotor ?
+A l’aide de schémas et de repères que vous aurez fixés, expliquez comment
+peut-on contrôler la trajectoire d’un drone quadricoptère.
+
+
+## Question 2
+
+tello_control
+
+node:
+/control
+
+topic :
+/control
+/emergency
+/flip
+/land
+/parameter_events
+/rosout
+/takeoff
+
+tello
+
+topic :
+/battery
+/camera_info
+/control
+/emergency
+/flip
+/id
+/image_raw
+/imu
+/land
+/odom
+/parameter_events
+/rosout
+/status
+/takeoff
+/temperature
+/wifi_config
+
+node :
+/rqt_gui_py_node_83791
+/tello

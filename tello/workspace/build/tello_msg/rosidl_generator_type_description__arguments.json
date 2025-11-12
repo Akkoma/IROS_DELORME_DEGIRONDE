@@ -1,0 +1,14 @@
+{
+  "package_name": "tello_msg",
+  "output_dir": "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg",
+  "idl_tuples": [
+    "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:msg/TelloStatus.idl",
+    "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:msg/TelloID.idl",
+    "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:msg/TelloWifiConfig.idl"
+  ],
+  "include_paths": [
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs"
+  ]
+}
