@@ -1,0 +1,2 @@
+[console_scripts]
+manual_control = controller.manual_control:main

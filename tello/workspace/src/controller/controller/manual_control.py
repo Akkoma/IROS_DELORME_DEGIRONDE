@@ -1,82 +1,179 @@
 #!/home/alix.degironde/Public/ven_IROS/bin python3
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
 
-import rclpy
-from rclpy.node import Node
-
-from tutorial_interfaces.msg import Num                        # CHANGE
-
-#!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
+from std_msgs.msg import Empty, String
+from geometry_msgs.msg import Twist
+import time
+
 
 class ManualControl(Node):
     def __init__(self):
         super().__init__('manual_control')
-        self.subscription = self.create_subscription(
-            Joy,
-            '/joy',
-            self.joy_callback,
-            10)
-        self.subscription  # prevent unused variable warning
 
-        # Exemple de mapping des boutons (à adapter selon ton joystick)
-        self.BTN_TAKEOFF = 9       # décollage
-        self.BTN_LAND = 7          # atterrissage
-        self.BTN_EMERGENCY = 8     # arrêt d’urgence
-        self.BTN_FLIP = 4          # optionnel
+        # --- Souscription au joystick ---
+        self.subscription = self.create_subscription(Joy, '/joy', self.joy_callback, 10)
+        self.subscription  # empêche le warning
 
-        # Joysticks pour les déplacements
-        self.AXIS_LR = 0           # gauche/droite (axe horizontal du stick gauche)
-        self.AXIS_FB = 1           # avant/arrière (axe vertical du stick gauche)
-        self.AXIS_YAW = 3          # rotation (stick droit horizontal)
-        self.AXIS_ALT = 4          # montée/descente (stick droit vertical)
+        # --- Publishers pour le drone Tello ---
+        self.pub_takeoff = self.create_publisher(Empty, '/takeoff', 10)
+        self.pub_land = self.create_publisher(Empty, '/land', 10)
+        self.pub_emergency = self.create_publisher(Empty, '/emergency', 10)
+        self.pub_flip = self.create_publisher(String, '/flip', 10)
+        self.pub_control = self.create_publisher(Twist, '/control', 10)
 
-        self.get_logger().info('🕹️  Manual Control node started — waiting for joystick input...')
+        # --- Mapping des boutons ---
+        self.BTN_TAKEOFF = 0       # bouton décollage
+        self.BTN_LAND = 1          # bouton atterrissage
+        self.BTN_EMERGENCY = 8     # bouton arrêt d'urgence
+        self.BTN_FLIP_F = 3          # optionnel
+        self.BTN_FLIP_L = 4          # optionnel
+        self.BTN_FLIP_R = 5          # optionnel
+        self.BTN_FLIP_B = 2          # optionnel
+
+        # --- Mapping des axes ---
+        self.AXIS_LR = 1           # gauche/droite
+        self.AXIS_FB = 0           # avant/arrière
+        self.AXIS_YAW = 3          # rotation (yaw)
+        self.AXIS_ALT = 4          # montée/descente
+
+        self.get_logger().info("Manual control pour drone Tello initialisé !")
+
+        # --- Debounce / anti-rebond pour boutons ---
+        # Durée minimale entre deux envois pour le même bouton (en secondes)
+        self.button_debounce = 1.0  # 1 seconde de délai minimum entre chaque envoi
+        # Dictionnaire button_index -> last send time (monotonic)
+        self.last_button_time = {}
+        # État précédent des boutons pour détecter le front montant (rising edge)
+        self.prev_buttons = []
+        # Compteur d'envois pour debug
+        self.button_send_count = {}
 
     def joy_callback(self, msg: Joy):
         buttons = msg.buttons
         axes = msg.axes
 
-        # === Boutons ===
-        if buttons[self.BTN_TAKEOFF]:
-            self.get_logger().info("🚁 Décollage demandé")
-            # Ici tu pourrais publier une commande de décollage
+        # --- Gestion des boutons avec debounce et front montant ---
+        now = time.monotonic()
 
-        if buttons[self.BTN_LAND]:
-            self.get_logger().info("🛬 Atterrissage demandé")
-            # Ici tu pourrais publier une commande d'atterrissage
+        # S'assurer que prev_buttons a la même taille que buttons
+        if not self.prev_buttons or len(self.prev_buttons) != len(buttons):
+            # initialiser à des zéros (non appuyés)
+            self.prev_buttons = [0] * len(buttons)
 
-        if buttons[self.BTN_EMERGENCY]:
-            self.get_logger().warn("⛔ Arrêt d’urgence demandé !")
-            # Ici tu pourrais publier un arrêt d’urgence
+        # --- Traitement de chaque bouton avec debounce et front montant ---
+        for btn_index in range(len(buttons)):
+            pressed = bool(buttons[btn_index])
+            prev_pressed = bool(self.prev_buttons[btn_index]) if btn_index < len(self.prev_buttons) else False
+            
+            # Détection du front montant (transition de non-appuyé à appuyé)
+            if pressed and not prev_pressed:
+                # Vérifier le délai minimum (debounce)
+                last_time = self.last_button_time.get(btn_index, 0)
+                time_since_last = now - last_time
+                
+                if time_since_last >= self.button_debounce:
+                    # Mettre à jour le compteur pour debug
+                    self.button_send_count[btn_index] = self.button_send_count.get(btn_index, 0) + 1
+                    count = self.button_send_count[btn_index]
+                    
+                    # ======== CASES: Traiter selon le bouton ========
+                    
+                    if btn_index == self.BTN_TAKEOFF:
+                        # Commande Takeoff: envoie Empty
+                        self.get_logger().info(f"[Commande #{count}] Décollage envoyé")
+                        self.pub_takeoff.publish(Empty())
+                        self.last_button_time[btn_index] = now
+                        
+                    elif btn_index == self.BTN_LAND:
+                        # Commande Land: envoie Empty
+                        self.get_logger().info(f"[Commande #{count}] Atterrissage envoyé")
+                        self.pub_land.publish(Empty())
+                        self.last_button_time[btn_index] = now
+                        
+                    elif btn_index == self.BTN_EMERGENCY:
+                        # Commande Emergency: envoie Empty
+                        self.get_logger().warn(f"[Commande #{count}] Arrêt d'urgence envoyé !")
+                        self.pub_emergency.publish(Empty())
+                        self.last_button_time[btn_index] = now
+                        
+                    elif btn_index == self.BTN_FLIP_F:
+                        # Commande Flip: envoie String avec direction
+                        self.get_logger().info(f"[Commande #{count}] Flip envoyé (direction: f)")
+                        flip_msg = String()
+                        flip_msg.data = 'f'  # b=backward, f=forward, l=left, r=right
+                        self.pub_flip.publish(flip_msg)
+                        self.last_button_time[btn_index] = now
+                    
+                    elif btn_index == self.BTN_FLIP_L:
+                        # Commande Flip: envoie String avec direction
+                        self.get_logger().info(f"[Commande #{count}] Flip envoyé (direction: l)")
+                        flip_msg = String()
+                        flip_msg.data = 'l'  # b=backward, f=forward, l=left, r=right
+                        self.pub_flip.publish(flip_msg)
+                        self.last_button_time[btn_index] = now
+                    
+                    elif btn_index == self.BTN_FLIP_R:
+                        # Commande Flip: envoie String avec direction
+                        self.get_logger().info(f"[Commande #{count}] Flip envoyé (direction: r)")
+                        flip_msg = String()
+                        flip_msg.data = 'r'  # b=backward, f=forward, l=left, r=right
+                        self.pub_flip.publish(flip_msg)
+                        self.last_button_time[btn_index] = now
 
-        if self.BTN_FLIP < len(buttons) and buttons[self.BTN_FLIP]:
-            self.get_logger().info("🤸 Flip demandé (optionnel)")
+                    elif btn_index == self.BTN_FLIP_B:
+                        # Commande Flip: envoie String avec direction
+                        self.get_logger().info(f"[Commande #{count}] Flip envoyé (direction: b)")
+                        flip_msg = String()
+                        flip_msg.data = 'b'  # b=backward, f=forward, l=left, r=right
+                        self.pub_flip.publish(flip_msg)
+                        self.last_button_time[btn_index] = now
+                        
+                    # ================================================
+                else:
+                    # Bouton ignoré à cause du debounce
+                    wait_time = self.button_debounce - time_since_last
+                    self.get_logger().warn(
+                        f"⏱️  Bouton {btn_index} BLOQUÉ (anti-spam) - "
+                        f"attendez encore {wait_time:.1f}s"
+                    )
 
-        # === Déplacements ===
-        lr = axes[self.AXIS_LR]     # gauche/droite
-        fb = axes[self.AXIS_FB]     # avant/arrière
-        yaw = axes[self.AXIS_YAW]   # rotation
-        alt = axes[self.AXIS_ALT]   # altitude
+        # --- Mouvement du drone ---
+        twist = Twist()
+        # Les valeurs d'axes du joystick sont entre -1 et 1
+        # Le drone Tello attend des valeurs entre -100 et 100
+        # On multiplie par 100 pour convertir l'échelle
+        twist.linear.x = axes[self.AXIS_FB] * 100.0      # avant/arrière
+        twist.linear.y = axes[self.AXIS_LR] * 100.0      # gauche/droite
+        twist.linear.z = axes[self.AXIS_ALT] * 100.0     # monter/descendre
+        twist.angular.z = axes[self.AXIS_YAW] * 100.0    # rotation
 
-        # On affiche seulement si il y a un mouvement significatif
-        if abs(lr) > 0.2 or abs(fb) > 0.2 or abs(yaw) > 0.2 or abs(alt) > 0.2:
-            self.get_logger().info(
-                f"Déplacement -> LR: {lr:.2f}, FB: {fb:.2f}, Yaw: {yaw:.2f}, Alt: {alt:.2f}"
+        # Vérifier si les joysticks sont au centre (zone morte de 10%)
+        deadzone = 10.0  # Seuil de 10 sur 100
+        has_movement = any(abs(v) > deadzone for v in [
+            twist.linear.x, twist.linear.y, twist.linear.z, twist.angular.z
+        ])
+        
+        if has_movement:
+            # Publier les commandes de mouvement
+            self.pub_control.publish(twist)
+            self.get_logger().debug(
+                f"Déplacement: x={twist.linear.x:.0f}, y={twist.linear.y:.0f}, z={twist.linear.z:.0f}, yaw={twist.angular.z:.0f}"
             )
+        else:
+            # Joysticks relâchés : envoyer commande d'arrêt (tous les axes à 0)
+            stop_twist = Twist()
+            stop_twist.linear.x = 0.0
+            stop_twist.linear.y = 0.0
+            stop_twist.linear.z = 0.0
+            stop_twist.angular.z = 0.0
+            self.pub_control.publish(stop_twist)
+            # Pas de log pour éviter de spammer quand le joystick est au repos
+
+        # Mettre à jour l'état précédent des boutons
+        self.prev_buttons = list(buttons)
+
 
 def main(args=None):
     rclpy.init(args=args)
@@ -89,19 +186,6 @@ def main(args=None):
         node.destroy_node()
         rclpy.shutdown()
 
+
 if __name__ == '__main__':
     main()
-
-class MinimalSubscriber(Node):
-
-    def __init__(self):
-        super().__init__('minimal_subscriber')
-        self.subscription = self.create_subscription(
-            Num,                                               # CHANGE
-            'topic',
-            self.listener_callback,
-            10)
-        self.subscription
-
-    def listener_callback(self, msg):
-        self.get_logger().info('I heard: "%d"' % msg.num)  # CHANGE

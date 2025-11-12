@@ -24,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-             'manual_control = manual_control.manual_control:main',
+             'manual_control = controller.manual_control:main',
         ],
     },
 )
