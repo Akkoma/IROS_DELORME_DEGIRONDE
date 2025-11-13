@@ -9,6 +9,9 @@ file(REMOVE_RECURSE
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/msg/_tello_status_s.c"
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/msg/_tello_wifi_config.py"
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/msg/_tello_wifi_config_s.c"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/srv/__init__.py"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/srv/_drone_mode.py"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/srv/_drone_mode_s.c"
   "CMakeFiles/tello_msg__py"
 )
 

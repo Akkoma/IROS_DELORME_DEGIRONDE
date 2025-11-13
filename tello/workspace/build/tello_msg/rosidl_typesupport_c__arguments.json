@@ -5,7 +5,8 @@
   "idl_tuples": [
     "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:msg/TelloStatus.idl",
     "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:msg/TelloID.idl",
-    "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:msg/TelloWifiConfig.idl"
+    "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:msg/TelloWifiConfig.idl",
+    "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:srv/DroneMode.idl"
   ],
   "ros_interface_dependencies": [
     "std_msgs:/opt/ros/jazzy/share/std_msgs/msg/Bool.idl",
@@ -71,7 +72,8 @@
     "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs/msg/Vector3Stamped.idl",
     "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs/msg/VelocityStamped.idl",
     "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs/msg/Wrench.idl",
-    "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs/msg/WrenchStamped.idl"
+    "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs/msg/WrenchStamped.idl",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl"
   ],
   "target_dependencies": [
     "/opt/ros/jazzy/lib/rosidl_typesupport_c/rosidl_typesupport_c",
@@ -83,6 +85,7 @@
     "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/msg/TelloStatus.idl",
     "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/msg/TelloID.idl",
     "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/msg/TelloWifiConfig.idl",
+    "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/srv/DroneMode.idl",
     "/opt/ros/jazzy/share/std_msgs/msg/Bool.idl",
     "/opt/ros/jazzy/share/std_msgs/msg/Byte.idl",
     "/opt/ros/jazzy/share/std_msgs/msg/ByteMultiArray.idl",
@@ -146,6 +149,7 @@
     "/opt/ros/jazzy/share/geometry_msgs/msg/Vector3Stamped.idl",
     "/opt/ros/jazzy/share/geometry_msgs/msg/VelocityStamped.idl",
     "/opt/ros/jazzy/share/geometry_msgs/msg/Wrench.idl",
-    "/opt/ros/jazzy/share/geometry_msgs/msg/WrenchStamped.idl"
+    "/opt/ros/jazzy/share/geometry_msgs/msg/WrenchStamped.idl",
+    "/opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl"
   ]
 }

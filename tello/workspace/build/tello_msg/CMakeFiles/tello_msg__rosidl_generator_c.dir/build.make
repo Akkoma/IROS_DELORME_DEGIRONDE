@@ -91,6 +91,7 @@ rosidl_generator_c/tello_msg/msg/tello_status.h: /opt/ros/jazzy/share/rosidl_gen
 rosidl_generator_c/tello_msg/msg/tello_status.h: rosidl_adapter/tello_msg/msg/TelloStatus.idl
 rosidl_generator_c/tello_msg/msg/tello_status.h: rosidl_adapter/tello_msg/msg/TelloID.idl
 rosidl_generator_c/tello_msg/msg/tello_status.h: rosidl_adapter/tello_msg/msg/TelloWifiConfig.idl
+rosidl_generator_c/tello_msg/msg/tello_status.h: rosidl_adapter/tello_msg/srv/DroneMode.idl
 rosidl_generator_c/tello_msg/msg/tello_status.h: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
 rosidl_generator_c/tello_msg/msg/tello_status.h: /opt/ros/jazzy/share/std_msgs/msg/Byte.idl
 rosidl_generator_c/tello_msg/msg/tello_status.h: /opt/ros/jazzy/share/std_msgs/msg/ByteMultiArray.idl
@@ -155,6 +156,7 @@ rosidl_generator_c/tello_msg/msg/tello_status.h: /opt/ros/jazzy/share/geometry_m
 rosidl_generator_c/tello_msg/msg/tello_status.h: /opt/ros/jazzy/share/geometry_msgs/msg/VelocityStamped.idl
 rosidl_generator_c/tello_msg/msg/tello_status.h: /opt/ros/jazzy/share/geometry_msgs/msg/Wrench.idl
 rosidl_generator_c/tello_msg/msg/tello_status.h: /opt/ros/jazzy/share/geometry_msgs/msg/WrenchStamped.idl
+rosidl_generator_c/tello_msg/msg/tello_status.h: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c__arguments.json
 
@@ -191,6 +193,18 @@ rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__struct.h: rosidl_gene
 rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.h: rosidl_generator_c/tello_msg/msg/tello_status.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.h
 
+rosidl_generator_c/tello_msg/srv/drone_mode.h: rosidl_generator_c/tello_msg/msg/tello_status.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/tello_msg/srv/drone_mode.h
+
+rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.h: rosidl_generator_c/tello_msg/msg/tello_status.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.h
+
+rosidl_generator_c/tello_msg/srv/detail/drone_mode__struct.h: rosidl_generator_c/tello_msg/msg/tello_status.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/tello_msg/srv/detail/drone_mode__struct.h
+
+rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.h: rosidl_generator_c/tello_msg/msg/tello_status.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.h
+
 rosidl_generator_c/tello_msg/msg/detail/tello_status__description.c: rosidl_generator_c/tello_msg/msg/tello_status.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/tello_msg/msg/detail/tello_status__description.c
 
@@ -217,6 +231,15 @@ rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__functions.c: rosidl_g
 
 rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.c: rosidl_generator_c/tello_msg/msg/tello_status.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.c
+
+rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c: rosidl_generator_c/tello_msg/msg/tello_status.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c
+
+rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c: rosidl_generator_c/tello_msg/msg/tello_status.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c
+
+rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c: rosidl_generator_c/tello_msg/msg/tello_status.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c
 
 CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_status__description.c.o: CMakeFiles/tello_msg__rosidl_generator_c.dir/flags.make
 CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_status__description.c.o: rosidl_generator_c/tello_msg/msg/detail/tello_status__description.c
@@ -344,6 +367,48 @@ CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/de
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.c -o CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.c.s
 
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.o: CMakeFiles/tello_msg__rosidl_generator_c.dir/flags.make
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.o: rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.o: CMakeFiles/tello_msg__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.o -MF CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.o.d -o CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.o -c /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c
+
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c > CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.i
+
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c -o CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.s
+
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.o: CMakeFiles/tello_msg__rosidl_generator_c.dir/flags.make
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.o: rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.o: CMakeFiles/tello_msg__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.o -MF CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.o.d -o CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.o -c /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c
+
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c > CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.i
+
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c -o CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.s
+
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.o: CMakeFiles/tello_msg__rosidl_generator_c.dir/flags.make
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.o: rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.o: CMakeFiles/tello_msg__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.o -MF CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.o.d -o CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.o -c /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c
+
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c > CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.i
+
+CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c -o CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.s
+
 # Object files for target tello_msg__rosidl_generator_c
 tello_msg__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_status__description.c.o" \
@@ -354,7 +419,10 @@ tello_msg__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_id__type_support.c.o" \
 "CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__description.c.o" \
 "CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__functions.c.o" \
-"CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.c.o"
+"CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.c.o" \
+"CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.o" \
+"CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.o" \
+"CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.o"
 
 # External object files for target tello_msg__rosidl_generator_c
 tello_msg__rosidl_generator_c_EXTERNAL_OBJECTS =
@@ -368,14 +436,18 @@ libtello_msg__rosidl_generator_c.so: CMakeFiles/tello_msg__rosidl_generator_c.di
 libtello_msg__rosidl_generator_c.so: CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__description.c.o
 libtello_msg__rosidl_generator_c.so: CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__functions.c.o
 libtello_msg__rosidl_generator_c.so: CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.c.o
+libtello_msg__rosidl_generator_c.so: CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.o
+libtello_msg__rosidl_generator_c.so: CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.o
+libtello_msg__rosidl_generator_c.so: CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.o
 libtello_msg__rosidl_generator_c.so: CMakeFiles/tello_msg__rosidl_generator_c.dir/build.make
 libtello_msg__rosidl_generator_c.so: /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_generator_c.so
+libtello_msg__rosidl_generator_c.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_generator_c.so
 libtello_msg__rosidl_generator_c.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_generator_c.so
 libtello_msg__rosidl_generator_c.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_generator_c.so
 libtello_msg__rosidl_generator_c.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libtello_msg__rosidl_generator_c.so: /opt/ros/jazzy/lib/librcutils.so
 libtello_msg__rosidl_generator_c.so: CMakeFiles/tello_msg__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C shared library libtello_msg__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C shared library libtello_msg__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tello_msg__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -407,6 +479,13 @@ CMakeFiles/tello_msg__rosidl_generator_c.dir/depend: rosidl_generator_c/tello_ms
 CMakeFiles/tello_msg__rosidl_generator_c.dir/depend: rosidl_generator_c/tello_msg/msg/tello_id.h
 CMakeFiles/tello_msg__rosidl_generator_c.dir/depend: rosidl_generator_c/tello_msg/msg/tello_status.h
 CMakeFiles/tello_msg__rosidl_generator_c.dir/depend: rosidl_generator_c/tello_msg/msg/tello_wifi_config.h
+CMakeFiles/tello_msg__rosidl_generator_c.dir/depend: rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c
+CMakeFiles/tello_msg__rosidl_generator_c.dir/depend: rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c
+CMakeFiles/tello_msg__rosidl_generator_c.dir/depend: rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.h
+CMakeFiles/tello_msg__rosidl_generator_c.dir/depend: rosidl_generator_c/tello_msg/srv/detail/drone_mode__struct.h
+CMakeFiles/tello_msg__rosidl_generator_c.dir/depend: rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c
+CMakeFiles/tello_msg__rosidl_generator_c.dir/depend: rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.h
+CMakeFiles/tello_msg__rosidl_generator_c.dir/depend: rosidl_generator_c/tello_msg/srv/drone_mode.h
 	cd /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg /home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles/tello_msg__rosidl_generator_c.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/tello_msg__rosidl_generator_c.dir/depend
 

@@ -69,6 +69,7 @@ include CMakeFiles/tello_msg.dir/progress.make
 CMakeFiles/tello_msg: /home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg/msg/TelloStatus.msg
 CMakeFiles/tello_msg: /home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg/msg/TelloID.msg
 CMakeFiles/tello_msg: /home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg/msg/TelloWifiConfig.msg
+CMakeFiles/tello_msg: /home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg/srv/DroneMode.srv
 CMakeFiles/tello_msg: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
 CMakeFiles/tello_msg: /opt/ros/jazzy/share/std_msgs/msg/Byte.idl
 CMakeFiles/tello_msg: /opt/ros/jazzy/share/std_msgs/msg/ByteMultiArray.idl
@@ -131,6 +132,7 @@ CMakeFiles/tello_msg: /opt/ros/jazzy/share/geometry_msgs/msg/Vector3Stamped.idl
 CMakeFiles/tello_msg: /opt/ros/jazzy/share/geometry_msgs/msg/VelocityStamped.idl
 CMakeFiles/tello_msg: /opt/ros/jazzy/share/geometry_msgs/msg/Wrench.idl
 CMakeFiles/tello_msg: /opt/ros/jazzy/share/geometry_msgs/msg/WrenchStamped.idl
+CMakeFiles/tello_msg: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 
 tello_msg: CMakeFiles/tello_msg
 tello_msg: CMakeFiles/tello_msg.dir/build.make

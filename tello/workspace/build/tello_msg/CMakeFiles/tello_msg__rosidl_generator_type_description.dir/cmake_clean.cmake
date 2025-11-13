@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "rosidl_generator_type_description/tello_msg/msg/TelloID.json"
   "rosidl_generator_type_description/tello_msg/msg/TelloStatus.json"
   "rosidl_generator_type_description/tello_msg/msg/TelloWifiConfig.json"
+  "rosidl_generator_type_description/tello_msg/srv/DroneMode.json"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -59,7 +59,7 @@ endif()
 add_library(tello_msg::tello_msg__rosidl_typesupport_c SHARED IMPORTED)
 
 set_target_properties(tello_msg::tello_msg__rosidl_typesupport_c PROPERTIES
-  INTERFACE_LINK_LIBRARIES "tello_msg::tello_msg__rosidl_generator_c;std_msgs::std_msgs__rosidl_typesupport_c;builtin_interfaces::builtin_interfaces__rosidl_typesupport_c;geometry_msgs::geometry_msgs__rosidl_typesupport_c"
+  INTERFACE_LINK_LIBRARIES "tello_msg::tello_msg__rosidl_generator_c;std_msgs::std_msgs__rosidl_typesupport_c;builtin_interfaces::builtin_interfaces__rosidl_typesupport_c;geometry_msgs::geometry_msgs__rosidl_typesupport_c;service_msgs::service_msgs__rosidl_typesupport_c"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

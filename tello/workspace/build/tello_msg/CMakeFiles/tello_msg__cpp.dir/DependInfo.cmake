@@ -27,6 +27,11 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/rosidl_generator_cpp__visibility_control.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_id.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_wifi_config.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__builder.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__struct.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__traits.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__type_support.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/drone_mode.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
   )
 
 

@@ -12,6 +12,10 @@ CMakeFiles/tello_msg_s__rosidl_typesupport_c.dir/rosidl_generator_py/tello_msg/_
   rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__struct.h \
   rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.h \
   rosidl_generator_c/tello_msg/msg/rosidl_generator_c__visibility_control.h \
+  rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.h \
+  rosidl_generator_c/tello_msg/srv/detail/drone_mode__struct.h \
+  rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.h \
+  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h \
   /opt/ros/jazzy/include/rcutils/rcutils/allocator.h \
   /opt/ros/jazzy/include/rcutils/rcutils/macros.h \
@@ -32,6 +36,7 @@ CMakeFiles/tello_msg_s__rosidl_typesupport_c.dir/rosidl_generator_py/tello_msg/_
   /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h \
   /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
+  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -313,19 +318,13 @@ CMakeFiles/tello_msg_s__rosidl_typesupport_c.dir/rosidl_generator_py/tello_msg/_
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
-/usr/include/python3.12/memoryobject.h:
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/usr/include/python3.12/cpython/pyctype.h:
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/python3.12/listobject.h:
-
-/usr/include/python3.12/pystrtod.h:
-
-/usr/include/python3.12/iterobject.h:
-
-/usr/include/features-time64.h:
 
 /usr/include/python3.12/genericaliasobject.h:
 
@@ -336,10 +335,6 @@ CMakeFiles/tello_msg_s__rosidl_typesupport_c.dir/rosidl_generator_py/tello_msg/_
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/usr/include/python3.12/fileobject.h:
-
-/opt/ros/jazzy/include/rcutils/rcutils/visibility_control_macros.h:
 
 /usr/include/python3.12/ceval.h:
 
@@ -423,9 +418,9 @@ rosidl_generator_c/tello_msg/msg/detail/tello_id__type_support.h:
 
 /usr/include/python3.12/cpython/classobject.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h:
-
 /usr/include/python3.12/compile.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h:
 
 /usr/include/python3.12/codecs.h:
 
@@ -433,75 +428,13 @@ rosidl_generator_c/tello_msg/msg/detail/tello_id__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
-/usr/include/python3.12/cpython/bytesobject.h:
-
 /usr/include/python3.12/boolobject.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h:
-
-/usr/include/linux/stddef.h:
-
-/opt/ros/jazzy/include/rcutils/rcutils/sha256.h:
-
-/usr/include/python3.12/cpython/ceval.h:
-
-/usr/include/python3.12/pybuffer.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
-
-/opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h:
-
-/usr/include/python3.12/pyerrors.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-least.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
-
-/usr/include/inttypes.h:
-
-/usr/include/python3.12/cpython/longintrepr.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
-
-/usr/include/python3.12/complexobject.h:
-
-/usr/include/python3.12/cpython/picklebufobject.h:
-
-rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__functions.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
+/usr/include/python3.12/cpython/bytesobject.h:
 
 /usr/include/python3.12/abstract.h:
 
 /usr/include/x86_64-linux-gnu/bits/statx-generic.h:
-
-rosidl_generator_c/tello_msg/msg/rosidl_generator_c__visibility_control.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h:
-
-rosidl_generator_c/tello_msg/msg/detail/tello_status__struct.h:
-
-rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_c.c:
-
-/usr/include/asm-generic/errno-base.h:
-
-rosidl_generator_c/tello_msg/msg/detail/tello_status__functions.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/python3.12/cpython/warnings.h:
-
-/usr/include/python3.12/objimpl.h:
-
-/usr/include/python3.12/fileutils.h:
-
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/python3.12/cpython/pylifecycle.h:
 
@@ -513,15 +446,19 @@ rosidl_generator_c/tello_msg/msg/detail/tello_status__functions.h:
 
 /usr/include/python3.12/Python.h:
 
-/usr/include/python3.12/cpython/odictobject.h:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
-/usr/include/alloca.h:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
 
-/usr/include/python3.12/cpython/pydebug.h:
+/usr/include/python3.12/fileobject.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+/opt/ros/jazzy/include/rcutils/rcutils/visibility_control_macros.h:
 
-/opt/ros/jazzy/include/rcutils/rcutils/macros.h:
+/usr/include/linux/stddef.h:
+
+/opt/ros/jazzy/include/rcutils/rcutils/sha256.h:
+
+rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.h:
 
 /usr/include/python3.12/cpython/code.h:
 
@@ -529,39 +466,11 @@ rosidl_generator_c/tello_msg/msg/detail/tello_status__functions.h:
 
 /usr/include/python3.12/bltinmodule.h:
 
-/usr/include/asm-generic/posix_types.h:
-
-rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.h:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/usr/include/python3.12/pymath.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
-
-/usr/include/python3.12/methodobject.h:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__struct.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h:
-
-/usr/include/limits.h:
+/opt/ros/jazzy/include/rcutils/rcutils/macros.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
-
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /opt/ros/jazzy/include/rcutils/rcutils/types/rcutils_ret.h:
 
@@ -585,21 +494,131 @@ rosidl_generator_c/tello_msg/msg/detail/tello_id__functions.h:
 
 /usr/include/python3.12/pyframe.h:
 
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h:
+
+/usr/include/python3.12/cpython/longintrepr.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/inttypes.h:
+
+/usr/include/python3.12/complexobject.h:
+
+/usr/include/python3.12/cpython/picklebufobject.h:
+
+rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/include/python3.12/cpython/ceval.h:
+
+/usr/include/python3.12/pybuffer.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
+
+/opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h:
+
+/usr/include/python3.12/pyerrors.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-least.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+rosidl_generator_c/tello_msg/srv/detail/drone_mode__struct.h:
+
+rosidl_generator_c/tello_msg/msg/rosidl_generator_c__visibility_control.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h:
+
+rosidl_generator_c/tello_msg/msg/detail/tello_status__struct.h:
+
+rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_c.c:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/usr/include/asm-generic/types.h:
+
+/usr/include/python3.12/cpython/pyctype.h:
+
+/usr/include/python3.12/memoryobject.h:
+
+rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.h:
+
+rosidl_generator_c/tello_msg/msg/detail/tello_status__functions.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/python3.12/cpython/warnings.h:
+
+/usr/include/python3.12/objimpl.h:
+
+/usr/include/python3.12/fileutils.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/usr/include/features-time64.h:
+
+/usr/include/python3.12/iterobject.h:
+
+/usr/include/python3.12/cpython/odictobject.h:
+
+/usr/include/alloca.h:
+
+/usr/include/python3.12/cpython/pydebug.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__struct.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h:
+
+/usr/include/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/python3.12/pymath.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
+
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h:
+
+/usr/include/asm-generic/posix_types.h:
+
+/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h:
 
 /usr/include/python3.12/cpython/memoryobject.h:
 
 /usr/include/asm-generic/int-ll64.h:
-
-/usr/include/ctype.h:
-
-/usr/include/errno.h:
 
 /usr/include/python3.12/cpython/modsupport.h:
 
 /usr/include/python3.12/cpython/dictobject.h:
 
 /usr/include/pthread.h:
+
+/usr/include/ctype.h:
+
+/usr/include/errno.h:
 
 /opt/ros/jazzy/include/rcutils/rcutils/visibility_control.h:
 
@@ -629,6 +648,12 @@ rosidl_generator_c/tello_msg/msg/detail/tello_id__functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
 
+/usr/include/python3.12/listobject.h:
+
+/usr/include/python3.12/pystrtod.h:
+
+/usr/include/python3.12/methodobject.h:
+
 /usr/include/python3.12/modsupport.h:
 
 /usr/include/strings.h:
@@ -645,17 +670,15 @@ rosidl_generator_c/tello_msg/msg/detail/tello_id__functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
 /usr/include/python3.12/osmodule.h:
 
 /usr/include/x86_64-linux-gnu/bits/stat.h:
 
 /usr/include/python3.12/cpython/methodobject.h:
 
-rosidl_generator_c/tello_msg/msg/detail/tello_status__type_support.h:
-
 /opt/ros/jazzy/include/rcutils/rcutils/allocator.h:
+
+rosidl_generator_c/tello_msg/msg/detail/tello_status__type_support.h:
 
 /usr/include/python3.12/pyhash.h:
 
@@ -673,6 +696,12 @@ rosidl_generator_c/tello_msg/msg/detail/tello_status__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/usr/include/python3.12/pymem.h:
+
+/usr/include/python3.12/pystate.h:
+
 /usr/include/string.h:
 
 /usr/include/stdc-predef.h:
@@ -689,12 +718,6 @@ rosidl_generator_c/tello_msg/msg/detail/tello_status__type_support.h:
 
 /usr/include/python3.12/pytypedefs.h:
 
-/usr/include/python3.12/pymem.h:
-
-/usr/include/python3.12/pystate.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
 /usr/include/python3.12/structseq.h:
 
 /usr/include/python3.12/sysmodule.h:
@@ -707,11 +730,11 @@ rosidl_generator_c/tello_msg/msg/detail/tello_status__type_support.h:
 
 /usr/include/python3.12/tracemalloc.h:
 
-/usr/include/python3.12/longobject.h:
-
 /usr/include/python3.12/cpython/tupleobject.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/python3.12/longobject.h:
 
 /usr/include/python3.12/tupleobject.h:
 
@@ -819,12 +842,6 @@ rosidl_generator_c/tello_msg/msg/detail/tello_status__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
-/usr/include/asm-generic/bitsperlong.h:
-
-/usr/include/asm-generic/types.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
@@ -834,5 +851,3 @@ rosidl_generator_c/tello_msg/msg/detail/tello_status__type_support.h:
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:

@@ -12,6 +12,7 @@ setup.py
 controller/__init__.py
 controller/manual_control.py
 controller/manual_control_old.py
+controller/tello_behaviour.py
 resource/controller
 test/test_copyright.py
 test/test_flake8.py

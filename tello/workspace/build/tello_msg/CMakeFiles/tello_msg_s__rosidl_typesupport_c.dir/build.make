@@ -100,6 +100,8 @@ rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_c.so: /opt/ros/jaz
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_generator_c.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_c.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_generator_c.so
+rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_c.so
+rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_generator_c.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/librosidl_dynamic_typesupport.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/librosidl_typesupport_c.so

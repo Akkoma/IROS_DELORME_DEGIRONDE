@@ -3,6 +3,7 @@
   "non_idl_tuples": [
     "/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg:msg/TelloStatus.msg",
     "/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg:msg/TelloID.msg",
-    "/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg:msg/TelloWifiConfig.msg"
+    "/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg:msg/TelloWifiConfig.msg",
+    "/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg:srv/DroneMode.srv"
   ]
 }

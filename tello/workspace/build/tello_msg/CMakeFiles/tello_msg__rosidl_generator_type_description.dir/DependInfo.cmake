@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/msg/TelloID.json" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/msg/TelloStatus.json"
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/msg/TelloWifiConfig.json" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/msg/TelloStatus.json"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/srv/DroneMode.json" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/msg/TelloStatus.json"
   )
 
 

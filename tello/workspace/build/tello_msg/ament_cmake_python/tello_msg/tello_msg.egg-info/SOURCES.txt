@@ -8,3 +8,5 @@ tello_msg/msg/__init__.py
 tello_msg/msg/_tello_id.py
 tello_msg/msg/_tello_status.py
 tello_msg/msg/_tello_wifi_config.py
+tello_msg/srv/__init__.py
+tello_msg/srv/_drone_mode.py

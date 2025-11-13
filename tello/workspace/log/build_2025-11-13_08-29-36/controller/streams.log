@@ -1,0 +1,29 @@
+[1.759s] Invoking command in '/home/alix.degironde/Public/tello-ros2/workspace/src/controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T PYTHONPATH=/home/alix.degironde/Public/tello-ros2/workspace/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/alix.degironde/Public/tello-ros2/workspace/build/controller/build install --record /home/alix.degironde/Public/tello-ros2/workspace/build/controller/install.log --single-version-externally-managed install_data
+[2.276s] running egg_info
+[2.323s] writing ../../build/controller/controller.egg-info/PKG-INFO
+[2.323s] writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt
+[2.324s] writing entry points to ../../build/controller/controller.egg-info/entry_points.txt
+[2.324s] writing requirements to ../../build/controller/controller.egg-info/requires.txt
+[2.324s] writing top-level names to ../../build/controller/controller.egg-info/top_level.txt
+[2.419s] reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[2.419s] adding license file 'LICENSE'
+[2.420s] writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[2.421s] running build
+[2.421s] running build_py
+[2.421s] copying controller/tello_behaviour.py -> /home/alix.degironde/Public/tello-ros2/workspace/build/controller/build/lib/controller
+[2.421s] copying controller/manual_control.py -> /home/alix.degironde/Public/tello-ros2/workspace/build/controller/build/lib/controller
+[2.421s] running install
+[2.430s] running install_lib
+[2.477s] copying /home/alix.degironde/Public/tello-ros2/workspace/build/controller/build/lib/controller/tello_behaviour.py -> /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller
+[2.478s] copying /home/alix.degironde/Public/tello-ros2/workspace/build/controller/build/lib/controller/manual_control.py -> /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller
+[2.478s] byte-compiling /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/tello_behaviour.py to tello_behaviour.cpython-312.pyc
+[2.480s] byte-compiling /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/manual_control.py to manual_control.cpython-312.pyc
+[2.482s] running install_data
+[2.482s] running install_egg_info
+[2.532s] removing '/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info' (and everything under it)
+[2.536s] Copying ../../build/controller/controller.egg-info to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info
+[2.536s] running install_scripts
+[2.856s] Installing manual_control script to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/controller
+[2.856s] Installing tello_behaviour script to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/controller
+[2.856s] writing list of installed files to '/home/alix.degironde/Public/tello-ros2/workspace/build/controller/install.log'
+[2.901s] Invoked command in '/home/alix.degironde/Public/tello-ros2/workspace/src/controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T PYTHONPATH=/home/alix.degironde/Public/tello-ros2/workspace/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/controller build --build-base /home/alix.degironde/Public/tello-ros2/workspace/build/controller/build install --record /home/alix.degironde/Public/tello-ros2/workspace/build/controller/install.log --single-version-externally-managed install_data

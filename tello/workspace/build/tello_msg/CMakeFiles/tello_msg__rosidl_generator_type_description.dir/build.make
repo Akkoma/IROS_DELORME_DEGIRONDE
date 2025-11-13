@@ -69,12 +69,14 @@ include CMakeFiles/tello_msg__rosidl_generator_type_description.dir/progress.mak
 CMakeFiles/tello_msg__rosidl_generator_type_description: rosidl_generator_type_description/tello_msg/msg/TelloStatus.json
 CMakeFiles/tello_msg__rosidl_generator_type_description: rosidl_generator_type_description/tello_msg/msg/TelloID.json
 CMakeFiles/tello_msg__rosidl_generator_type_description: rosidl_generator_type_description/tello_msg/msg/TelloWifiConfig.json
+CMakeFiles/tello_msg__rosidl_generator_type_description: rosidl_generator_type_description/tello_msg/srv/DroneMode.json
 
 rosidl_generator_type_description/tello_msg/msg/TelloStatus.json: /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description
 rosidl_generator_type_description/tello_msg/msg/TelloStatus.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
 rosidl_generator_type_description/tello_msg/msg/TelloStatus.json: rosidl_adapter/tello_msg/msg/TelloStatus.idl
 rosidl_generator_type_description/tello_msg/msg/TelloStatus.json: rosidl_adapter/tello_msg/msg/TelloID.idl
 rosidl_generator_type_description/tello_msg/msg/TelloStatus.json: rosidl_adapter/tello_msg/msg/TelloWifiConfig.idl
+rosidl_generator_type_description/tello_msg/msg/TelloStatus.json: rosidl_adapter/tello_msg/srv/DroneMode.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description__arguments.json
 
@@ -84,10 +86,14 @@ rosidl_generator_type_description/tello_msg/msg/TelloID.json: rosidl_generator_t
 rosidl_generator_type_description/tello_msg/msg/TelloWifiConfig.json: rosidl_generator_type_description/tello_msg/msg/TelloStatus.json
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/tello_msg/msg/TelloWifiConfig.json
 
+rosidl_generator_type_description/tello_msg/srv/DroneMode.json: rosidl_generator_type_description/tello_msg/msg/TelloStatus.json
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/tello_msg/srv/DroneMode.json
+
 tello_msg__rosidl_generator_type_description: CMakeFiles/tello_msg__rosidl_generator_type_description
 tello_msg__rosidl_generator_type_description: rosidl_generator_type_description/tello_msg/msg/TelloID.json
 tello_msg__rosidl_generator_type_description: rosidl_generator_type_description/tello_msg/msg/TelloStatus.json
 tello_msg__rosidl_generator_type_description: rosidl_generator_type_description/tello_msg/msg/TelloWifiConfig.json
+tello_msg__rosidl_generator_type_description: rosidl_generator_type_description/tello_msg/srv/DroneMode.json
 tello_msg__rosidl_generator_type_description: CMakeFiles/tello_msg__rosidl_generator_type_description.dir/build.make
 .PHONY : tello_msg__rosidl_generator_type_description
 

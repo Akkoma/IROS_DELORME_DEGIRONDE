@@ -13,6 +13,10 @@ CMakeFiles/tello_msg_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/te
  /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__struct.h
  /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.h
  /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/msg/rosidl_generator_c__visibility_control.h
+ /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.h
+ /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__struct.h
+ /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.h
+ /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h
  /opt/ros/jazzy/include/rcutils/rcutils/allocator.h
  /opt/ros/jazzy/include/rcutils/rcutils/macros.h
@@ -33,6 +37,7 @@ CMakeFiles/tello_msg_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/te
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h
  /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h
+ /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h

@@ -81,6 +81,11 @@ CMakeFiles/tello_msg__cpp: rosidl_generator_cpp/tello_msg/msg/detail/tello_wifi_
 CMakeFiles/tello_msg__cpp: rosidl_generator_cpp/tello_msg/msg/detail/tello_wifi_config__struct.hpp
 CMakeFiles/tello_msg__cpp: rosidl_generator_cpp/tello_msg/msg/detail/tello_wifi_config__traits.hpp
 CMakeFiles/tello_msg__cpp: rosidl_generator_cpp/tello_msg/msg/detail/tello_wifi_config__type_support.hpp
+CMakeFiles/tello_msg__cpp: rosidl_generator_cpp/tello_msg/srv/drone_mode.hpp
+CMakeFiles/tello_msg__cpp: rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__builder.hpp
+CMakeFiles/tello_msg__cpp: rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__struct.hpp
+CMakeFiles/tello_msg__cpp: rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__traits.hpp
+CMakeFiles/tello_msg__cpp: rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__type_support.hpp
 CMakeFiles/tello_msg__cpp: rosidl_generator_cpp/tello_msg/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/tello_msg/msg/tello_status.hpp: /opt/ros/jazzy/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -105,6 +110,7 @@ rosidl_generator_cpp/tello_msg/msg/tello_status.hpp: /opt/ros/jazzy/share/rosidl
 rosidl_generator_cpp/tello_msg/msg/tello_status.hpp: rosidl_adapter/tello_msg/msg/TelloStatus.idl
 rosidl_generator_cpp/tello_msg/msg/tello_status.hpp: rosidl_adapter/tello_msg/msg/TelloID.idl
 rosidl_generator_cpp/tello_msg/msg/tello_status.hpp: rosidl_adapter/tello_msg/msg/TelloWifiConfig.idl
+rosidl_generator_cpp/tello_msg/msg/tello_status.hpp: rosidl_adapter/tello_msg/srv/DroneMode.idl
 rosidl_generator_cpp/tello_msg/msg/tello_status.hpp: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/tello_msg/msg/tello_status.hpp: /opt/ros/jazzy/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/tello_msg/msg/tello_status.hpp: /opt/ros/jazzy/share/std_msgs/msg/ByteMultiArray.idl
@@ -169,6 +175,7 @@ rosidl_generator_cpp/tello_msg/msg/tello_status.hpp: /opt/ros/jazzy/share/geomet
 rosidl_generator_cpp/tello_msg/msg/tello_status.hpp: /opt/ros/jazzy/share/geometry_msgs/msg/VelocityStamped.idl
 rosidl_generator_cpp/tello_msg/msg/tello_status.hpp: /opt/ros/jazzy/share/geometry_msgs/msg/Wrench.idl
 rosidl_generator_cpp/tello_msg/msg/tello_status.hpp: /opt/ros/jazzy/share/geometry_msgs/msg/WrenchStamped.idl
+rosidl_generator_cpp/tello_msg/msg/tello_status.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp__arguments.json
 
@@ -214,6 +221,21 @@ rosidl_generator_cpp/tello_msg/msg/detail/tello_wifi_config__traits.hpp: rosidl_
 rosidl_generator_cpp/tello_msg/msg/detail/tello_wifi_config__type_support.hpp: rosidl_generator_cpp/tello_msg/msg/tello_status.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/tello_msg/msg/detail/tello_wifi_config__type_support.hpp
 
+rosidl_generator_cpp/tello_msg/srv/drone_mode.hpp: rosidl_generator_cpp/tello_msg/msg/tello_status.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/tello_msg/srv/drone_mode.hpp
+
+rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__builder.hpp: rosidl_generator_cpp/tello_msg/msg/tello_status.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__builder.hpp
+
+rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__struct.hpp: rosidl_generator_cpp/tello_msg/msg/tello_status.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__struct.hpp
+
+rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__traits.hpp: rosidl_generator_cpp/tello_msg/msg/tello_status.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__traits.hpp
+
+rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__type_support.hpp: rosidl_generator_cpp/tello_msg/msg/tello_status.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__type_support.hpp
+
 rosidl_generator_cpp/tello_msg/msg/rosidl_generator_cpp__visibility_control.hpp: rosidl_generator_cpp/tello_msg/msg/tello_status.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/tello_msg/msg/rosidl_generator_cpp__visibility_control.hpp
 
@@ -234,6 +256,11 @@ tello_msg__cpp: rosidl_generator_cpp/tello_msg/msg/rosidl_generator_cpp__visibil
 tello_msg__cpp: rosidl_generator_cpp/tello_msg/msg/tello_id.hpp
 tello_msg__cpp: rosidl_generator_cpp/tello_msg/msg/tello_status.hpp
 tello_msg__cpp: rosidl_generator_cpp/tello_msg/msg/tello_wifi_config.hpp
+tello_msg__cpp: rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__builder.hpp
+tello_msg__cpp: rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__struct.hpp
+tello_msg__cpp: rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__traits.hpp
+tello_msg__cpp: rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__type_support.hpp
+tello_msg__cpp: rosidl_generator_cpp/tello_msg/srv/drone_mode.hpp
 tello_msg__cpp: CMakeFiles/tello_msg__cpp.dir/build.make
 .PHONY : tello_msg__cpp
 
