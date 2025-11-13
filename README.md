@@ -51,3 +51,8 @@ node :
 ros2 topic pub /takeoff std_msgs/msg/Empty {} --once
 ros2 topic pub /land std_msgs/msg/Empty {} --once
 
+ros2 run controller tello_behaviour
+ros2 run controller manual_control
+ros2 run joy joy_node
+ros2 run tello tello
+ros2 topic info /joy
