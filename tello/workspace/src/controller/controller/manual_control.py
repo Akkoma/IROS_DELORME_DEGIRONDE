@@ -16,12 +16,12 @@ class ManualControl(Node):
         self.subscription = self.create_subscription(Joy, '/joy', self.joy_callback, 10)
         self.subscription  # empêche le warning
 
-        # --- Publishers pour le drone Tello ---
-        self.pub_takeoff = self.create_publisher(Empty, '/takeoff', 10)
-        self.pub_land = self.create_publisher(Empty, '/land', 10)
-        self.pub_emergency = self.create_publisher(Empty, '/emergency', 10)
-        self.pub_flip = self.create_publisher(String, '/flip', 10)
-        self.pub_control = self.create_publisher(Twist, '/control', 10)
+        # --- Publishers pour le noeud tello_behaviour (préfixe /control/) ---
+        self.pub_takeoff = self.create_publisher(Empty, '/control/takeoff', 10)
+        self.pub_land = self.create_publisher(Empty, '/control/land', 10)
+        self.pub_emergency = self.create_publisher(Empty, '/control/emergency', 10)
+        self.pub_flip = self.create_publisher(String, '/control/flip', 10)
+        self.pub_control = self.create_publisher(Twist, '/control/cmd_vel', 10)
 
         # --- Mapping des boutons ---
         self.BTN_TAKEOFF = 0       # bouton décollage

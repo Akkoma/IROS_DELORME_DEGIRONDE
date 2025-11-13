@@ -23,8 +23,13 @@ set(msg_files
   "msg/TelloWifiConfig.msg"
 )
 
+set(srv_files
+  "srv/DroneMode.srv"
+)
+
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
+  ${srv_files}
   DEPENDENCIES std_msgs geometry_msgs
   ADD_LINTER_TESTS
 )

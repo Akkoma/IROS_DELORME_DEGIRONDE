@@ -25,6 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
              'manual_control = controller.manual_control:main',
+             'tello_behaviour = controller.tello_behaviour:main',
         ],
     },
 )
