@@ -149,7 +149,7 @@ class ManualControl(Node):
                     # Bouton ignoré à cause du debounce
                     wait_time = self.button_debounce - time_since_last
                     self.get_logger().warn(
-                        f"⏱️  Bouton {btn_index} BLOQUÉ (anti-spam) - "
+                        f"Bouton {btn_index} BLOQUÉ (anti-spam) - "
                         f"attendez encore {wait_time:.1f}s"
                     )
 
