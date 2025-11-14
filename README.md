@@ -66,3 +66,6 @@ ros2 topic info /joy
 [INFO] tello.py - 438 - Send command: 'takeoff'
 [INFO] tello.py - 438 - Send command: 'wifi?'
 [INFO] tello.py - 462 - Response takeoff: '90'
+
+
+colcon build --packages-select 
