@@ -11,60 +11,55 @@ class Surveillance(Node):
 
     def __init__(self):
         super().__init__('surveillance')
-
-        # état local
-        self.current_mode = None
-        # flag indiquant si la rotation de surveillance est active
-        self.surveillance_active = False
-
-        # Subscription: on écoute l'état du mode (expose /drone_mode/state depuis tello_behaviour)
-        self.mode_sub = self.create_subscription(Int32, '/drone_mode/state', self._mode_cb, 10)
-
-        # Publisher: publie des Twist de rotation sur /control
-        self.pub_control = self.create_publisher(Twist, '/control', 10)
-
-        # Timer permanent à 20 Hz ; on choisit de créer le timer dès l'initialisation
-        # et de n'envoyer la commande que si self.surveillance_active est True.
-        self.surveillance_timer = self.create_timer(1.0 / 20.0, self._publish_rotate)
-
-        self.get_logger().info('Noeud surveillance initialisé (timer 20Hz créé)')
-
-    def _mode_cb(self, msg: Int32):
+        
+        # État du mode actuel
+        self.current_mode = 0
+        
+        # Timer pour envoyer des commandes à 20 Hz (toutes les 0.05 secondes)
+        self.timer = self.create_timer(0.05, self.timer_callback)
+        
+        # Subscriber pour écouter le mode du drone
+        self.mode_sub = self.create_subscription(
+            Int32,
+            '/drone_mode/state',
+            self.mode_callback,
+            10
+        )
+        
+        # Publisher pour envoyer les commandes de mouvement
+        self.cmd_vel_pub = self.create_publisher(
+            Twist,
+            '/surveillance/cmd_vel',
+            10
+        )
+        
+        self.get_logger().info('Noeud surveillance initialisé')
+    
+    def mode_callback(self, msg):
+        """Callback qui reçoit les changements de mode"""
         old_mode = self.current_mode
-        self.current_mode = int(msg.data)
-        self.get_logger().info(f'Mode changé : {old_mode} -> {self.current_mode}')
-
-        # activation/désactivation de la rotation uniquement selon le mode
+        self.current_mode = msg.data
+        
+        if old_mode != self.current_mode:
+            if self.current_mode == self.SURVEILLANCE_MODE:
+                self.get_logger().info('Mode surveillance activé - Rotation démarrée')
+            else:
+                self.get_logger().info(f'Mode surveillance désactivé (mode actuel: {self.current_mode})')
+    
+    def timer_callback(self):
+        """Appelé à 20 Hz pour envoyer les commandes de rotation"""
         if self.current_mode == self.SURVEILLANCE_MODE:
-            self.start_surveillance_rotation()
-        elif old_mode == self.SURVEILLANCE_MODE and self.current_mode != self.SURVEILLANCE_MODE:
-            self.stop_surveillance_rotation()
-
-    def start_surveillance_rotation(self):
-        if self.surveillance_active:
-            self.get_logger().info('start_surveillance_rotation appelé, déjà actif')
-            return
-        self.surveillance_active = True
-        self.get_logger().info('Rotation de surveillance ACTIVÉE (publishing à 20Hz)')
-
-    def stop_surveillance_rotation(self):
-        if not self.surveillance_active:
-            self.get_logger().info('stop_surveillance_rotation appelé, déjà inactif')
-            return
-        self.surveillance_active = False
-        self.get_logger().info('Rotation de surveillance DÉSACTIVÉE')
-
-    def _publish_rotate(self):
-        # Ce timer tourne 20 Hz en permanence ; on publie seulement si le mode est actif.
-        if not self.surveillance_active or self.current_mode != self.SURVEILLANCE_MODE:
-            return
-        twist = Twist()
-        twist.angular.z = 50
-        twist.linear.x = 0.0
-        twist.linear.y = 0.0
-        twist.linear.z = 0.0
-        self.pub_control.publish(twist)
-        self.get_logger().debug('Commande rotation publiée (surveillance)')
+            # Créer un message Twist pour la rotation
+            twist = Twist()
+            twist.linear.x = 0.0
+            twist.linear.y = 0.0
+            twist.linear.z = 0.0
+            twist.angular.x = 0.0
+            twist.angular.y = 0.0
+            twist.angular.z = 50.0  # Rotation angulaire sur l'axe Z
+            
+            # Publier la commande
+            self.cmd_vel_pub.publish(twist)
 
 
 def main(args=None):
