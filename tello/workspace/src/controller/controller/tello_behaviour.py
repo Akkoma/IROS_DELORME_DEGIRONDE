@@ -106,19 +106,19 @@ class TelloBehaviour(Node):
             f"{DroneModes.get_name(self.current_mode)}"
         )
         
-        self.get_logger().info(f"🔄 {response.message}")
+        self.get_logger().info(f"{response.message}")
         
         # Logique spécifique selon le mode
         if self.current_mode == DroneModes.MANUAL:
-            self.get_logger().info("➡️  Mode MANUEL: Bypass actif, toutes commandes autorisées")
+            self.get_logger().info("Mode MANUEL: Bypass actif, toutes commandes autorisées")
         elif self.current_mode == DroneModes.QR_FOLLOWER:
-            self.get_logger().info("📷 Mode QR FOLLOWER: Filtre actif, suivi de QR code activé")
+            self.get_logger().info("Mode QR FOLLOWER: Filtre actif, suivi de QR code activé")
             self.start_qr_follower_mode()
         elif self.current_mode == DroneModes.SPIELBERG:
-            self.get_logger().info("🎬 Mode SPIELBERG: Filtre actif, mode cinématique activé")
+            self.get_logger().info("Mode SPIELBERG: Filtre actif, mode cinématique activé")
             self.start_spielberg_mode()
         elif self.current_mode == DroneModes.SURVEILLANCE:
-            self.get_logger().info("👁️  Mode SURVEILLANCE: Filtre actif, surveillance activée")
+            self.get_logger().info("Mode SURVEILLANCE: Filtre actif, surveillance activée")
             self.start_surveillance_mode()
         
         return response
@@ -141,42 +141,42 @@ class TelloBehaviour(Node):
     def callback_takeoff(self, msg):
         """Callback pour la commande de décollage"""
         if self.is_manual_mode() or self.is_command_allowed_in_filtered_mode('takeoff'):
-            self.get_logger().info("✈️  Décollage autorisé")
+            self.get_logger().info("Décollage autorisé")
             self.pub_takeoff.publish(msg)
         else:
             self.get_logger().warn(
-                f"🚫 Décollage bloqué en mode {DroneModes.get_name(self.current_mode)}"
+                f"Décollage bloqué en mode {DroneModes.get_name(self.current_mode)}"
             )
     
     def callback_land(self, msg):
         """Callback pour la commande d'atterrissage"""
         if self.is_manual_mode() or self.is_command_allowed_in_filtered_mode('land'):
-            self.get_logger().info("🛬 Atterrissage autorisé")
+            self.get_logger().info("Atterrissage autorisé")
             self.pub_land.publish(msg)
         else:
             self.get_logger().warn(
-                f"🚫 Atterrissage bloqué en mode {DroneModes.get_name(self.current_mode)}"
+                f"Atterrissage bloqué en mode {DroneModes.get_name(self.current_mode)}"
             )
     
     def callback_emergency(self, msg):
         """Callback pour l'arrêt d'urgence"""
         if self.is_manual_mode() or self.is_command_allowed_in_filtered_mode('emergency'):
-            self.get_logger().warn("🚨 ARRÊT D'URGENCE autorisé")
+            self.get_logger().warn("ARRÊT D'URGENCE autorisé")
             self.pub_emergency.publish(msg)
         else:
             # L'urgence devrait toujours passer, mais on garde la logique cohérente
             self.get_logger().warn(
-                f"🚫 Arrêt d'urgence bloqué en mode {DroneModes.get_name(self.current_mode)}"
+                f"Arrêt d'urgence bloqué en mode {DroneModes.get_name(self.current_mode)}"
             )
     
     def callback_flip(self, msg):
         """Callback pour la commande de flip"""
         if self.is_manual_mode():
-            self.get_logger().info(f"🔄 Flip autorisé (direction: {msg.data})")
+            self.get_logger().info(f"Flip autorisé (direction: {msg.data})")
             self.pub_flip.publish(msg)
         else:
             self.get_logger().warn(
-                f"🚫 Flip bloqué en mode {DroneModes.get_name(self.current_mode)}"
+                f"Flip bloqué en mode {DroneModes.get_name(self.current_mode)}"
             )
     
     def callback_control(self, msg):
@@ -200,13 +200,13 @@ class TelloBehaviour(Node):
         - Maintenir une distance fixe
         - Se centrer sur le QR code
         """
-        self.get_logger().info("📷 Initialisation du mode QR Follower...")
+        self.get_logger().info("Initialisation du mode QR Follower...")
         # TODO: Ajouter la logique de détection et suivi de QR code
         # - Subscription au topic de la caméra
         # - Détection de QR codes avec OpenCV/pyzbar
         # - Calcul de la position relative
         # - Envoi de commandes de correction via self.pub_control
-        self.get_logger().info("⚠️  Mode QR Follower: Implémentation à compléter")
+        self.get_logger().info("Mode QR Follower: Implémentation à compléter")
     
     def start_spielberg_mode(self):
         """
@@ -217,12 +217,12 @@ class TelloBehaviour(Node):
         - Suivre des trajectoires prédéfinies ou contrôlées
         - Maintenir une stabilité optimale pour la prise de vue
         """
-        self.get_logger().info("🎬 Initialisation du mode Spielberg...")
+        self.get_logger().info("Initialisation du mode Spielberg...")
         # TODO: Ajouter la logique de mouvements cinématiques
         # - Mouvements lents et fluides (travelling, panoramique)
         # - Trajectoires préprogrammées
         # - Lissage des commandes de mouvement
-        self.get_logger().info("⚠️  Mode Spielberg: Implémentation à compléter")
+        self.get_logger().info("Mode Spielberg: Implémentation à compléter")
     
     def start_surveillance_mode(self):
         """
@@ -233,12 +233,12 @@ class TelloBehaviour(Node):
         - Détecter les mouvements suspects
         - Enregistrer ou transmettre les images
         """
-        self.get_logger().info("👁️  Initialisation du mode Surveillance...")
+        self.get_logger().info("Initialisation du mode Surveillance...")
         # TODO: Ajouter la logique de surveillance
         # - Définition de waypoints pour la patrouille
         # - Détection de mouvement dans l'image
         # - Rotation panoramique pour scanner l'environnement
-        self.get_logger().info("⚠️  Mode Surveillance: Implémentation à compléter")
+        self.get_logger().info("Mode Surveillance: Implémentation à compléter")
 
 
 def main(args=None):

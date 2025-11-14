@@ -56,3 +56,13 @@ ros2 run controller manual_control
 ros2 run joy joy_node
 ros2 run tello tello
 ros2 topic info /joy
+
+[INFO] tello.py - 438 - Send command: 'wifi?'
+[INFO] tello.py - 471 - Send command (no response expected): 'rc 0 0 0 0'
+[INFO] tello.py - 471 - Send command (no response expected): 'rc 0 0 0 0'
+[INFO] tello.py - 462 - Response wifi?: '90'
+[INFO] tello.py - 471 - Send command (no response expected): 'rc 0 0 0 0'
+[INFO] tello.py - 471 - Send command (no response expected): 'rc 0 0 0 0'
+[INFO] tello.py - 438 - Send command: 'takeoff'
+[INFO] tello.py - 438 - Send command: 'wifi?'
+[INFO] tello.py - 462 - Response takeoff: '90'
