@@ -26,6 +26,8 @@ setup(
         'console_scripts': [
              'manual_control = controller.manual_control:main',
              'tello_behaviour = controller.tello_behaviour:main',
+             'spielberg = controller.spielberg:main',
+             'surveillance = controller.surveillance:main'
         ],
     },
 )

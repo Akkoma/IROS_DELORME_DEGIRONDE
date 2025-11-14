@@ -11,7 +11,8 @@ setup.py
 ../../build/controller/controller.egg-info/zip-safe
 controller/__init__.py
 controller/manual_control.py
-controller/manual_control_old.py
+controller/spielberg.py
+controller/surveillance.py
 controller/tello_behaviour.py
 resource/controller
 test/test_copyright.py

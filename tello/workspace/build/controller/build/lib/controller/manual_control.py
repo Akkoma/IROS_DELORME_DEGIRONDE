@@ -15,8 +15,8 @@ class ManualControl(Node):
 
         # --- Souscription au joystick ---
         self.subscription = self.create_subscription(Joy, '/joy', self.joy_callback, 10)
-        self.subscription_status = self.create_subscription(TelloStatus, '/status', self.status_callback, 10)
-        self.subscription_status
+        #self.subscription_status = self.create_subscription(TelloStatus, '/status', self.status_callback, 10)
+        #self.subscription_status
         self.subscription  # empêche le warning
 
         # --- Publishers pour le noeud tello_behaviour (préfixe /control/) ---
@@ -54,13 +54,13 @@ class ManualControl(Node):
         self.button_send_count = {}
         self.altitude_condition = 1
 
-    def status_callback(self, msg: TelloStatus):
-        altitude = msg.distance_tof
-        self.get_logger().info(f"Statut du drone reçu: Altitude à {altitude} cm")
-        if altitude < 30 :
-            self.altitude_condition = 1
-        else:
-            self.altitude_condition = 0
+    #def status_callback(self, msg: TelloStatus):
+    #    altitude = msg.distance_tof
+    #    self.get_logger().info(f"Statut du drone reçu: Altitude à {altitude} cm")
+    #    if altitude < 30 :
+    #        self.altitude_condition = 1
+    #    else:
+    #        self.altitude_condition = 0
 
     def joy_callback(self, msg: Joy):
         buttons = msg.buttons
@@ -92,15 +92,15 @@ class ManualControl(Node):
                     
                     # ======== CASES: Traiter selon le bouton ========
                     
-                    if btn_index == self.BTN_TAKEOFF and self.altitude_condition == 1:
-                        self.get_logger().info(f"{self.status_callback(TelloStatus())}")
+                    if btn_index == self.BTN_TAKEOFF:
+
                         # Commande Takeoff: envoie Empty
                         self.get_logger().info(f"[Commande #{count}] Décollage envoyé")
                         self.pub_takeoff.publish(Empty())
                         self.last_button_time[btn_index] = now
                         
-                    elif btn_index == self.BTN_LAND and self.altitude_condition == 0:
-                        self.get_logger().info(f"{self.status_callback(TelloStatus())}")
+                    elif btn_index == self.BTN_LAND:
+
                         # Commande Land: envoie Empty
                         self.get_logger().info(f"[Commande #{count}] Atterrissage envoyé")
                         self.pub_land.publish(Empty())
