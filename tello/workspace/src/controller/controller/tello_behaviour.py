@@ -69,6 +69,11 @@ class TelloBehaviour(Node):
             Twist, '/control/cmd_vel', self.callback_control, 10
         )
         
+        # --- Subscriber pour les commandes du mode surveillance ---
+        self.sub_surveillance = self.create_subscription(
+            Twist, '/surveillance/cmd_vel', self.callback_surveillance_control, 10
+        )
+        
         # --- Publishers (vers le drone Tello) ---
         self.pub_takeoff = self.create_publisher(Empty, '/takeoff', 10)
         self.pub_land = self.create_publisher(Empty, '/land', 10)
@@ -199,6 +204,15 @@ class TelloBehaviour(Node):
         else:
             # En mode filtré, on bloque les commandes de mouvement du joystick
             # (les modes automatiques gèrent leur propre mouvement)
+            pass
+    
+    def callback_surveillance_control(self, msg):
+        """Callback pour les commandes de mouvement du mode surveillance"""
+        if self.current_mode == DroneModes.SURVEILLANCE:
+            # En mode surveillance, on publie les commandes vers le drone
+            self.pub_control.publish(msg)
+        else:
+            # Si on n'est pas en mode surveillance, on ignore les commandes
             pass
     
     # ========== MÉTHODES POUR LES MODES SPÉCIFIQUES ==========
