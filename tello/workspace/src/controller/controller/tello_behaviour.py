@@ -2,7 +2,7 @@
 
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Empty, String
+from std_msgs.msg import Empty, String, Int32
 from geometry_msgs.msg import Twist
 from tello_msg.srv import DroneMode
 
@@ -41,6 +41,9 @@ class TelloBehaviour(Node):
         
         # Mode actuel du drone
         self.current_mode = DroneModes.MANUAL
+        ### AJOUT PAO
+        # Publisher léger pour informer d'autres noeuds de l'état du mode
+        self.mode_pub = self.create_publisher(Int32, '/drone_mode/state', 10)
         
         # --- Service pour changer de mode ---
         self.mode_service = self.create_service(
@@ -120,6 +123,15 @@ class TelloBehaviour(Node):
         elif self.current_mode == DroneModes.SURVEILLANCE:
             self.get_logger().info("Mode SURVEILLANCE: Filtre actif, surveillance activée")
             self.start_surveillance_mode()
+
+        # Publier l'état du mode pour les autres noeuds (ex: surveillance)
+        try:
+            mode_msg = Int32()
+            mode_msg.data = int(self.current_mode)
+            self.mode_pub.publish(mode_msg)
+        except Exception:
+            # Ne doit pas bloquer la réponse du service
+            self.get_logger().debug("Impossible de publier l'état du mode")
         
         return response
     
@@ -239,6 +251,7 @@ class TelloBehaviour(Node):
         # - Détection de mouvement dans l'image
         # - Rotation panoramique pour scanner l'environnement
         self.get_logger().info("Mode Surveillance: Implémentation à compléter")
+        
 
 
 def main(args=None):
