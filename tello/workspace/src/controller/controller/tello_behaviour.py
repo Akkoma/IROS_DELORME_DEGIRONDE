@@ -5,7 +5,7 @@ from rclpy.node import Node
 from rclpy.action import ActionClient
 from std_msgs.msg import Empty, String, Int32
 from geometry_msgs.msg import Twist
-from tello_msg.srv import DroneMode
+from tello_msg.srv import DroneMode, Surveillance as SurveillanceSrv
 from tello_msg.action import Spielberg
 
 
@@ -55,7 +55,10 @@ class TelloBehaviour(Node):
         )
         
         self._action_client = ActionClient(self, Spielberg, 'spielberg')
-
+        self.surveillance_client = self.create_client(
+            SurveillanceSrv,
+            '/surveillance/control'
+        )
         # --- Subscribers (depuis le noeud control/manual_control) ---
         self.sub_takeoff = self.create_subscription(
             Empty, '/control/takeoff', self.callback_takeoff, 10
@@ -110,7 +113,9 @@ class TelloBehaviour(Node):
         
         # Changer le mode
         old_mode = self.current_mode
-        self.current_mode = requested_mode
+        self.current_mode = requested_mode  
+        if old_mode == DroneModes.SURVEILLANCE and requested_mode != DroneModes.SURVEILLANCE:
+            self.stop_surveillance_mode()
         
         response.success = True
         response.message = (
@@ -283,23 +288,59 @@ class TelloBehaviour(Node):
         self.get_logger().info("Initialisation du mode Spielberg...")
         self.send_goal()
 
-    
     def start_surveillance_mode(self):
         """
-        Initialise le mode Surveillance.
+        Initialise le mode Surveillance via le service.
         
         Dans ce mode, le drone doit:
         - Patrouiller selon un schéma défini
         - Détecter les mouvements suspects
         - Enregistrer ou transmettre les images
         """
-        self.get_logger().info("Initialisation du mode Surveillance...")
-        # TODO: Ajouter la logique de surveillance
-        # - Définition de waypoints pour la patrouille
-        # - Détection de mouvement dans l'image
-        # - Rotation panoramique pour scanner l'environnement
-        self.get_logger().info("Mode Surveillance: Implémentation à compléter")
+        self.get_logger().info("Activation du mode Surveillance via service...")
         
+        # Attendre que le service soit disponible
+        if not self.surveillance_client.wait_for_service(timeout_sec=2.0):
+            self.get_logger().error(
+                "Service /surveillance/control non disponible! "
+                "Assurez-vous que le noeud surveillance est lancé."
+            )
+            return
+        
+        # Créer la requête pour activer la surveillance
+        request = SurveillanceSrv.Request()
+        request.data = True  # Activer
+        
+        # Appeler le service de manière asynchrone
+        future = self.surveillance_client.call_async(request)
+        future.add_done_callback(self.surveillance_response_callback)
+    
+    def stop_surveillance_mode(self):
+        """Désactive le mode Surveillance via le service."""
+        self.get_logger().info("Désactivation du mode Surveillance via service...")
+        
+        if not self.surveillance_client.service_is_ready():
+            self.get_logger().warn("Service de surveillance non disponible pour désactivation")
+            return
+        
+        # Créer la requête pour désactiver la surveillance
+        request = SurveillanceSrv.Request()
+        request.data = False  # Désactiver
+        
+        # Appeler le service de manière asynchrone
+        future = self.surveillance_client.call_async(request)
+        future.add_done_callback(self.surveillance_response_callback)
+    
+    def surveillance_response_callback(self, future):
+        """Callback pour la réponse du service de surveillance"""
+        try:
+            response = future.result()
+            if response.success:
+                self.get_logger().info("Service de surveillance : Commande exécutée avec succès")
+            else:
+                self.get_logger().warn("Service de surveillance : Échec de la commande")
+        except Exception as e:
+            self.get_logger().error(f"Erreur lors de l'appel du service de surveillance: {e}")
 
 
 def main(args=None):

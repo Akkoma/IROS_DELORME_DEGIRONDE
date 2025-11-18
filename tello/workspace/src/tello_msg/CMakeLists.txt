@@ -26,6 +26,7 @@ set(msg_files
 
 set(srv_files
   "srv/DroneMode.srv"
+  "srv/Surveillance.srv"
 )
 
 set(action_files
