@@ -73,12 +73,15 @@ include /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_m
 /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_msg__py/CMakeFiles/tello_msg__py: rosidl_generator_py/tello_msg/msg/_tello_id.py
 /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_msg__py/CMakeFiles/tello_msg__py: rosidl_generator_py/tello_msg/msg/_tello_wifi_config.py
 /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_msg__py/CMakeFiles/tello_msg__py: rosidl_generator_py/tello_msg/srv/_drone_mode.py
+/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_msg__py/CMakeFiles/tello_msg__py: rosidl_generator_py/tello_msg/action/_spielberg.py
 /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_msg__py/CMakeFiles/tello_msg__py: rosidl_generator_py/tello_msg/msg/__init__.py
 /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_msg__py/CMakeFiles/tello_msg__py: rosidl_generator_py/tello_msg/srv/__init__.py
+/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_msg__py/CMakeFiles/tello_msg__py: rosidl_generator_py/tello_msg/action/__init__.py
 /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_msg__py/CMakeFiles/tello_msg__py: rosidl_generator_py/tello_msg/msg/_tello_status_s.c
 /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_msg__py/CMakeFiles/tello_msg__py: rosidl_generator_py/tello_msg/msg/_tello_id_s.c
 /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_msg__py/CMakeFiles/tello_msg__py: rosidl_generator_py/tello_msg/msg/_tello_wifi_config_s.c
 /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_msg__py/CMakeFiles/tello_msg__py: rosidl_generator_py/tello_msg/srv/_drone_mode_s.c
+/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_msg__py/CMakeFiles/tello_msg__py: rosidl_generator_py/tello_msg/action/_spielberg_s.c
 
 rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_py/__init__.py
@@ -97,6 +100,7 @@ rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: r
 rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/tello_msg/msg/TelloID.idl
 rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/tello_msg/msg/TelloWifiConfig.idl
 rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/tello_msg/srv/DroneMode.idl
+rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/tello_msg/action/Spielberg.idl
 rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
 rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/std_msgs/msg/Byte.idl
 rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/std_msgs/msg/ByteMultiArray.idl
@@ -161,6 +165,11 @@ rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /
 rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/geometry_msgs/msg/VelocityStamped.idl
 rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/geometry_msgs/msg/Wrench.idl
 rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/geometry_msgs/msg/WrenchStamped.idl
+rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
+rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
+rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
+rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
+rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_msg__py && /usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
@@ -183,11 +192,17 @@ rosidl_generator_py/tello_msg/msg/_tello_wifi_config.py: rosidl_generator_py/tel
 rosidl_generator_py/tello_msg/srv/_drone_mode.py: rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/tello_msg/srv/_drone_mode.py
 
+rosidl_generator_py/tello_msg/action/_spielberg.py: rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/tello_msg/action/_spielberg.py
+
 rosidl_generator_py/tello_msg/msg/__init__.py: rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/tello_msg/msg/__init__.py
 
 rosidl_generator_py/tello_msg/srv/__init__.py: rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/tello_msg/srv/__init__.py
+
+rosidl_generator_py/tello_msg/action/__init__.py: rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/tello_msg/action/__init__.py
 
 rosidl_generator_py/tello_msg/msg/_tello_status_s.c: rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/tello_msg/msg/_tello_status_s.c
@@ -201,9 +216,15 @@ rosidl_generator_py/tello_msg/msg/_tello_wifi_config_s.c: rosidl_generator_py/te
 rosidl_generator_py/tello_msg/srv/_drone_mode_s.c: rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/tello_msg/srv/_drone_mode_s.c
 
+rosidl_generator_py/tello_msg/action/_spielberg_s.c: rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/tello_msg/action/_spielberg_s.c
+
 tello_msg__py: rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_c.c
 tello_msg__py: rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c
 tello_msg__py: rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_introspection_c.c
+tello_msg__py: rosidl_generator_py/tello_msg/action/__init__.py
+tello_msg__py: rosidl_generator_py/tello_msg/action/_spielberg.py
+tello_msg__py: rosidl_generator_py/tello_msg/action/_spielberg_s.c
 tello_msg__py: rosidl_generator_py/tello_msg/msg/__init__.py
 tello_msg__py: rosidl_generator_py/tello_msg/msg/_tello_id.py
 tello_msg__py: rosidl_generator_py/tello_msg/msg/_tello_id_s.c

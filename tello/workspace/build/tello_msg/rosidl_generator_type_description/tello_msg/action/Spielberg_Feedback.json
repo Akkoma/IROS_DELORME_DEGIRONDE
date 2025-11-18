@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "tello_msg/action/Spielberg_Feedback",
+      "fields": [
+        {
+          "name": "time_remaining",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "tello_msg/action/Spielberg_Feedback",
+      "hash_string": "RIHS01_341a4893a85b2c15515f6fb8a1c82b1db25ec99e7eb70c7a2dcaf9385aa9f5c1"
+    }
+  ]
+}

@@ -1,79 +1,154 @@
-#!/usr/bin/env python3
+#!/home/alix.degironde/Public/ven_IROS/bin python3
 
 import sys
 import time
 import rclpy
+from rclpy.action import ActionServer
 from rclpy.node import Node
 from sensor_msgs.msg import Image
 from tello_msg.msg import TelloStatus
 from std_msgs.msg import Int32
 from geometry_msgs.msg import Twist
 import cv2
-from cv_bridge import CvBridge, CvBridgeError
 import numpy as np
 
-class Spielberg(Node):
+from tello_msg.action import Spielberg
+
+class SpielbergNode(Node):
+    # Définition des modes
+    SPIELBERG_MODE = 2
+    
     def __init__(self):
         super().__init__('spielberg')
-        self.bridge = CvBridge()
-        self.qr_detector = cv2.QRCodeDetector()
-        self.subscription = self.create_subscription(Image, '/image_raw', self.qr_callback, 10)
-        self.last_qr_code = None
-
-        # Subscriber pour écouter le mode du drone
-        self.mode_sub = self.create_subscription(
-            Int32,
-            '/drone_mode/state',
-            self.mode_callback,
+        
+        # Mode actuel
+        self.current_mode = 0
+        self.current_goal_handle = None
+        self._action_server = ActionServer(
+            self,
+            Spielberg,
+            'spielberg',
+            self.execute_callback)
+        
+        # Publisher pour envoyer les commandes de mouvement
+        self.cmd_vel_pub = self.create_publisher(
+            Twist,
+            '/control',
             10
         )
-
-    def display(self, img, bbox):
-        n = len(bbox)
-
-        pt1 = int(bbox[0][0][0]), int(bbox[0][0][1])    # angle en haut à gauche
-        pt2 = int(bbox[0][2][0]), int(bbox[0][2][1])    # angle en bas à droite
         
-        color = (255, 0, 0)
-
-        cv2.rectangle(img, pt1, pt2, color, 2)
-
-    def qr_callback(self, msg):
-        try:
-            cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-        except CvBridgeError as e:
-            self.get_logger().error(f'Failed to convert image: {e}')
-            return
-
-        data, bbox, rectified_image = self.qr_detector.detectAndDecode(cv_image)
-
-        if len(data) > 0:
-            qr_data = data.strip()
-
-            if qr_data != self.last_qr_code:
-                self.last_qr_code = qr_data
-                self.get_logger().info(f'QR Code detected : {qr_data}')
-
-            self.display(cv_image, bbox)
-            cv2.imshow("Results", cv_image)
+        # Variables pour la séquence de commandes
+        self.sequence_timer = None
+        self.sequence_index = 0
+        self.sequence_start_time = None
+        
+        # Définir la séquence de commandes : [(durée_en_secondes, commande_twist)]
+        self.command_sequence = [
+            (2.0, self.create_twist(0.0, 50.0, 0.0, 0.0, 0.0, 0.0)),  # Avancer 5s
+            (1.0, self.create_twist(0.0, 0.0, 0.0, 0.0, 0.0, 40.0)),  # Rotation 3s
+            (2.0, self.create_twist(0.0, -50.0, 0.0, 0.0, 0.0, 0.0)),  # recule 2s
+            (1.0, self.create_twist(0.0, 0.0, 0.0, 0.0, 0.0, -40.0)), # Rotation inverse 3s
+            (2.0, self.create_twist(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)),   # Stop 2s
+        ]
+    
+    def create_twist(self, lx, ly, lz, ax, ay, az):
+        """Crée un message Twist avec les valeurs données"""
+        twist = Twist()
+        twist.linear.x = lx
+        twist.linear.y = ly
+        twist.linear.z = lz
+        twist.angular.x = ax
+        twist.angular.y = ay
+        twist.angular.z = az
+        return twist
+    
+    def execute_callback(self, goal_handle):
+        """Callback de l'action qui démarre la séquence"""
+        self.get_logger().info('Action Spielberg reçue - Séquence démarrée')
+        self.current_goal_handle = goal_handle
+        
+        # Démarrer la séquence
+        self.start_sequence()
+        
+        # L'action continue en arrière-plan via le timer
+        # On retourne le goal_handle pour qu'il reste actif
+        return goal_handle
+    
+    def start_sequence(self):
+        """Démarre la séquence de commandes"""
+        self.sequence_index = 0
+        self.sequence_start_time = self.get_clock().now()
+        
+        # Créer un timer qui s'exécute à 10Hz (toutes les 0.1s)
+        if self.sequence_timer is not None:
+            self.sequence_timer.cancel()
+        
+        self.sequence_timer = self.create_timer(0.1, self.execute_sequence)
+        self.get_logger().info('Séquence de commandes démarrée')
+    
+    def stop_sequence(self):
+        """Arrête la séquence de commandes"""
+        if self.sequence_timer is not None:
+            self.sequence_timer.cancel()
+            self.sequence_timer = None
+        
+        # Envoyer une commande d'arrêt
+        stop_cmd = self.create_twist(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+        self.cmd_vel_pub.publish(stop_cmd)
+        self.get_logger().info('Séquence de commandes arrêtée')
+    
+    def execute_sequence(self):
+        """Exécute la séquence de commandes selon les timings"""
+        # Envoyer le feedback si on a un goal actif
+        if self.current_goal_handle is not None:
+            feedback_msg = Spielberg.Feedback()
+            feedback_msg.time_remaining = len(self.command_sequence) - self.sequence_index
+            self.current_goal_handle.publish_feedback(feedback_msg)
+        
+        if self.sequence_index >= len(self.command_sequence):
+            # Séquence terminée
+            self.get_logger().info('Séquence terminée')
+            self.stop_sequence()
             
-            if rectified_image is not None and rectified_image.size > 0:
-                rectified_image = np.uint8(rectified_image)
-                cv2.imshow("Rectified QRCode", rectified_image)
-        else:
-            cv2.imshow("Results", cv_image)
-
-        cv2.waitKey(3)
+            # Envoyer le résultat de l'action
+            if self.current_goal_handle is not None:
+                result = Spielberg.Result()
+                result.success = True
+                self.current_goal_handle.succeed()
+                self.current_goal_handle = None
+            return
+        
+        # Calculer le temps écoulé depuis le début de la séquence
+        current_time = self.get_clock().now()
+        elapsed = (current_time - self.sequence_start_time).nanoseconds / 1e9  # Convertir en secondes
+        
+        # Calculer le temps cumulé jusqu'à l'étape actuelle
+        cumulative_time = sum(duration for duration, _ in self.command_sequence[:self.sequence_index])
+        
+        # Vérifier si on doit passer à l'étape suivante
+        current_duration, current_command = self.command_sequence[self.sequence_index]
+        
+        if elapsed >= cumulative_time + current_duration:
+            # Passer à l'étape suivante
+            self.sequence_index += 1
+            if self.sequence_index < len(self.command_sequence):
+                next_duration, next_command = self.command_sequence[self.sequence_index]
+                self.get_logger().info(f'Étape {self.sequence_index + 1}/{len(self.command_sequence)} - Durée: {next_duration}s')
+        
+        # Publier la commande actuelle
+        if self.sequence_index < len(self.command_sequence):
+            _, command = self.command_sequence[self.sequence_index]
+            self.cmd_vel_pub.publish(command)
+    
 
 def main(args=None):
     rclpy.init(args=args)
-    node = Spielberg()
+    node = SpielbergNode()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass
     finally:
-        cv2.destroyAllWindows()
         node.destroy_node()
         rclpy.shutdown()
 

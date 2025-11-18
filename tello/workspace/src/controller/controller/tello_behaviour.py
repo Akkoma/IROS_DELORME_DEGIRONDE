@@ -2,9 +2,11 @@
 
 import rclpy
 from rclpy.node import Node
+from rclpy.action import ActionClient
 from std_msgs.msg import Empty, String, Int32
 from geometry_msgs.msg import Twist
 from tello_msg.srv import DroneMode
+from tello_msg.action import Spielberg
 
 
 class DroneModes:
@@ -52,6 +54,8 @@ class TelloBehaviour(Node):
             self.handle_mode_change
         )
         
+        self._action_client = ActionClient(self, Spielberg, 'spielberg')
+
         # --- Subscribers (depuis le noeud control/manual_control) ---
         self.sub_takeoff = self.create_subscription(
             Empty, '/control/takeoff', self.callback_takeoff, 10
@@ -131,9 +135,10 @@ class TelloBehaviour(Node):
 
         # Publier l'état du mode pour les autres noeuds (ex: surveillance)
         try:
-            mode_msg = Int32()
-            mode_msg.data = int(self.current_mode)
-            self.mode_pub.publish(mode_msg)
+            if not self.current_mode == DroneModes.SPIELBERG:
+                mode_msg = Int32()
+                mode_msg.data = int(self.current_mode)
+                self.mode_pub.publish(mode_msg)
         except Exception:
             # Ne doit pas bloquer la réponse du service
             self.get_logger().debug("Impossible de publier l'état du mode")
@@ -234,6 +239,38 @@ class TelloBehaviour(Node):
         # - Envoi de commandes de correction via self.pub_control
         self.get_logger().info("Mode QR Follower: Implémentation à compléter")
     
+    def send_goal(self):
+        """Envoie le goal à l'action server Spielberg"""
+        goal_msg = Spielberg.Goal()
+        goal_msg.flag = True
+
+        self._action_client.wait_for_server()
+        
+        # Envoyer le goal de manière asynchrone
+        future = self._action_client.send_goal_async(goal_msg)
+        future.add_done_callback(self.goal_response_callback)
+    
+    def goal_response_callback(self, future):
+        """Callback quand le goal est accepté ou rejeté"""
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().error('Goal Spielberg rejeté')
+            return
+        
+        self.get_logger().info('Goal Spielberg accepté')
+        
+        # Attendre le résultat
+        result_future = goal_handle.get_result_async()
+        result_future.add_done_callback(self.get_result_callback)
+    
+    def get_result_callback(self, future):
+        """Callback quand l'action est terminée"""
+        result = future.result().result
+        if result.success:
+            self.get_logger().info('Séquence Spielberg terminée avec succès')
+        else:
+            self.get_logger().warn('Séquence Spielberg échouée')
+
     def start_spielberg_mode(self):
         """
         Initialise le mode Spielberg (cinématique).
@@ -244,11 +281,8 @@ class TelloBehaviour(Node):
         - Maintenir une stabilité optimale pour la prise de vue
         """
         self.get_logger().info("Initialisation du mode Spielberg...")
-        # TODO: Ajouter la logique de mouvements cinématiques
-        # - Mouvements lents et fluides (travelling, panoramique)
-        # - Trajectoires préprogrammées
-        # - Lissage des commandes de mouvement
-        self.get_logger().info("Mode Spielberg: Implémentation à compléter")
+        self.send_goal()
+
     
     def start_surveillance_mode(self):
         """

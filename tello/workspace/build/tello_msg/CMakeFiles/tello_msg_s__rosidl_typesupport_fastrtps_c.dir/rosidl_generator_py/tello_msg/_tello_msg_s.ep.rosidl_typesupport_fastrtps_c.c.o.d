@@ -244,4 +244,8 @@ CMakeFiles/tello_msg_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/te
  /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__struct.h \
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
- /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.h
+ /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.h \
+ /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__type_support.h \
+ /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__struct.h \
+ /opt/ros/jazzy/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h \
+ /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__functions.h

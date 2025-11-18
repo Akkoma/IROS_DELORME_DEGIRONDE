@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from tello_msg/action/Spielberg.action
+// generated code does not contain a copyright notice
+
+
+module tello_msg {
+  module action {
+    @verbatim (language="comment", text=
+      "Request")
+    struct Spielberg_Goal {
+      boolean flag;
+    };
+    @verbatim (language="comment", text=
+      "Result")
+    struct Spielberg_Result {
+      boolean success;
+    };
+    @verbatim (language="comment", text=
+      "Feedback")
+    struct Spielberg_Feedback {
+      int32 time_remaining;
+    };
+  };
+};

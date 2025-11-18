@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/tello_msg__rosidl_generator_py.dir/rosidl_generator_py/tello_msg/action/_spielberg_s.c.o"
+  "CMakeFiles/tello_msg__rosidl_generator_py.dir/rosidl_generator_py/tello_msg/action/_spielberg_s.c.o.d"
   "CMakeFiles/tello_msg__rosidl_generator_py.dir/rosidl_generator_py/tello_msg/msg/_tello_id_s.c.o"
   "CMakeFiles/tello_msg__rosidl_generator_py.dir/rosidl_generator_py/tello_msg/msg/_tello_id_s.c.o.d"
   "CMakeFiles/tello_msg__rosidl_generator_py.dir/rosidl_generator_py/tello_msg/msg/_tello_status_s.c.o"

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/action/detail/spielberg__type_support_c.cpp.o"
+  "CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/action/detail/spielberg__type_support_c.cpp.o.d"
   "CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/msg/detail/tello_id__type_support_c.cpp.o"
   "CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/msg/detail/tello_id__type_support_c.cpp.o.d"
   "CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/msg/detail/tello_status__type_support_c.cpp.o"
@@ -9,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/srv/detail/drone_mode__type_support_c.cpp.o.d"
   "libtello_msg__rosidl_typesupport_fastrtps_c.pdb"
   "libtello_msg__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/tello_msg/action/detail/spielberg__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/tello_msg/action/detail/spielberg__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/tello_msg/msg/detail/tello_id__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/tello_msg/msg/detail/tello_id__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/tello_msg/msg/detail/tello_status__rosidl_typesupport_fastrtps_c.h"

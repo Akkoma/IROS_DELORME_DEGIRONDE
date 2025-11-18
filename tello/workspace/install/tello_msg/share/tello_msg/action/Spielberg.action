@@ -1,0 +1,8 @@
+# Request
+bool flag
+---
+# Result
+bool success
+---
+# Feedback
+int32 time_remaining

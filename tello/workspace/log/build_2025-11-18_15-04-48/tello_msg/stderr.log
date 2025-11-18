@@ -1,0 +1,38 @@
+In file included from [01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__functions.h:28[m[K,
+                 from [01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__description.c:5[m[K:
+[01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__struct.h:26:8:[m[K [01;31m[Kerror: [m[Kexpected identifier or ‘[01m[K([m[K’ before ‘[01m[Kdo[m[K’
+   26 |   bool [01;31m[Kdo[m[K;
+      |        [01;31m[K^~[m[K
+[01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__struct.h:27:1:[m[K [01;35m[Kwarning: [m[Kno semicolon at end of struct or union
+   27 | [01;35m[K}[m[K tello_msg__action__Spielberg_Goal;
+      | [01;35m[K^[m[K
+gmake[2]: *** [CMakeFiles/tello_msg__rosidl_generator_c.dir/build.make:443 : CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/action/detail/spielberg__description.c.o] Erreur 1
+gmake[2]: *** Attente des tâches non terminées....
+In file included from [01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__functions.h:28[m[K,
+                 from [01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__functions.c:4[m[K:
+[01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__struct.h:26:8:[m[K [01;31m[Kerror: [m[Kexpected identifier or ‘[01m[K([m[K’ before ‘[01m[Kdo[m[K’
+   26 |   bool [01;31m[Kdo[m[K;
+      |        [01;31m[K^~[m[K
+[01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__struct.h:27:1:[m[K [01;35m[Kwarning: [m[Kno semicolon at end of struct or union
+   27 | [01;35m[K}[m[K tello_msg__action__Spielberg_Goal;
+      | [01;35m[K^[m[K
+[01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__functions.c:[m[K In function ‘[01m[Ktello_msg__action__Spielberg_Goal__are_equal[m[K’:
+[01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__functions.c:40:12:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[Kdo[m[K’
+   40 |   if (lhs->[01;31m[Kdo[m[K != rhs->do) {
+      |            [01;31m[K^~[m[K
+[01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__functions.c:[m[K In function ‘[01m[Ktello_msg__action__Spielberg_Goal__copy[m[K’:
+[01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__functions.c:55:11:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[Kdo[m[K’
+   55 |   output->[01;31m[Kdo[m[K = input->do;
+      |           [01;31m[K^~[m[K
+In file included from [01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__functions.h:28[m[K,
+                 from [01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__type_support.c:8[m[K:
+[01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__struct.h:26:8:[m[K [01;31m[Kerror: [m[Kexpected identifier or ‘[01m[K([m[K’ before ‘[01m[Kdo[m[K’
+   26 |   bool [01;31m[Kdo[m[K;
+      |        [01;31m[K^~[m[K
+[01m[K/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/action/detail/spielberg__struct.h:27:1:[m[K [01;35m[Kwarning: [m[Kno semicolon at end of struct or union
+   27 | [01;35m[K}[m[K tello_msg__action__Spielberg_Goal;
+      | [01;35m[K^[m[K
+gmake[2]: *** [CMakeFiles/tello_msg__rosidl_generator_c.dir/build.make:457 : CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/action/detail/spielberg__functions.c.o] Erreur 1
+gmake[2]: *** [CMakeFiles/tello_msg__rosidl_generator_c.dir/build.make:471 : CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/action/detail/spielberg__type_support.c.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:241 : CMakeFiles/tello_msg__rosidl_generator_c.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2

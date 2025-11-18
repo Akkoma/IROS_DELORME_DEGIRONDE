@@ -1,0 +1,495 @@
+[0.000000] (-) TimerEvent: {}
+[0.000499] (-) JobUnselected: {'identifier': 'controller'}
+[0.000567] (-) JobUnselected: {'identifier': 'tello_control'}
+[0.000605] (tello_msg) JobQueued: {'identifier': 'tello_msg', 'dependencies': OrderedDict()}
+[0.000638] (tello_msg) JobStarted: {'identifier': 'tello_msg'}
+[0.026882] (tello_msg) JobProgress: {'identifier': 'tello_msg', 'progress': 'cmake'}
+[0.026962] (tello_msg) Command: {'cmd': ['/usr/bin/cmake', '/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg', '-DCMAKE_INSTALL_PREFIX=/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg'], 'cwd': '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'HISTFILESIZE': '2000', 'HISTTIMEFORMAT': '%F %T', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'alix.degironde', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'PT8HOME': '/opt/pt', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'XDG_CACHE_HOME': '/run/shm/.cache/alix.degironde', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/alix.degironde', 'CHROME_DESKTOP': 'code.desktop', 'OLDPWD': '/home/alix.degironde/Public/tello-ros2', 'TERM_PROGRAM_VERSION': '1.106.1', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '75677', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '76140', 'BUNDLED_DEBUGPY_PATH': '/opt/visual-studio-code-plugins/ms-python.debugpy-2025.16.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/31633/bus', 'COLORTERM': 'truecolor', 'LIBVIRT_DEFAULT_URI': 'qemu:///system', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '79038', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'alix.degironde', 'JOURNAL_STREAM': '9:320074', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-31633.slice/user@31633.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'alix.degironde', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': ':/opt/ros/jazzy/share/turtlebot3_gazebo/models', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '1', 'HISTCONTROL': 'ignoreboth', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/alix.degironde/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/alix.degironde/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/softwares/bin:/usr/local/cpe/bin:/usr/local/cpe/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/opt/visual-studio-code-plugins/ms-python.debugpy-2025.16.0-linux-x64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/tpi102-02.cpe.lan:@/tmp/.ICE-unix/76122,unix/tpi102-02.cpe.lan:/tmp/.ICE-unix/76122', 'INVOCATION_ID': '358270ea3dde4422960ac74bf4adae5b', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/31633', 'GDK_BACKEND': 'x11', 'DISPLAY': ':1', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/opt/visual-studio-code-plugins/ms-python.debugpy-2025.16.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-66846923881e429d.txt', 'HISTSIZE': '1000', 'LANG': 'fr_FR.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/31633/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/31633/vscode-git-0253c452c8.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/31633/gnupg/S.gpg-agent.ssh', 'ROS_DOMAIN_ID': '69', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/31633/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg', 'TURTLEBOT3_MODEL': 'waffle', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/alix.degironde/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.093519] (-) TimerEvent: {}
+[0.195860] (-) TimerEvent: {}
+[0.297621] (-) TimerEvent: {}
+[0.375300] (tello_msg) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.398711] (-) TimerEvent: {}
+[0.499425] (-) TimerEvent: {}
+[0.603964] (-) TimerEvent: {}
+[0.722832] (-) TimerEvent: {}
+[0.775835] (tello_msg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.827337] (-) TimerEvent: {}
+[0.874313] (tello_msg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.927631] (-) TimerEvent: {}
+[1.030998] (-) TimerEvent: {}
+[1.132136] (-) TimerEvent: {}
+[1.240558] (-) TimerEvent: {}
+[1.309257] (tello_msg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.369628] (tello_msg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.370541] (-) TimerEvent: {}
+[1.372321] (tello_msg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.373317] (tello_msg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.471887] (-) TimerEvent: {}
+[1.484290] (tello_msg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.572681] (-) TimerEvent: {}
+[1.677630] (-) TimerEvent: {}
+[1.782612] (-) TimerEvent: {}
+[1.883221] (-) TimerEvent: {}
+[1.987026] (-) TimerEvent: {}
+[2.004838] (tello_msg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.087142] (-) TimerEvent: {}
+[2.088296] (tello_msg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.088758] (tello_msg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.090715] (tello_msg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.137490] (tello_msg) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[2.189468] (-) TimerEvent: {}
+[2.292475] (-) TimerEvent: {}
+[2.395214] (-) TimerEvent: {}
+[2.498382] (-) TimerEvent: {}
+[2.599026] (-) TimerEvent: {}
+[2.701498] (-) TimerEvent: {}
+[2.807746] (-) TimerEvent: {}
+[2.908230] (-) TimerEvent: {}
+[3.008776] (-) TimerEvent: {}
+[3.112489] (-) TimerEvent: {}
+[3.163824] (tello_msg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[3.226664] (-) TimerEvent: {}
+[3.326959] (-) TimerEvent: {}
+[3.430482] (-) TimerEvent: {}
+[3.438986] (tello_msg) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[3.451283] (tello_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.533689] (-) TimerEvent: {}
+[3.591601] (tello_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.635079] (-) TimerEvent: {}
+[3.720118] (tello_msg) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.6 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[3.727366] (tello_msg) StdoutLine: {'line': b'-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[3.737915] (-) TimerEvent: {}
+[3.802826] (tello_msg) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[3.829757] (tello_msg) StdoutLine: {'line': b'-- Found action_msgs: 2.0.3 (/opt/ros/jazzy/share/action_msgs/cmake)\n'}
+[3.841638] (-) TimerEvent: {}
+[3.942334] (-) TimerEvent: {}
+[4.044525] (-) TimerEvent: {}
+[4.151043] (-) TimerEvent: {}
+[4.256699] (-) TimerEvent: {}
+[4.360264] (-) TimerEvent: {}
+[4.460847] (-) TimerEvent: {}
+[4.564793] (-) TimerEvent: {}
+[4.665334] (-) TimerEvent: {}
+[4.765680] (-) TimerEvent: {}
+[4.868650] (-) TimerEvent: {}
+[4.974392] (-) TimerEvent: {}
+[5.075241] (-) TimerEvent: {}
+[5.179054] (-) TimerEvent: {}
+[5.283320] (-) TimerEvent: {}
+[5.389766] (-) TimerEvent: {}
+[5.492035] (-) TimerEvent: {}
+[5.592963] (-) TimerEvent: {}
+[5.695840] (-) TimerEvent: {}
+[5.715063] (tello_msg) StdoutLine: {'line': b'-- Found ament_cmake_cppcheck: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_cppcheck/cmake)\n'}
+[5.742267] (tello_msg) StdoutLine: {'line': b'-- Found ament_cmake_cpplint: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_cpplint/cmake)\n'}
+[5.761922] (tello_msg) StdoutLine: {'line': b'-- Found ament_cmake_uncrustify: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_uncrustify/cmake)\n'}
+[5.782369] (tello_msg) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[5.795940] (-) TimerEvent: {}
+[5.898479] (-) TimerEvent: {}
+[5.998817] (-) TimerEvent: {}
+[6.099241] (-) TimerEvent: {}
+[6.205447] (-) TimerEvent: {}
+[6.310753] (-) TimerEvent: {}
+[6.412354] (-) TimerEvent: {}
+[6.514241] (-) TimerEvent: {}
+[6.615747] (-) TimerEvent: {}
+[6.716239] (-) TimerEvent: {}
+[6.816599] (-) TimerEvent: {}
+[6.916895] (-) TimerEvent: {}
+[7.017227] (-) TimerEvent: {}
+[7.107590] (tello_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.117444] (-) TimerEvent: {}
+[7.220381] (-) TimerEvent: {}
+[7.321147] (-) TimerEvent: {}
+[7.421940] (-) TimerEvent: {}
+[7.522386] (-) TimerEvent: {}
+[7.622873] (-) TimerEvent: {}
+[7.724118] (-) TimerEvent: {}
+[7.824575] (-) TimerEvent: {}
+[7.926284] (-) TimerEvent: {}
+[8.028259] (-) TimerEvent: {}
+[8.130297] (-) TimerEvent: {}
+[8.230714] (-) TimerEvent: {}
+[8.333243] (-) TimerEvent: {}
+[8.434082] (-) TimerEvent: {}
+[8.536637] (-) TimerEvent: {}
+[8.637345] (-) TimerEvent: {}
+[8.738815] (-) TimerEvent: {}
+[8.839415] (-) TimerEvent: {}
+[8.937491] (tello_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.940406] (-) TimerEvent: {}
+[8.965304] (tello_msg) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[9.041337] (-) TimerEvent: {}
+[9.142320] (-) TimerEvent: {}
+[9.246217] (-) TimerEvent: {}
+[9.346525] (-) TimerEvent: {}
+[9.451535] (-) TimerEvent: {}
+[9.474102] (tello_msg) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[9.551773] (-) TimerEvent: {}
+[9.652746] (-) TimerEvent: {}
+[9.756604] (-) TimerEvent: {}
+[9.857459] (-) TimerEvent: {}
+[9.958531] (-) TimerEvent: {}
+[10.061417] (-) TimerEvent: {}
+[10.161962] (-) TimerEvent: {}
+[10.262800] (-) TimerEvent: {}
+[10.364349] (-) TimerEvent: {}
+[10.390093] (tello_msg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[10.467228] (-) TimerEvent: {}
+[10.536552] (tello_msg) StdoutLine: {'line': b'-- Found ament_cmake_flake8: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_flake8/cmake)\n'}
+[10.545491] (tello_msg) StdoutLine: {'line': b'-- Found ament_cmake_pep257: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_pep257/cmake)\n'}
+[10.559277] (tello_msg) StdoutLine: {'line': b'-- Configuring done (10.5s)\n'}
+[10.567324] (-) TimerEvent: {}
+[10.669804] (tello_msg) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[10.670230] (-) TimerEvent: {}
+[10.685906] (tello_msg) StdoutLine: {'line': b'-- Build files have been written to: /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg\n'}
+[10.723234] (tello_msg) CommandEnded: {'returncode': 0}
+[10.723780] (tello_msg) JobProgress: {'identifier': 'tello_msg', 'progress': 'build'}
+[10.723814] (tello_msg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg', '--', '-j4', '-l4'], 'cwd': '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'HISTFILESIZE': '2000', 'HISTTIMEFORMAT': '%F %T', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'alix.degironde', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'PT8HOME': '/opt/pt', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'XDG_CACHE_HOME': '/run/shm/.cache/alix.degironde', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/alix.degironde', 'CHROME_DESKTOP': 'code.desktop', 'OLDPWD': '/home/alix.degironde/Public/tello-ros2', 'TERM_PROGRAM_VERSION': '1.106.1', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '75677', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '76140', 'BUNDLED_DEBUGPY_PATH': '/opt/visual-studio-code-plugins/ms-python.debugpy-2025.16.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/31633/bus', 'COLORTERM': 'truecolor', 'LIBVIRT_DEFAULT_URI': 'qemu:///system', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '79038', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'alix.degironde', 'JOURNAL_STREAM': '9:320074', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-31633.slice/user@31633.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'alix.degironde', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': ':/opt/ros/jazzy/share/turtlebot3_gazebo/models', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '1', 'HISTCONTROL': 'ignoreboth', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/alix.degironde/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/alix.degironde/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/softwares/bin:/usr/local/cpe/bin:/usr/local/cpe/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/opt/visual-studio-code-plugins/ms-python.debugpy-2025.16.0-linux-x64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/tpi102-02.cpe.lan:@/tmp/.ICE-unix/76122,unix/tpi102-02.cpe.lan:/tmp/.ICE-unix/76122', 'INVOCATION_ID': '358270ea3dde4422960ac74bf4adae5b', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/31633', 'GDK_BACKEND': 'x11', 'DISPLAY': ':1', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/opt/visual-studio-code-plugins/ms-python.debugpy-2025.16.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-66846923881e429d.txt', 'HISTSIZE': '1000', 'LANG': 'fr_FR.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/31633/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/31633/vscode-git-0253c452c8.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/31633/gnupg/S.gpg-agent.ssh', 'ROS_DOMAIN_ID': '69', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/31633/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg', 'TURTLEBOT3_MODEL': 'waffle', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/alix.degironde/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[10.774230] (-) TimerEvent: {}
+[10.874711] (-) TimerEvent: {}
+[10.907373] (tello_msg) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[10.974861] (-) TimerEvent: {}
+[11.079348] (-) TimerEvent: {}
+[11.179969] (-) TimerEvent: {}
+[11.280893] (-) TimerEvent: {}
+[11.382656] (-) TimerEvent: {}
+[11.482946] (-) TimerEvent: {}
+[11.589264] (-) TimerEvent: {}
+[11.689577] (-) TimerEvent: {}
+[11.792430] (-) TimerEvent: {}
+[11.895154] (-) TimerEvent: {}
+[11.999136] (-) TimerEvent: {}
+[12.101097] (-) TimerEvent: {}
+[12.138414] (tello_msg) StdoutLine: {'line': b'[  1%] Built target tello_msg__rosidl_generator_type_description\n'}
+[12.211649] (-) TimerEvent: {}
+[12.220968] (tello_msg) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_copy_tello_msg\n'}
+[12.248686] (tello_msg) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[12.312068] (-) TimerEvent: {}
+[12.413842] (-) TimerEvent: {}
+[12.518157] (-) TimerEvent: {}
+[12.618537] (-) TimerEvent: {}
+[12.719034] (-) TimerEvent: {}
+[12.828150] (-) TimerEvent: {}
+[12.928679] (-) TimerEvent: {}
+[13.031486] (-) TimerEvent: {}
+[13.132339] (-) TimerEvent: {}
+[13.243038] (-) TimerEvent: {}
+[13.345283] (-) TimerEvent: {}
+[13.457208] (-) TimerEvent: {}
+[13.559542] (-) TimerEvent: {}
+[13.662800] (-) TimerEvent: {}
+[13.766359] (-) TimerEvent: {}
+[13.868229] (-) TimerEvent: {}
+[13.968522] (-) TimerEvent: {}
+[14.068918] (-) TimerEvent: {}
+[14.171244] (-) TimerEvent: {}
+[14.273010] (-) TimerEvent: {}
+[14.373898] (-) TimerEvent: {}
+[14.477259] (-) TimerEvent: {}
+[14.577688] (-) TimerEvent: {}
+[14.679282] (-) TimerEvent: {}
+[14.779601] (-) TimerEvent: {}
+[14.880008] (-) TimerEvent: {}
+[14.983628] (tello_msg) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_status__description.c.o\x1b[0m\n'}
+[14.984111] (-) TimerEvent: {}
+[15.066245] (tello_msg) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_status__functions.c.o\x1b[0m\n'}
+[15.085280] (-) TimerEvent: {}
+[15.185588] (-) TimerEvent: {}
+[15.193848] (tello_msg) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_status__type_support.c.o\x1b[0m\n'}
+[15.267897] (tello_msg) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_id__description.c.o\x1b[0m\n'}
+[15.285782] (-) TimerEvent: {}
+[15.348412] (tello_msg) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_id__functions.c.o\x1b[0m\n'}
+[15.387782] (-) TimerEvent: {}
+[15.486474] (tello_msg) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_id__type_support.c.o\x1b[0m\n'}
+[15.487863] (-) TimerEvent: {}
+[15.580641] (tello_msg) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__description.c.o\x1b[0m\n'}
+[15.587963] (-) TimerEvent: {}
+[15.659154] (tello_msg) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__functions.c.o\x1b[0m\n'}
+[15.688101] (-) TimerEvent: {}
+[15.760828] (tello_msg) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.c.o\x1b[0m\n'}
+[15.788261] (-) TimerEvent: {}
+[15.826625] (tello_msg) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.o\x1b[0m\n'}
+[15.891288] (-) TimerEvent: {}
+[15.917646] (tello_msg) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.o\x1b[0m\n'}
+[15.991550] (-) TimerEvent: {}
+[16.093309] (tello_msg) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.o\x1b[0m\n'}
+[16.093606] (-) TimerEvent: {}
+[16.165148] (tello_msg) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/action/detail/spielberg__description.c.o\x1b[0m\n'}
+[16.194450] (-) TimerEvent: {}
+[16.294835] (-) TimerEvent: {}
+[16.320557] (tello_msg) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/action/detail/spielberg__functions.c.o\x1b[0m\n'}
+[16.397100] (-) TimerEvent: {}
+[16.497741] (-) TimerEvent: {}
+[16.598094] (-) TimerEvent: {}
+[16.701347] (-) TimerEvent: {}
+[16.747032] (tello_msg) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/action/detail/spielberg__type_support.c.o\x1b[0m\n'}
+[16.802230] (-) TimerEvent: {}
+[16.866520] (tello_msg) StdoutLine: {'line': b'[ 24%] \x1b[32m\x1b[1mLinking C shared library libtello_msg__rosidl_generator_c.so\x1b[0m\n'}
+[16.902343] (-) TimerEvent: {}
+[16.971343] (tello_msg) StdoutLine: {'line': b'[ 24%] Built target tello_msg__rosidl_generator_c\n'}
+[17.002820] (-) TimerEvent: {}
+[17.103637] (-) TimerEvent: {}
+[17.204218] (-) TimerEvent: {}
+[17.304584] (-) TimerEvent: {}
+[17.407891] (-) TimerEvent: {}
+[17.511275] (-) TimerEvent: {}
+[17.611716] (-) TimerEvent: {}
+[17.712011] (-) TimerEvent: {}
+[17.792279] (tello_msg) StdoutLine: {'line': b'running egg_info\n'}
+[17.793609] (tello_msg) StdoutLine: {'line': b'creating tello_msg.egg-info\n'}
+[17.812095] (-) TimerEvent: {}
+[17.853817] (tello_msg) StdoutLine: {'line': b'writing tello_msg.egg-info/PKG-INFO\n'}
+[17.855086] (tello_msg) StdoutLine: {'line': b'writing dependency_links to tello_msg.egg-info/dependency_links.txt\n'}
+[17.855641] (tello_msg) StdoutLine: {'line': b'writing top-level names to tello_msg.egg-info/top_level.txt\n'}
+[17.858507] (tello_msg) StdoutLine: {'line': b"writing manifest file 'tello_msg.egg-info/SOURCES.txt'\n"}
+[17.914283] (-) TimerEvent: {}
+[18.014563] (-) TimerEvent: {}
+[18.078694] (tello_msg) StdoutLine: {'line': b"reading manifest file 'tello_msg.egg-info/SOURCES.txt'\n"}
+[18.079376] (tello_msg) StdoutLine: {'line': b"writing manifest file 'tello_msg.egg-info/SOURCES.txt'\n"}
+[18.114789] (-) TimerEvent: {}
+[18.184627] (tello_msg) StdoutLine: {'line': b'[ 24%] Built target ament_cmake_python_build_tello_msg_egg\n'}
+[18.205000] (tello_msg) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[18.215541] (-) TimerEvent: {}
+[18.315853] (-) TimerEvent: {}
+[18.416224] (-) TimerEvent: {}
+[18.517624] (-) TimerEvent: {}
+[18.619458] (-) TimerEvent: {}
+[18.719955] (-) TimerEvent: {}
+[18.820483] (-) TimerEvent: {}
+[18.920939] (-) TimerEvent: {}
+[19.021845] (-) TimerEvent: {}
+[19.122831] (-) TimerEvent: {}
+[19.225268] (-) TimerEvent: {}
+[19.326928] (-) TimerEvent: {}
+[19.430339] (-) TimerEvent: {}
+[19.447510] (tello_msg) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msg/msg/detail/tello_status__type_support.c.o\x1b[0m\n'}
+[19.530488] (-) TimerEvent: {}
+[19.530849] (tello_msg) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msg/msg/detail/tello_id__type_support.c.o\x1b[0m\n'}
+[19.597092] (tello_msg) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msg/msg/detail/tello_wifi_config__type_support.c.o\x1b[0m\n'}
+[19.630567] (-) TimerEvent: {}
+[19.666492] (tello_msg) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msg/srv/detail/drone_mode__type_support.c.o\x1b[0m\n'}
+[19.731491] (-) TimerEvent: {}
+[19.745467] (tello_msg) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msg/action/detail/spielberg__type_support.c.o\x1b[0m\n'}
+[19.836262] (-) TimerEvent: {}
+[19.929353] (tello_msg) StdoutLine: {'line': b'[ 33%] \x1b[32m\x1b[1mLinking C shared library libtello_msg__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[19.936382] (-) TimerEvent: {}
+[20.036708] (-) TimerEvent: {}
+[20.046174] (tello_msg) StdoutLine: {'line': b'[ 33%] Built target tello_msg__rosidl_typesupport_introspection_c\n'}
+[20.092993] (tello_msg) StdoutLine: {'line': b'[ 35%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[20.136813] (-) TimerEvent: {}
+[20.238359] (-) TimerEvent: {}
+[20.338990] (-) TimerEvent: {}
+[20.439480] (-) TimerEvent: {}
+[20.543376] (-) TimerEvent: {}
+[20.644010] (-) TimerEvent: {}
+[20.745828] (-) TimerEvent: {}
+[20.847615] (-) TimerEvent: {}
+[20.947916] (-) TimerEvent: {}
+[21.048226] (-) TimerEvent: {}
+[21.149121] (-) TimerEvent: {}
+[21.250219] (-) TimerEvent: {}
+[21.350510] (-) TimerEvent: {}
+[21.461225] (tello_msg) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp.o\x1b[0m\n'}
+[21.461479] (-) TimerEvent: {}
+[21.527375] (tello_msg) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/msg/tello_id__type_support.cpp.o\x1b[0m\n'}
+[21.561642] (-) TimerEvent: {}
+[21.606245] (tello_msg) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/msg/tello_wifi_config__type_support.cpp.o\x1b[0m\n'}
+[21.662469] (-) TimerEvent: {}
+[21.696911] (tello_msg) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/srv/drone_mode__type_support.cpp.o\x1b[0m\n'}
+[21.762354] (-) TimerEvent: {}
+[21.790427] (tello_msg) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.o\x1b[0m\n'}
+[21.862813] (-) TimerEvent: {}
+[21.894646] (tello_msg) StdoutLine: {'line': b'[ 43%] \x1b[32m\x1b[1mLinking CXX shared library libtello_msg__rosidl_typesupport_c.so\x1b[0m\n'}
+[21.962918] (-) TimerEvent: {}
+[21.966267] (tello_msg) StdoutLine: {'line': b'[ 43%] Built target tello_msg__rosidl_typesupport_c\n'}
+[21.986392] (tello_msg) StdoutLine: {'line': b'[ 44%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[22.065892] (-) TimerEvent: {}
+[22.169218] (-) TimerEvent: {}
+[22.269520] (-) TimerEvent: {}
+[22.369965] (-) TimerEvent: {}
+[22.470382] (-) TimerEvent: {}
+[22.570800] (-) TimerEvent: {}
+[22.671701] (-) TimerEvent: {}
+[22.775633] (-) TimerEvent: {}
+[22.876544] (-) TimerEvent: {}
+[22.977214] (-) TimerEvent: {}
+[23.077901] (-) TimerEvent: {}
+[23.178719] (-) TimerEvent: {}
+[23.279889] (-) TimerEvent: {}
+[23.380937] (-) TimerEvent: {}
+[23.482475] (-) TimerEvent: {}
+[23.571058] (tello_msg) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/msg/detail/tello_status__type_support_c.cpp.o\x1b[0m\n'}
+[23.582597] (-) TimerEvent: {}
+[23.685245] (-) TimerEvent: {}
+[23.786084] (-) TimerEvent: {}
+[23.889932] (-) TimerEvent: {}
+[23.990322] (-) TimerEvent: {}
+[24.091250] (-) TimerEvent: {}
+[24.192275] (-) TimerEvent: {}
+[24.293305] (-) TimerEvent: {}
+[24.393638] (-) TimerEvent: {}
+[24.493974] (-) TimerEvent: {}
+[24.506354] (tello_msg) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/msg/detail/tello_wifi_config__type_support_c.cpp.o\x1b[0m\n'}
+[24.594071] (-) TimerEvent: {}
+[24.694496] (-) TimerEvent: {}
+[24.795287] (-) TimerEvent: {}
+[24.897389] (-) TimerEvent: {}
+[25.000599] (-) TimerEvent: {}
+[25.101131] (-) TimerEvent: {}
+[25.201840] (-) TimerEvent: {}
+[25.302924] (-) TimerEvent: {}
+[25.399224] (tello_msg) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/srv/detail/drone_mode__type_support_c.cpp.o\x1b[0m\n'}
+[25.404219] (-) TimerEvent: {}
+[25.504568] (-) TimerEvent: {}
+[25.608789] (-) TimerEvent: {}
+[25.711111] (-) TimerEvent: {}
+[25.811537] (-) TimerEvent: {}
+[25.912862] (-) TimerEvent: {}
+[26.013315] (-) TimerEvent: {}
+[26.114741] (-) TimerEvent: {}
+[26.216414] (-) TimerEvent: {}
+[26.317065] (-) TimerEvent: {}
+[26.329643] (tello_msg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/action/detail/spielberg__type_support_c.cpp.o\x1b[0m\n'}
+[26.417191] (-) TimerEvent: {}
+[26.525338] (-) TimerEvent: {}
+[26.634346] (-) TimerEvent: {}
+[26.734916] (-) TimerEvent: {}
+[26.835340] (-) TimerEvent: {}
+[26.935825] (-) TimerEvent: {}
+[27.039571] (-) TimerEvent: {}
+[27.139997] (-) TimerEvent: {}
+[27.240564] (-) TimerEvent: {}
+[27.343240] (-) TimerEvent: {}
+[27.443600] (-) TimerEvent: {}
+[27.543986] (-) TimerEvent: {}
+[27.646230] (-) TimerEvent: {}
+[27.746570] (-) TimerEvent: {}
+[27.815808] (tello_msg) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/msg/detail/tello_id__type_support_c.cpp.o\x1b[0m\n'}
+[27.847624] (-) TimerEvent: {}
+[27.948268] (-) TimerEvent: {}
+[28.048646] (-) TimerEvent: {}
+[28.149671] (-) TimerEvent: {}
+[28.250214] (-) TimerEvent: {}
+[28.351667] (-) TimerEvent: {}
+[28.452586] (-) TimerEvent: {}
+[28.553012] (-) TimerEvent: {}
+[28.656417] (-) TimerEvent: {}
+[28.718495] (tello_msg) StdoutLine: {'line': b'[ 52%] \x1b[32m\x1b[1mLinking CXX shared library libtello_msg__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[28.756523] (-) TimerEvent: {}
+[28.857767] (-) TimerEvent: {}
+[28.920612] (tello_msg) StdoutLine: {'line': b'[ 52%] Built target tello_msg__rosidl_typesupport_fastrtps_c\n'}
+[28.957989] (-) TimerEvent: {}
+[28.959985] (tello_msg) StdoutLine: {'line': b'[ 54%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[29.060234] (-) TimerEvent: {}
+[29.160692] (-) TimerEvent: {}
+[29.260999] (-) TimerEvent: {}
+[29.361837] (-) TimerEvent: {}
+[29.465485] (-) TimerEvent: {}
+[29.569236] (-) TimerEvent: {}
+[29.669669] (-) TimerEvent: {}
+[29.772367] (-) TimerEvent: {}
+[29.872686] (-) TimerEvent: {}
+[29.973024] (-) TimerEvent: {}
+[30.073386] (-) TimerEvent: {}
+[30.180342] (-) TimerEvent: {}
+[30.280646] (-) TimerEvent: {}
+[30.380997] (-) TimerEvent: {}
+[30.485369] (-) TimerEvent: {}
+[30.596695] (-) TimerEvent: {}
+[30.697193] (-) TimerEvent: {}
+[30.797539] (-) TimerEvent: {}
+[30.904412] (-) TimerEvent: {}
+[31.007564] (-) TimerEvent: {}
+[31.110435] (-) TimerEvent: {}
+[31.214080] (-) TimerEvent: {}
+[31.316154] (-) TimerEvent: {}
+[31.418715] (-) TimerEvent: {}
+[31.521345] (-) TimerEvent: {}
+[31.570018] (tello_msg) StdoutLine: {'line': b'[ 54%] Built target tello_msg__cpp\n'}
+[31.621677] (tello_msg) StdoutLine: {'line': b'[ 55%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[31.622437] (-) TimerEvent: {}
+[31.723284] (-) TimerEvent: {}
+[31.823976] (-) TimerEvent: {}
+[31.930233] (-) TimerEvent: {}
+[32.030550] (-) TimerEvent: {}
+[32.131057] (-) TimerEvent: {}
+[32.232183] (-) TimerEvent: {}
+[32.332901] (-) TimerEvent: {}
+[32.422954] (tello_msg) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[32.423617] (tello_msg) StderrLine: {'line': b'  File "/opt/ros/jazzy/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp", line 28, in <module>\n'}
+[32.423742] (tello_msg) StderrLine: {'line': b'    sys.exit(main())\n'}
+[32.423858] (tello_msg) StderrLine: {'line': b'             ^^^^^^\n'}
+[32.423963] (tello_msg) StderrLine: {'line': b'  File "/opt/ros/jazzy/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp", line 24, in main\n'}
+[32.426369] (tello_msg) StderrLine: {'line': b'    generate_cpp(args.generator_arguments_file, args.typesupports)\n'}
+[32.426636] (tello_msg) StderrLine: {'line': b'  File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_typesupport_cpp/__init__.py", line 28, in generate_cpp\n'}
+[32.426850] (tello_msg) StderrLine: {'line': b'    return generate_files(\n'}
+[32.435506] (-) TimerEvent: {}
+[32.440987] (tello_msg) StderrLine: {'line': b'           ^^^^^^^^^^^^^^^\n'}
+[32.446354] (tello_msg) StderrLine: {'line': b'  File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_pycommon/__init__.py", line 117, in generate_files\n'}
+[32.447097] (tello_msg) StderrLine: {'line': b'gmake[2]: *** Suppression du fichier \xc2\xab\xc2\xa0rosidl_typesupport_cpp/tello_msg/msg/tello_status__type_support.cpp\xc2\xa0\xc2\xbb\n'}
+[32.447238] (tello_msg) StderrLine: {'line': b'    expand_template(\n'}
+[32.457660] (tello_msg) StderrLine: {'line': b'  File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_pycommon/__init__.py", line 193, in expand_template\n'}
+[32.460922] (tello_msg) StderrLine: {'line': b'    interpreter.string(template_content, template_path, locals=data)\n'}
+[32.461067] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2391, in string\n'}
+[32.461194] (tello_msg) StderrLine: {'line': b'    self.safe(scanner, True, locals)\n'}
+[32.461341] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2401, in safe\n'}
+[32.461485] (tello_msg) StderrLine: {'line': b'    self.parse(scanner, locals)\n'}
+[32.461626] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2421, in parse\n'}
+[32.461753] (tello_msg) StderrLine: {'line': b'    token.run(self, locals)\n'}
+[32.461873] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 1547, in run\n'}
+[32.462025] (tello_msg) StderrLine: {'line': b'    self.subrun(info[0][1], interpreter, locals)\n'}
+[32.462147] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 1631, in subrun\n'}
+[32.481373] (tello_msg) StderrLine: {'line': b'    token.run(interpreter, locals)\n'}
+[32.482526] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 1425, in run\n'}
+[32.482828] (tello_msg) StderrLine: {'line': b'    interpreter.execute(self.code, locals)\n'}
+[32.482968] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2596, in execute\n'}
+[32.483097] (tello_msg) StderrLine: {'line': b'    _exec(statements, self.globals, locals)\n'}
+[32.493701] (tello_msg) StderrLine: {'line': b'  File "<string>", line 2, in <module>\n'}
+[32.493944] (tello_msg) StderrLine: {'line': b'  File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_pycommon/__init__.py", line 245, in _expand_template\n'}
+[32.494078] (tello_msg) StderrLine: {'line': b'    interpreter.string(content, template_path, locals=kwargs)\n'}
+[32.494226] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2391, in string\n'}
+[32.494364] (tello_msg) StderrLine: {'line': b'    self.safe(scanner, True, locals)\n'}
+[32.494500] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2401, in safe\n'}
+[32.494632] (tello_msg) StderrLine: {'line': b'    self.parse(scanner, locals)\n'}
+[32.494760] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2421, in parse\n'}
+[32.494892] (tello_msg) StderrLine: {'line': b'    token.run(self, locals)\n'}
+[32.495028] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 1425, in run\n'}
+[32.495173] (tello_msg) StderrLine: {'line': b'    interpreter.execute(self.code, locals)\n'}
+[32.495295] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2596, in execute\n'}
+[32.495440] (tello_msg) StderrLine: {'line': b'    _exec(statements, self.globals, locals)\n'}
+[32.495567] (tello_msg) StderrLine: {'line': b'  File "<string>", line 2, in <module>\n'}
+[32.495689] (tello_msg) StderrLine: {'line': b'  File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_pycommon/__init__.py", line 245, in _expand_template\n'}
+[32.495802] (tello_msg) StderrLine: {'line': b'    interpreter.string(content, template_path, locals=kwargs)\n'}
+[32.495914] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2391, in string\n'}
+[32.496039] (tello_msg) StderrLine: {'line': b'    self.safe(scanner, True, locals)\n'}
+[32.502363] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2401, in safe\n'}
+[32.502866] (tello_msg) StderrLine: {'line': b'    self.parse(scanner, locals)\n'}
+[32.502995] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2417, in parse\n'}
+[32.503108] (tello_msg) StderrLine: {'line': b'    token = scanner.one()\n'}
+[32.503250] (tello_msg) StderrLine: {'line': b'            ^^^^^^^^^^^^^\n'}
+[32.503372] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 1969, in one\n'}
+[32.503482] (tello_msg) StderrLine: {'line': b'    prefix = self.chop(1)\n'}
+[32.503595] (tello_msg) StderrLine: {'line': b'             ^^^^^^^^^^^^\n'}
+[32.503708] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 1724, in chop\n'}
+[32.503824] (tello_msg) StderrLine: {'line': b'    if count > len(self):\n'}
+[32.503943] (tello_msg) StderrLine: {'line': b'               ^^^^^^^^^\n'}
+[32.504131] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 1680, in __len__\n'}
+[32.504329] (tello_msg) StderrLine: {'line': b'    def __len__(self): return len(self.buffer) - self.pointer\n'}
+[32.504465] (tello_msg) StderrLine: {'line': b'\n'}
+[32.508866] (tello_msg) StderrLine: {'line': b'KeyboardInterrupt\n'}
+[32.513138] (tello_msg) StderrLine: {'line': b'Exception ignored in: <function Interpreter.__del__ at 0x744556e132e0>\n'}
+[32.513744] (tello_msg) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[32.513932] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2094, in __del__\n'}
+[32.514129] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2157, in shutdown\n'}
+[32.514285] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2647, in finalize\n'}
+[32.514401] (tello_msg) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/em.py", line 2200, in push\n'}
+[32.514511] (tello_msg) StderrLine: {'line': b"AttributeError: '_io.TextIOWrapper' object has no attribute 'push'\n"}
+[32.537245] (-) TimerEvent: {}
+[32.541274] (tello_msg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/tello_msg__rosidl_typesupport_cpp.dir/build.make:154: rosidl_typesupport_cpp/tello_msg/msg/tello_status__type_support.cpp] Interrompre\n'}
+[32.541518] (tello_msg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:425: CMakeFiles/tello_msg__rosidl_typesupport_cpp.dir/all] Interrompre\n'}
+[32.543536] (tello_msg) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Interrompre\n'}
+[32.550757] (tello_msg) CommandEnded: {'returncode': -2}
+[32.594724] (tello_msg) JobEnded: {'identifier': 'tello_msg', 'rc': 'SIGINT'}
+[32.595900] (-) EventReactorShutdown: {}

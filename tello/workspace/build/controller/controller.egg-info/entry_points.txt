@@ -1,5 +1,7 @@
 [console_scripts]
 manual_control = controller.manual_control:main
+qr_code_follower = controller.qr_code_follower:main
+qr_code_reader = controller.qr_code_reader:main
 spielberg = controller.spielberg:main
 surveillance = controller.surveillance:main
 tello_behaviour = controller.tello_behaviour:main

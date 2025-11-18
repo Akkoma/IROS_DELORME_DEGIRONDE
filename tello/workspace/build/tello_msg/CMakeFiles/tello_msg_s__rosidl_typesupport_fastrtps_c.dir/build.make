@@ -98,6 +98,8 @@ rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: lib
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/librmw.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_typesupport_c.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_c.so
+rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_c.so
+rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_typesupport_c.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_c.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/librosidl_typesupport_c.so
@@ -106,6 +108,10 @@ rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /op
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_generator_c.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_generator_c.so
+rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_fastrtps_c.so
+rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libaction_msgs__rosidl_generator_c.so
+rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_typesupport_fastrtps_c.so
+rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_generator_c.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_fastrtps_c.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
 rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_cpp.so

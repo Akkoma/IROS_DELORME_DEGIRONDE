@@ -79,6 +79,7 @@ rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: rosidl_adapte
 rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: rosidl_adapter/tello_msg/msg/TelloID.idl
 rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: rosidl_adapter/tello_msg/msg/TelloWifiConfig.idl
 rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: rosidl_adapter/tello_msg/srv/DroneMode.idl
+rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: rosidl_adapter/tello_msg/action/Spielberg.idl
 rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: /opt/ros/jazzy/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: /opt/ros/jazzy/share/std_msgs/msg/ByteMultiArray.idl
@@ -143,6 +144,11 @@ rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: /opt/ros/jazz
 rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: /opt/ros/jazzy/share/geometry_msgs/msg/VelocityStamped.idl
 rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: /opt/ros/jazzy/share/geometry_msgs/msg/Wrench.idl
 rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: /opt/ros/jazzy/share/geometry_msgs/msg/WrenchStamped.idl
+rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
+rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
+rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
+rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
+rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support dispatch for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_typesupport_c/rosidl_typesupport_c --generator-arguments-file /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_typesupport_c__arguments.json --typesupports rosidl_typesupport_fastrtps_c rosidl_typesupport_introspection_c
@@ -155,6 +161,9 @@ rosidl_typesupport_c/tello_msg/msg/tello_wifi_config__type_support.cpp: rosidl_t
 
 rosidl_typesupport_c/tello_msg/srv/drone_mode__type_support.cpp: rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/tello_msg/srv/drone_mode__type_support.cpp
+
+rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp: rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp
 
 CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp.o: CMakeFiles/tello_msg__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp.o: rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp
@@ -212,12 +221,27 @@ CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/sr
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/srv/drone_mode__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_typesupport_c/tello_msg/srv/drone_mode__type_support.cpp -o CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/srv/drone_mode__type_support.cpp.s
 
+CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.o: CMakeFiles/tello_msg__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.o: rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp
+CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.o: CMakeFiles/tello_msg__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.o -MF CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.o.d -o CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.o -c /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp
+
+CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp > CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.i
+
+CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp -o CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.s
+
 # Object files for target tello_msg__rosidl_typesupport_c
 tello_msg__rosidl_typesupport_c_OBJECTS = \
 "CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp.o" \
 "CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/msg/tello_id__type_support.cpp.o" \
 "CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/msg/tello_wifi_config__type_support.cpp.o" \
-"CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/srv/drone_mode__type_support.cpp.o"
+"CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/srv/drone_mode__type_support.cpp.o" \
+"CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.o"
 
 # External object files for target tello_msg__rosidl_typesupport_c
 tello_msg__rosidl_typesupport_c_EXTERNAL_OBJECTS =
@@ -226,21 +250,26 @@ libtello_msg__rosidl_typesupport_c.so: CMakeFiles/tello_msg__rosidl_typesupport_
 libtello_msg__rosidl_typesupport_c.so: CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/msg/tello_id__type_support.cpp.o
 libtello_msg__rosidl_typesupport_c.so: CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/msg/tello_wifi_config__type_support.cpp.o
 libtello_msg__rosidl_typesupport_c.so: CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/srv/drone_mode__type_support.cpp.o
+libtello_msg__rosidl_typesupport_c.so: CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.o
 libtello_msg__rosidl_typesupport_c.so: CMakeFiles/tello_msg__rosidl_typesupport_c.dir/build.make
 libtello_msg__rosidl_typesupport_c.so: libtello_msg__rosidl_generator_c.so
 libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_typesupport_c.so
+libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_c.so
+libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_typesupport_c.so
 libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_c.so
 libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_c.so
 libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_generator_c.so
 libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_generator_c.so
 libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
 libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/librosidl_typesupport_c.so
+libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libaction_msgs__rosidl_generator_c.so
+libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_generator_c.so
 libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_generator_c.so
 libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_generator_c.so
 libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libtello_msg__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/librcutils.so
 libtello_msg__rosidl_typesupport_c.so: CMakeFiles/tello_msg__rosidl_typesupport_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libtello_msg__rosidl_typesupport_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library libtello_msg__rosidl_typesupport_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tello_msg__rosidl_typesupport_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -251,6 +280,7 @@ CMakeFiles/tello_msg__rosidl_typesupport_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/tello_msg__rosidl_typesupport_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/tello_msg__rosidl_typesupport_c.dir/clean
 
+CMakeFiles/tello_msg__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp
 CMakeFiles/tello_msg__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/tello_msg/msg/tello_id__type_support.cpp
 CMakeFiles/tello_msg__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp
 CMakeFiles/tello_msg__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/tello_msg/msg/tello_wifi_config__type_support.cpp

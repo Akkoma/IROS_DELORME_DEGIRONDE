@@ -1,3 +1,5 @@
+action/Spielberg.action
+action/Spielberg.idl
 msg/TelloID.idl
 msg/TelloID.msg
 msg/TelloStatus.idl

@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "tello_msg/action/Spielberg_Goal",
+      "fields": [
+        {
+          "name": "flag",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "tello_msg/action/Spielberg_Goal",
+      "hash_string": "RIHS01_90c9cd1035d0b195b1ac06e1f4f4ce53a9cf5bd71b716b63e4e6302a74a88211"
+    }
+  ]
+}

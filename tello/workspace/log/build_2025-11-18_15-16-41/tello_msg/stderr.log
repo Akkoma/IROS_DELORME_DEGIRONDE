@@ -1,0 +1,71 @@
+Traceback (most recent call last):
+  File "/opt/ros/jazzy/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp", line 28, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/opt/ros/jazzy/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp", line 24, in main
+    generate_cpp(args.generator_arguments_file, args.typesupports)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_typesupport_cpp/__init__.py", line 28, in generate_cpp
+    return generate_files(
+           ^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_pycommon/__init__.py", line 117, in generate_files
+gmake[2]: *** Suppression du fichier « rosidl_typesupport_cpp/tello_msg/msg/tello_status__type_support.cpp »
+    expand_template(
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_pycommon/__init__.py", line 193, in expand_template
+    interpreter.string(template_content, template_path, locals=data)
+  File "/usr/lib/python3/dist-packages/em.py", line 2391, in string
+    self.safe(scanner, True, locals)
+  File "/usr/lib/python3/dist-packages/em.py", line 2401, in safe
+    self.parse(scanner, locals)
+  File "/usr/lib/python3/dist-packages/em.py", line 2421, in parse
+    token.run(self, locals)
+  File "/usr/lib/python3/dist-packages/em.py", line 1547, in run
+    self.subrun(info[0][1], interpreter, locals)
+  File "/usr/lib/python3/dist-packages/em.py", line 1631, in subrun
+    token.run(interpreter, locals)
+  File "/usr/lib/python3/dist-packages/em.py", line 1425, in run
+    interpreter.execute(self.code, locals)
+  File "/usr/lib/python3/dist-packages/em.py", line 2596, in execute
+    _exec(statements, self.globals, locals)
+  File "<string>", line 2, in <module>
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_pycommon/__init__.py", line 245, in _expand_template
+    interpreter.string(content, template_path, locals=kwargs)
+  File "/usr/lib/python3/dist-packages/em.py", line 2391, in string
+    self.safe(scanner, True, locals)
+  File "/usr/lib/python3/dist-packages/em.py", line 2401, in safe
+    self.parse(scanner, locals)
+  File "/usr/lib/python3/dist-packages/em.py", line 2421, in parse
+    token.run(self, locals)
+  File "/usr/lib/python3/dist-packages/em.py", line 1425, in run
+    interpreter.execute(self.code, locals)
+  File "/usr/lib/python3/dist-packages/em.py", line 2596, in execute
+    _exec(statements, self.globals, locals)
+  File "<string>", line 2, in <module>
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_pycommon/__init__.py", line 245, in _expand_template
+    interpreter.string(content, template_path, locals=kwargs)
+  File "/usr/lib/python3/dist-packages/em.py", line 2391, in string
+    self.safe(scanner, True, locals)
+  File "/usr/lib/python3/dist-packages/em.py", line 2401, in safe
+    self.parse(scanner, locals)
+  File "/usr/lib/python3/dist-packages/em.py", line 2417, in parse
+    token = scanner.one()
+            ^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/em.py", line 1969, in one
+    prefix = self.chop(1)
+             ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/em.py", line 1724, in chop
+    if count > len(self):
+               ^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/em.py", line 1680, in __len__
+    def __len__(self): return len(self.buffer) - self.pointer
+
+KeyboardInterrupt
+Exception ignored in: <function Interpreter.__del__ at 0x744556e132e0>
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/em.py", line 2094, in __del__
+  File "/usr/lib/python3/dist-packages/em.py", line 2157, in shutdown
+  File "/usr/lib/python3/dist-packages/em.py", line 2647, in finalize
+  File "/usr/lib/python3/dist-packages/em.py", line 2200, in push
+AttributeError: '_io.TextIOWrapper' object has no attribute 'push'
+gmake[2]: *** [CMakeFiles/tello_msg__rosidl_typesupport_cpp.dir/build.make:154: rosidl_typesupport_cpp/tello_msg/msg/tello_status__type_support.cpp] Interrompre
+gmake[1]: *** [CMakeFiles/Makefile2:425: CMakeFiles/tello_msg__rosidl_typesupport_cpp.dir/all] Interrompre
+gmake: *** [Makefile:146: all] Interrompre

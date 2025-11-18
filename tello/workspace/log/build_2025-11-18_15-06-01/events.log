@@ -1,0 +1,614 @@
+[0.000000] (-) TimerEvent: {}
+[0.000334] (-) JobUnselected: {'identifier': 'tello_control'}
+[0.000389] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.000422] (tello_msg) JobQueued: {'identifier': 'tello_msg', 'dependencies': OrderedDict()}
+[0.001092] (controller) JobStarted: {'identifier': 'controller'}
+[0.012057] (tello_msg) JobStarted: {'identifier': 'tello_msg'}
+[0.099670] (-) TimerEvent: {}
+[0.199971] (-) TimerEvent: {}
+[0.300303] (-) TimerEvent: {}
+[0.400620] (-) TimerEvent: {}
+[0.406374] (tello_msg) JobProgress: {'identifier': 'tello_msg', 'progress': 'cmake'}
+[0.407139] (tello_msg) JobProgress: {'identifier': 'tello_msg', 'progress': 'build'}
+[0.407887] (tello_msg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg', '--', '-j4', '-l4'], 'cwd': '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'HISTFILESIZE': '2000', 'HISTTIMEFORMAT': '%F %T', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'alix.degironde', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'PT8HOME': '/opt/pt', 'XDG_SESSION_TYPE': 'x11', 'XDG_CACHE_HOME': '/run/shm/.cache/alix.degironde', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/alix.degironde', 'OLDPWD': '/home/alix.degironde/Public', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '(ven_IROS) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'MANAGERPID': '75677', 'SYSTEMD_EXEC_PID': '76400', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/31633/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'LIBVIRT_DEFAULT_URI': 'qemu:///system', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '79264', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/alix.degironde/Public/tello-ros2/workspace/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'alix.degironde', 'JOURNAL_STREAM': '9:319477', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-31633.slice/user@31633.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'alix.degironde', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': ':/opt/ros/jazzy/share/turtlebot3_gazebo/models', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '1', 'HISTCONTROL': 'ignoreboth', 'WINDOWPATH': '2', 'PATH': '/home/alix.degironde/Public/ven_IROS/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/softwares/bin:/usr/local/cpe/bin:/usr/local/cpe/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'SESSION_MANAGER': 'local/tpi102-02.cpe.lan:@/tmp/.ICE-unix/76122,unix/tpi102-02.cpe.lan:/tmp/.ICE-unix/76122', 'INVOCATION_ID': 'a98d5a5274be43118227d60a683408a7', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/31633', 'DISPLAY': ':1', 'HISTSIZE': '1000', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'fr_FR.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'VIRTUAL_ENV_PROMPT': '(ven_IROS)', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/31633/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/31633/gnupg/S.gpg-agent.ssh', 'ROS_DOMAIN_ID': '69', 'AMENT_PREFIX_PATH': '/home/alix.degironde/Public/tello-ros2/workspace/install/tello:/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg:/home/alix.degironde/Public/tello-ros2/workspace/install/tello_control:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:fc5ff19d-d8f9-4bc0-bac2-856e5d841aa8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/31633/gnupg/S.gpg-agent:0:1', 'VIRTUAL_ENV': '/home/alix.degironde/Public/ven_IROS', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg', 'TURTLEBOT3_MODEL': 'waffle', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/alix.degironde/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/alix.degironde/Public/tello-ros2/workspace/install/tello/lib/python3.12/site-packages:/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages:/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg:/home/alix.degironde/Public/tello-ros2/workspace/install/tello_control:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/alix.degironde/Public/tello-ros2/workspace/install/tello:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/opt/ros/jazzy'}), 'shell': False}
+[0.444911] (tello_msg) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.477612] (tello_msg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.500703] (-) TimerEvent: {}
+[0.581055] (tello_msg) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[0.584649] (tello_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.600781] (-) TimerEvent: {}
+[0.648839] (tello_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.695848] (tello_msg) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.6 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[0.698177] (tello_msg) StdoutLine: {'line': b'-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[0.700845] (-) TimerEvent: {}
+[0.738134] (tello_msg) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[0.759325] (tello_msg) StdoutLine: {'line': b'-- Found action_msgs: 2.0.3 (/opt/ros/jazzy/share/action_msgs/cmake)\n'}
+[0.801038] (-) TimerEvent: {}
+[0.902085] (-) TimerEvent: {}
+[1.002750] (-) TimerEvent: {}
+[1.103686] (-) TimerEvent: {}
+[1.204063] (-) TimerEvent: {}
+[1.304361] (-) TimerEvent: {}
+[1.363806] (tello_msg) StdoutLine: {'line': b'-- Found ament_cmake_cppcheck: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_cppcheck/cmake)\n'}
+[1.364877] (tello_msg) StdoutLine: {'line': b'-- Found ament_cmake_cpplint: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_cpplint/cmake)\n'}
+[1.366015] (tello_msg) StdoutLine: {'line': b'-- Found ament_cmake_uncrustify: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_uncrustify/cmake)\n'}
+[1.367464] (tello_msg) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[1.404496] (-) TimerEvent: {}
+[1.504887] (-) TimerEvent: {}
+[1.605181] (-) TimerEvent: {}
+[1.618510] (controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/controller', 'build', '--build-base', '/home/alix.degironde/Public/tello-ros2/workspace/build/controller/build', 'install', '--record', '/home/alix.degironde/Public/tello-ros2/workspace/build/controller/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/alix.degironde/Public/tello-ros2/workspace/src/controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'HISTFILESIZE': '2000', 'HISTTIMEFORMAT': '%F %T', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'alix.degironde', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'PT8HOME': '/opt/pt', 'XDG_SESSION_TYPE': 'x11', 'XDG_CACHE_HOME': '/run/shm/.cache/alix.degironde', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/alix.degironde', 'OLDPWD': '/home/alix.degironde/Public', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '(ven_IROS) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'MANAGERPID': '75677', 'SYSTEMD_EXEC_PID': '76400', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/31633/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'LIBVIRT_DEFAULT_URI': 'qemu:///system', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '79264', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/alix.degironde/Public/tello-ros2/workspace/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'alix.degironde', 'JOURNAL_STREAM': '9:319477', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-31633.slice/user@31633.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'alix.degironde', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': ':/opt/ros/jazzy/share/turtlebot3_gazebo/models', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '1', 'HISTCONTROL': 'ignoreboth', 'WINDOWPATH': '2', 'PATH': '/home/alix.degironde/Public/ven_IROS/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/softwares/bin:/usr/local/cpe/bin:/usr/local/cpe/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'SESSION_MANAGER': 'local/tpi102-02.cpe.lan:@/tmp/.ICE-unix/76122,unix/tpi102-02.cpe.lan:/tmp/.ICE-unix/76122', 'INVOCATION_ID': 'a98d5a5274be43118227d60a683408a7', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/31633', 'DISPLAY': ':1', 'HISTSIZE': '1000', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'fr_FR.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'VIRTUAL_ENV_PROMPT': '(ven_IROS)', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/31633/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/31633/gnupg/S.gpg-agent.ssh', 'ROS_DOMAIN_ID': '69', 'AMENT_PREFIX_PATH': '/home/alix.degironde/Public/tello-ros2/workspace/install/tello:/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg:/home/alix.degironde/Public/tello-ros2/workspace/install/tello_control:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:fc5ff19d-d8f9-4bc0-bac2-856e5d841aa8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/31633/gnupg/S.gpg-agent:0:1', 'VIRTUAL_ENV': '/home/alix.degironde/Public/ven_IROS', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/alix.degironde/Public/tello-ros2/workspace/build/controller', 'TURTLEBOT3_MODEL': 'waffle', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/alix.degironde/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/alix.degironde/Public/tello-ros2/workspace/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages:/home/alix.degironde/Public/tello-ros2/workspace/install/tello/lib/python3.12/site-packages:/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages:/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg:/home/alix.degironde/Public/tello-ros2/workspace/install/tello_control:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[1.647259] (tello_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.705269] (-) TimerEvent: {}
+[1.805527] (-) TimerEvent: {}
+[1.905987] (-) TimerEvent: {}
+[2.006432] (-) TimerEvent: {}
+[2.057194] (tello_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.059166] (tello_msg) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[2.106529] (-) TimerEvent: {}
+[2.180752] (controller) StdoutLine: {'line': b'running egg_info\n'}
+[2.206628] (-) TimerEvent: {}
+[2.230738] (controller) StdoutLine: {'line': b'writing ../../build/controller/controller.egg-info/PKG-INFO\n'}
+[2.231054] (controller) StdoutLine: {'line': b'writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt\n'}
+[2.232655] (controller) StdoutLine: {'line': b'writing entry points to ../../build/controller/controller.egg-info/entry_points.txt\n'}
+[2.232920] (controller) StdoutLine: {'line': b'writing requirements to ../../build/controller/controller.egg-info/requires.txt\n'}
+[2.233039] (controller) StdoutLine: {'line': b'writing top-level names to ../../build/controller/controller.egg-info/top_level.txt\n'}
+[2.307167] (-) TimerEvent: {}
+[2.332908] (controller) StdoutLine: {'line': b"reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'\n"}
+[2.333140] (controller) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[2.338752] (controller) StdoutLine: {'line': b"writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'\n"}
+[2.338977] (controller) StdoutLine: {'line': b'running build\n'}
+[2.339088] (controller) StdoutLine: {'line': b'running build_py\n'}
+[2.339216] (controller) StdoutLine: {'line': b'running install\n'}
+[2.344094] (controller) StdoutLine: {'line': b'running install_lib\n'}
+[2.391972] (controller) StdoutLine: {'line': b'running install_data\n'}
+[2.392239] (controller) StdoutLine: {'line': b'copying package.xml -> /home/alix.degironde/Public/tello-ros2/workspace/install/controller/share/controller\n'}
+[2.393091] (controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.407252] (-) TimerEvent: {}
+[2.441609] (controller) StdoutLine: {'line': b"removing '/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[2.441977] (controller) StdoutLine: {'line': b'Copying ../../build/controller/controller.egg-info to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller-0.0.0-py3.12.egg-info\n'}
+[2.443140] (controller) StdoutLine: {'line': b'running install_scripts\n'}
+[2.481256] (tello_msg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[2.507347] (-) TimerEvent: {}
+[2.547907] (tello_msg) StdoutLine: {'line': b'-- Found ament_cmake_flake8: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_flake8/cmake)\n'}
+[2.548773] (tello_msg) StdoutLine: {'line': b'-- Found ament_cmake_pep257: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_pep257/cmake)\n'}
+[2.557150] (tello_msg) StdoutLine: {'line': b'-- Configuring done (2.1s)\n'}
+[2.607442] (-) TimerEvent: {}
+[2.629067] (tello_msg) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[2.646828] (tello_msg) StdoutLine: {'line': b'-- Build files have been written to: /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg\n'}
+[2.697937] (tello_msg) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[2.707550] (-) TimerEvent: {}
+[2.711050] (tello_msg) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_copy_tello_msg\n'}
+[2.735245] (controller) StdoutLine: {'line': b'Installing manual_control script to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/controller\n'}
+[2.735481] (controller) StdoutLine: {'line': b'Installing qr_code_follower script to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/controller\n'}
+[2.735600] (controller) StdoutLine: {'line': b'Installing qr_code_reader script to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/controller\n'}
+[2.735723] (controller) StdoutLine: {'line': b'Installing spielberg script to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/controller\n'}
+[2.735830] (controller) StdoutLine: {'line': b'Installing surveillance script to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/controller\n'}
+[2.735935] (controller) StdoutLine: {'line': b'Installing tello_behaviour script to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/controller\n'}
+[2.736040] (controller) StdoutLine: {'line': b"writing list of installed files to '/home/alix.degironde/Public/tello-ros2/workspace/build/controller/install.log'\n"}
+[2.785223] (controller) CommandEnded: {'returncode': 0}
+[2.798682] (controller) JobEnded: {'identifier': 'controller', 'rc': 0}
+[2.807641] (-) TimerEvent: {}
+[2.908042] (-) TimerEvent: {}
+[3.008672] (-) TimerEvent: {}
+[3.111482] (-) TimerEvent: {}
+[3.130777] (tello_msg) StdoutLine: {'line': b'running egg_info\n'}
+[3.181600] (tello_msg) StdoutLine: {'line': b'writing tello_msg.egg-info/PKG-INFO\n'}
+[3.182926] (tello_msg) StdoutLine: {'line': b'writing dependency_links to tello_msg.egg-info/dependency_links.txt\n'}
+[3.183088] (tello_msg) StdoutLine: {'line': b'writing top-level names to tello_msg.egg-info/top_level.txt\n'}
+[3.211545] (-) TimerEvent: {}
+[3.267424] (tello_msg) StdoutLine: {'line': b'[  1%] Built target tello_msg__rosidl_generator_type_description\n'}
+[3.284165] (tello_msg) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[3.297170] (tello_msg) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[3.311641] (-) TimerEvent: {}
+[3.331930] (tello_msg) StdoutLine: {'line': b"reading manifest file 'tello_msg.egg-info/SOURCES.txt'\n"}
+[3.333149] (tello_msg) StdoutLine: {'line': b"writing manifest file 'tello_msg.egg-info/SOURCES.txt'\n"}
+[3.383023] (tello_msg) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_build_tello_msg_egg\n'}
+[3.416153] (-) TimerEvent: {}
+[3.524154] (-) TimerEvent: {}
+[3.624438] (-) TimerEvent: {}
+[3.727757] (-) TimerEvent: {}
+[3.828164] (-) TimerEvent: {}
+[3.928574] (-) TimerEvent: {}
+[4.028862] (-) TimerEvent: {}
+[4.129412] (-) TimerEvent: {}
+[4.231378] (-) TimerEvent: {}
+[4.333294] (-) TimerEvent: {}
+[4.433578] (-) TimerEvent: {}
+[4.534174] (-) TimerEvent: {}
+[4.636800] (-) TimerEvent: {}
+[4.737246] (-) TimerEvent: {}
+[4.809039] (tello_msg) StdoutLine: {'line': b'[  4%] Built target tello_msg__cpp\n'}
+[4.840170] (-) TimerEvent: {}
+[4.857838] (tello_msg) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_status__functions.c.o\x1b[0m\n'}
+[4.858107] (tello_msg) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_status__description.c.o\x1b[0m\n'}
+[4.862392] (tello_msg) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_status__type_support.c.o\x1b[0m\n'}
+[4.862791] (tello_msg) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_id__description.c.o\x1b[0m\n'}
+[4.920228] (tello_msg) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_id__functions.c.o\x1b[0m\n'}
+[4.928495] (tello_msg) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_id__type_support.c.o\x1b[0m\n'}
+[4.932383] (tello_msg) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__description.c.o\x1b[0m\n'}
+[4.940285] (-) TimerEvent: {}
+[4.971247] (tello_msg) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__functions.c.o\x1b[0m\n'}
+[4.991821] (tello_msg) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/msg/detail/tello_wifi_config__type_support.c.o\x1b[0m\n'}
+[4.994765] (tello_msg) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__description.c.o\x1b[0m\n'}
+[5.010193] (tello_msg) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.o\x1b[0m\n'}
+[5.040398] (-) TimerEvent: {}
+[5.052522] (tello_msg) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.o\x1b[0m\n'}
+[5.065097] (tello_msg) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/action/detail/spielberg__description.c.o\x1b[0m\n'}
+[5.090692] (tello_msg) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/action/detail/spielberg__functions.c.o\x1b[0m\n'}
+[5.127376] (tello_msg) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/action/detail/spielberg__type_support.c.o\x1b[0m\n'}
+[5.143172] (-) TimerEvent: {}
+[5.243504] (-) TimerEvent: {}
+[5.315085] (tello_msg) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking C shared library libtello_msg__rosidl_generator_c.so\x1b[0m\n'}
+[5.343611] (-) TimerEvent: {}
+[5.388407] (tello_msg) StdoutLine: {'line': b'[ 25%] Built target tello_msg__rosidl_generator_c\n'}
+[5.404619] (tello_msg) StdoutLine: {'line': b'[ 27%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[5.408461] (tello_msg) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[5.412684] (tello_msg) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[5.413414] (tello_msg) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[5.447208] (-) TimerEvent: {}
+[5.547512] (-) TimerEvent: {}
+[5.647796] (-) TimerEvent: {}
+[5.748078] (-) TimerEvent: {}
+[5.848321] (-) TimerEvent: {}
+[5.949175] (-) TimerEvent: {}
+[6.049602] (-) TimerEvent: {}
+[6.150009] (-) TimerEvent: {}
+[6.250470] (-) TimerEvent: {}
+[6.281179] (tello_msg) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tello_msg/msg/tello_status__type_support.cpp.o\x1b[0m\n'}
+[6.350576] (-) TimerEvent: {}
+[6.452282] (-) TimerEvent: {}
+[6.552719] (-) TimerEvent: {}
+[6.656239] (-) TimerEvent: {}
+[6.665462] (tello_msg) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msg/msg/detail/tello_status__type_support.c.o\x1b[0m\n'}
+[6.672224] (tello_msg) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp.o\x1b[0m\n'}
+[6.756412] (-) TimerEvent: {}
+[6.795762] (tello_msg) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msg/msg/detail/tello_id__type_support.c.o\x1b[0m\n'}
+[6.840489] (tello_msg) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/msg/tello_id__type_support.cpp.o\x1b[0m\n'}
+[6.856537] (-) TimerEvent: {}
+[6.913254] (tello_msg) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msg/msg/detail/tello_wifi_config__type_support.c.o\x1b[0m\n'}
+[6.934835] (tello_msg) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/msg/tello_wifi_config__type_support.cpp.o\x1b[0m\n'}
+[6.957171] (-) TimerEvent: {}
+[7.009053] (tello_msg) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msg/srv/detail/drone_mode__type_support.c.o\x1b[0m\n'}
+[7.041579] (tello_msg) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/srv/drone_mode__type_support.cpp.o\x1b[0m\n'}
+[7.061162] (-) TimerEvent: {}
+[7.140723] (tello_msg) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msg/action/detail/spielberg__type_support.c.o\x1b[0m\n'}
+[7.156690] (tello_msg) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp.o\x1b[0m\n'}
+[7.161273] (-) TimerEvent: {}
+[7.199240] (tello_msg) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tello_msg/msg/tello_id__type_support.cpp.o\x1b[0m\n'}
+[7.261065] (tello_msg) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking C shared library libtello_msg__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[7.261307] (-) TimerEvent: {}
+[7.263307] (tello_msg) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library libtello_msg__rosidl_typesupport_c.so\x1b[0m\n'}
+[7.357041] (tello_msg) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/msg/detail/tello_status__type_support_c.cpp.o\x1b[0m\n'}
+[7.358430] (tello_msg) StdoutLine: {'line': b'[ 51%] Built target tello_msg__rosidl_typesupport_introspection_c\n'}
+[7.361424] (-) TimerEvent: {}
+[7.372411] (tello_msg) StdoutLine: {'line': b'[ 51%] Built target tello_msg__rosidl_typesupport_c\n'}
+[7.384424] (tello_msg) StdoutLine: {'line': b'[ 52%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[7.384979] (tello_msg) StdoutLine: {'line': b'[ 54%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[7.464167] (-) TimerEvent: {}
+[7.567150] (-) TimerEvent: {}
+[7.667432] (-) TimerEvent: {}
+[7.768091] (-) TimerEvent: {}
+[7.869272] (-) TimerEvent: {}
+[7.970484] (-) TimerEvent: {}
+[8.016109] (tello_msg) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tello_msg/msg/tello_wifi_config__type_support.cpp.o\x1b[0m\n'}
+[8.070582] (-) TimerEvent: {}
+[8.171639] (-) TimerEvent: {}
+[8.274168] (-) TimerEvent: {}
+[8.374474] (-) TimerEvent: {}
+[8.434952] (tello_msg) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/msg/detail/tello_id__type_support_c.cpp.o\x1b[0m\n'}
+[8.475159] (-) TimerEvent: {}
+[8.576296] (-) TimerEvent: {}
+[8.663032] (tello_msg) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tello_msg/srv/drone_mode__type_support.cpp.o\x1b[0m\n'}
+[8.677155] (-) TimerEvent: {}
+[8.778384] (-) TimerEvent: {}
+[8.881156] (-) TimerEvent: {}
+[8.984159] (-) TimerEvent: {}
+[9.087154] (-) TimerEvent: {}
+[9.190196] (-) TimerEvent: {}
+[9.231208] (tello_msg) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tello_msg/msg/detail/tello_status__type_support.cpp.o\x1b[0m\n'}
+[9.290308] (-) TimerEvent: {}
+[9.393955] (-) TimerEvent: {}
+[9.495049] (-) TimerEvent: {}
+[9.572403] (tello_msg) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/msg/detail/tello_wifi_config__type_support_c.cpp.o\x1b[0m\n'}
+[9.590303] (tello_msg) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tello_msg/msg/detail/dds_fastrtps/tello_status__type_support.cpp.o\x1b[0m\n'}
+[9.597197] (-) TimerEvent: {}
+[9.700173] (-) TimerEvent: {}
+[9.800525] (-) TimerEvent: {}
+[9.830510] (tello_msg) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tello_msg/action/spielberg__type_support.cpp.o\x1b[0m\n'}
+[9.881014] (tello_msg) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tello_msg/msg/detail/tello_id__type_support.cpp.o\x1b[0m\n'}
+[9.900636] (-) TimerEvent: {}
+[10.002163] (-) TimerEvent: {}
+[10.107219] (-) TimerEvent: {}
+[10.207518] (-) TimerEvent: {}
+[10.307860] (-) TimerEvent: {}
+[10.410213] (-) TimerEvent: {}
+[10.510519] (-) TimerEvent: {}
+[10.527049] (tello_msg) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/srv/detail/drone_mode__type_support_c.cpp.o\x1b[0m\n'}
+[10.567269] (tello_msg) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tello_msg/msg/detail/dds_fastrtps/tello_id__type_support.cpp.o\x1b[0m\n'}
+[10.610631] (-) TimerEvent: {}
+[10.710083] (tello_msg) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tello_msg/msg/detail/tello_wifi_config__type_support.cpp.o\x1b[0m\n'}
+[10.712534] (-) TimerEvent: {}
+[10.812825] (-) TimerEvent: {}
+[10.914446] (-) TimerEvent: {}
+[11.014813] (-) TimerEvent: {}
+[11.115278] (-) TimerEvent: {}
+[11.217955] (-) TimerEvent: {}
+[11.285678] (tello_msg) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tello_msg/srv/detail/drone_mode__type_support.cpp.o\x1b[0m\n'}
+[11.323178] (-) TimerEvent: {}
+[11.426690] (-) TimerEvent: {}
+[11.530172] (-) TimerEvent: {}
+[11.573678] (tello_msg) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libtello_msg__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[11.630284] (-) TimerEvent: {}
+[11.730608] (-) TimerEvent: {}
+[11.762997] (tello_msg) StdoutLine: {'line': b'[ 71%] Built target tello_msg__rosidl_typesupport_cpp\n'}
+[11.775079] (tello_msg) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msg/action/detail/spielberg__type_support_c.cpp.o\x1b[0m\n'}
+[11.826915] (tello_msg) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tello_msg/action/detail/spielberg__type_support.cpp.o\x1b[0m\n'}
+[11.833235] (-) TimerEvent: {}
+[11.848465] (tello_msg) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tello_msg/msg/detail/dds_fastrtps/tello_wifi_config__type_support.cpp.o\x1b[0m\n'}
+[11.936172] (-) TimerEvent: {}
+[12.036495] (-) TimerEvent: {}
+[12.137570] (-) TimerEvent: {}
+[12.240858] (-) TimerEvent: {}
+[12.343063] (-) TimerEvent: {}
+[12.444513] (-) TimerEvent: {}
+[12.495159] (tello_msg) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tello_msg/srv/detail/dds_fastrtps/drone_mode__type_support.cpp.o\x1b[0m\n'}
+[12.544877] (-) TimerEvent: {}
+[12.646007] (-) TimerEvent: {}
+[12.749705] (-) TimerEvent: {}
+[12.852536] (-) TimerEvent: {}
+[12.955227] (-) TimerEvent: {}
+[13.058174] (-) TimerEvent: {}
+[13.087622] (tello_msg) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/tello_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tello_msg/action/detail/dds_fastrtps/spielberg__type_support.cpp.o\x1b[0m\n'}
+[13.158284] (-) TimerEvent: {}
+[13.269174] (-) TimerEvent: {}
+[13.360298] (tello_msg) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library libtello_msg__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[13.370174] (-) TimerEvent: {}
+[13.470503] (-) TimerEvent: {}
+[13.570818] (-) TimerEvent: {}
+[13.609317] (tello_msg) StdoutLine: {'line': b'[ 79%] Built target tello_msg__rosidl_typesupport_fastrtps_c\n'}
+[13.668047] (tello_msg) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libtello_msg__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[13.670919] (-) TimerEvent: {}
+[13.771377] (-) TimerEvent: {}
+[13.855275] (tello_msg) StdoutLine: {'line': b'[ 81%] Built target tello_msg__rosidl_typesupport_introspection_cpp\n'}
+[13.871590] (-) TimerEvent: {}
+[13.971947] (-) TimerEvent: {}
+[14.072319] (-) TimerEvent: {}
+[14.172656] (-) TimerEvent: {}
+[14.272964] (-) TimerEvent: {}
+[14.373282] (-) TimerEvent: {}
+[14.473558] (-) TimerEvent: {}
+[14.573918] (-) TimerEvent: {}
+[14.674247] (-) TimerEvent: {}
+[14.711168] (tello_msg) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking CXX shared library libtello_msg__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[14.774367] (-) TimerEvent: {}
+[14.830942] (tello_msg) StdoutLine: {'line': b'[ 82%] Built target tello_msg__rosidl_typesupport_fastrtps_cpp\n'}
+[14.857627] (tello_msg) StdoutLine: {'line': b'[ 82%] Built target tello_msg\n'}
+[14.874475] (-) TimerEvent: {}
+[14.885934] (tello_msg) StdoutLine: {'line': b'[ 83%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[14.974603] (-) TimerEvent: {}
+[15.077500] (-) TimerEvent: {}
+[15.177783] (-) TimerEvent: {}
+[15.278066] (-) TimerEvent: {}
+[15.378350] (-) TimerEvent: {}
+[15.478645] (-) TimerEvent: {}
+[15.578919] (-) TimerEvent: {}
+[15.680749] (-) TimerEvent: {}
+[15.781148] (-) TimerEvent: {}
+[15.881607] (-) TimerEvent: {}
+[15.981898] (-) TimerEvent: {}
+[16.082172] (-) TimerEvent: {}
+[16.182469] (-) TimerEvent: {}
+[16.282779] (-) TimerEvent: {}
+[16.383069] (-) TimerEvent: {}
+[16.483616] (-) TimerEvent: {}
+[16.583896] (-) TimerEvent: {}
+[16.687157] (-) TimerEvent: {}
+[16.726818] (tello_msg) StdoutLine: {'line': b'[ 83%] Built target tello_msg__py\n'}
+[16.767516] (tello_msg) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_py.dir/rosidl_generator_py/tello_msg/srv/_drone_mode_s.c.o\x1b[0m\n'}
+[16.776004] (tello_msg) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_py.dir/rosidl_generator_py/tello_msg/msg/_tello_status_s.c.o\x1b[0m\n'}
+[16.776461] (tello_msg) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_py.dir/rosidl_generator_py/tello_msg/msg/_tello_id_s.c.o\x1b[0m\n'}
+[16.779497] (tello_msg) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_py.dir/rosidl_generator_py/tello_msg/msg/_tello_wifi_config_s.c.o\x1b[0m\n'}
+[16.788170] (-) TimerEvent: {}
+[16.889396] (-) TimerEvent: {}
+[16.990695] (-) TimerEvent: {}
+[17.066579] (tello_msg) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/tello_msg__rosidl_generator_py.dir/rosidl_generator_py/tello_msg/action/_spielberg_s.c.o\x1b[0m\n'}
+[17.090808] (-) TimerEvent: {}
+[17.191956] (-) TimerEvent: {}
+[17.292295] (-) TimerEvent: {}
+[17.331856] (tello_msg) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking C shared library libtello_msg__rosidl_generator_py.so\x1b[0m\n'}
+[17.392416] (-) TimerEvent: {}
+[17.397033] (tello_msg) StdoutLine: {'line': b'[ 91%] Built target tello_msg__rosidl_generator_py\n'}
+[17.434077] (tello_msg) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/tello_msg_s__rosidl_typesupport_c.dir/rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[17.443967] (tello_msg) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/tello_msg_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[17.447317] (tello_msg) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/tello_msg_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[17.495172] (-) TimerEvent: {}
+[17.595485] (-) TimerEvent: {}
+[17.637773] (tello_msg) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[17.683146] (tello_msg) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[17.695613] (-) TimerEvent: {}
+[17.706856] (tello_msg) StdoutLine: {'line': b'[ 98%] Built target tello_msg_s__rosidl_typesupport_c\n'}
+[17.744376] (tello_msg) StdoutLine: {'line': b'[ 98%] Built target tello_msg_s__rosidl_typesupport_fastrtps_c\n'}
+[17.759302] (tello_msg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[17.795721] (-) TimerEvent: {}
+[17.814778] (tello_msg) StdoutLine: {'line': b'[100%] Built target tello_msg_s__rosidl_typesupport_introspection_c\n'}
+[17.839480] (tello_msg) CommandEnded: {'returncode': 0}
+[17.839908] (tello_msg) JobProgress: {'identifier': 'tello_msg', 'progress': 'install'}
+[17.851689] (tello_msg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg'], 'cwd': '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'HISTFILESIZE': '2000', 'HISTTIMEFORMAT': '%F %T', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'alix.degironde', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'PT8HOME': '/opt/pt', 'XDG_SESSION_TYPE': 'x11', 'XDG_CACHE_HOME': '/run/shm/.cache/alix.degironde', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/alix.degironde', 'OLDPWD': '/home/alix.degironde/Public', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '(ven_IROS) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'MANAGERPID': '75677', 'SYSTEMD_EXEC_PID': '76400', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/31633/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'LIBVIRT_DEFAULT_URI': 'qemu:///system', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '79264', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/alix.degironde/Public/tello-ros2/workspace/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'alix.degironde', 'JOURNAL_STREAM': '9:319477', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-31633.slice/user@31633.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'alix.degironde', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': ':/opt/ros/jazzy/share/turtlebot3_gazebo/models', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '1', 'HISTCONTROL': 'ignoreboth', 'WINDOWPATH': '2', 'PATH': '/home/alix.degironde/Public/ven_IROS/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/softwares/bin:/usr/local/cpe/bin:/usr/local/cpe/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'SESSION_MANAGER': 'local/tpi102-02.cpe.lan:@/tmp/.ICE-unix/76122,unix/tpi102-02.cpe.lan:/tmp/.ICE-unix/76122', 'INVOCATION_ID': 'a98d5a5274be43118227d60a683408a7', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/31633', 'DISPLAY': ':1', 'HISTSIZE': '1000', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'fr_FR.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'VIRTUAL_ENV_PROMPT': '(ven_IROS)', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/31633/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/31633/gnupg/S.gpg-agent.ssh', 'ROS_DOMAIN_ID': '69', 'AMENT_PREFIX_PATH': '/home/alix.degironde/Public/tello-ros2/workspace/install/tello:/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg:/home/alix.degironde/Public/tello-ros2/workspace/install/tello_control:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:fc5ff19d-d8f9-4bc0-bac2-856e5d841aa8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/31633/gnupg/S.gpg-agent:0:1', 'VIRTUAL_ENV': '/home/alix.degironde/Public/ven_IROS', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg', 'TURTLEBOT3_MODEL': 'waffle', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/alix.degironde/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/alix.degironde/Public/tello-ros2/workspace/install/tello/lib/python3.12/site-packages:/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages:/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg:/home/alix.degironde/Public/tello-ros2/workspace/install/tello_control:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/alix.degironde/Public/tello-ros2/workspace/install/tello:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/opt/ros/jazzy'}), 'shell': False}
+[17.863433] (tello_msg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[17.866517] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/ament_index/resource_index/rosidl_interfaces/tello_msg\n'}
+[17.866652] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloStatus.json\n'}
+[17.866762] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloID.json\n'}
+[17.866869] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloWifiConfig.json\n'}
+[17.866976] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/srv/DroneMode.json\n'}
+[17.867080] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/action/Spielberg.json\n'}
+[17.867202] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg\n'}
+[17.867309] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg\n'}
+[17.867413] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/rosidl_generator_c__visibility_control.h\n'}
+[17.867517] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail\n'}
+[17.867620] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__functions.c\n'}
+[17.867736] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__struct.h\n'}
+[17.867839] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__struct.h\n'}
+[17.867943] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__description.c\n'}
+[17.868047] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__type_support.c\n'}
+[17.868165] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__type_support.c\n'}
+[17.868274] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__functions.c\n'}
+[17.868377] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__type_support.h\n'}
+[17.868479] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__functions.h\n'}
+[17.868582] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__struct.h\n'}
+[17.868861] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__description.c\n'}
+[17.869075] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__type_support.h\n'}
+[17.869522] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__description.c\n'}
+[17.869982] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__functions.h\n'}
+[17.872191] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__functions.h\n'}
+[17.872846] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__type_support.h\n'}
+[17.873189] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__type_support.c\n'}
+[17.873762] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__functions.c\n'}
+[17.873977] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/tello_id.h\n'}
+[17.874155] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/tello_status.h\n'}
+[17.874324] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/tello_wifi_config.h\n'}
+[17.874436] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv\n'}
+[17.874634] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/drone_mode.h\n'}
+[17.874782] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail\n'}
+[17.874917] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__type_support.h\n'}
+[17.875063] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__description.c\n'}
+[17.875217] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__type_support.c\n'}
+[17.875326] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__functions.c\n'}
+[17.875429] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__functions.h\n'}
+[17.875533] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__struct.h\n'}
+[17.875685] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action\n'}
+[17.875796] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/spielberg.h\n'}
+[17.875900] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail\n'}
+[17.876004] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__functions.c\n'}
+[17.876116] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__description.c\n'}
+[17.876281] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__type_support.c\n'}
+[17.876580] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__functions.h\n'}
+[17.876800] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__type_support.h\n'}
+[17.877159] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__struct.h\n'}
+[17.877470] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/library_path.sh\n'}
+[17.877782] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/library_path.dsv\n'}
+[17.877954] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_generator_c.so\n'}
+[17.878372] (tello_msg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_generator_c.so" to ""\n'}
+[17.878548] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg\n'}
+[17.879223] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg\n'}
+[17.879381] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[17.879573] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail\n'}
+[17.879885] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__rosidl_typesupport_fastrtps_c.h\n'}
+[17.880212] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__rosidl_typesupport_fastrtps_c.h\n'}
+[17.880544] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__rosidl_typesupport_fastrtps_c.h\n'}
+[17.880858] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv\n'}
+[17.881206] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail\n'}
+[17.881574] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__rosidl_typesupport_fastrtps_c.h\n'}
+[17.881944] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action\n'}
+[17.882206] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail\n'}
+[17.882575] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__rosidl_typesupport_fastrtps_c.h\n'}
+[17.884334] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_fastrtps_c.so\n'}
+[17.884449] (tello_msg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[17.884591] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg\n'}
+[17.884746] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg\n'}
+[17.884860] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail\n'}
+[17.885020] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__rosidl_typesupport_introspection_c.h\n'}
+[17.885192] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__type_support.c\n'}
+[17.885374] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__type_support.c\n'}
+[17.885571] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__rosidl_typesupport_introspection_c.h\n'}
+[17.885758] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__rosidl_typesupport_introspection_c.h\n'}
+[17.885931] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__type_support.c\n'}
+[17.886074] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[17.886568] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv\n'}
+[17.886880] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail\n'}
+[17.887352] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__rosidl_typesupport_introspection_c.h\n'}
+[17.887713] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__type_support.c\n'}
+[17.888059] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action\n'}
+[17.888651] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail\n'}
+[17.890145] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__type_support.c\n'}
+[17.890365] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__rosidl_typesupport_introspection_c.h\n'}
+[17.890473] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_introspection_c.so\n'}
+[17.890583] (tello_msg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_introspection_c.so" to ""\n'}
+[17.890734] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_c.so\n'}
+[17.890875] (tello_msg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_c.so" to ""\n'}
+[17.890981] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg\n'}
+[17.891127] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg\n'}
+[17.891252] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/tello_wifi_config.hpp\n'}
+[17.891429] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail\n'}
+[17.891542] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__struct.hpp\n'}
+[17.891691] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__builder.hpp\n'}
+[17.891858] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__struct.hpp\n'}
+[17.891964] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__struct.hpp\n'}
+[17.892116] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__type_support.hpp\n'}
+[17.892237] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__type_support.hpp\n'}
+[17.892342] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__traits.hpp\n'}
+[17.892495] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__builder.hpp\n'}
+[17.892650] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__traits.hpp\n'}
+[17.895232] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__type_support.hpp\n'}
+[17.895438] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__builder.hpp\n'}
+[17.895546] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__traits.hpp\n'}
+[17.895652] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/tello_id.hpp\n'}
+[17.895755] (-) TimerEvent: {}
+[17.897314] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/tello_status.hpp\n'}
+[17.897643] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[17.897769] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv\n'}
+[17.899504] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail\n'}
+[17.899740] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__struct.hpp\n'}
+[17.899879] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__type_support.hpp\n'}
+[17.900446] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__builder.hpp\n'}
+[17.900615] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__traits.hpp\n'}
+[17.900736] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/drone_mode.hpp\n'}
+[17.900852] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action\n'}
+[17.900989] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail\n'}
+[17.901124] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__builder.hpp\n'}
+[17.901246] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__traits.hpp\n'}
+[17.901357] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__struct.hpp\n'}
+[17.904718] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__type_support.hpp\n'}
+[17.904855] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/spielberg.hpp\n'}
+[17.904968] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg\n'}
+[17.905076] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg\n'}
+[17.905200] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[17.905313] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail\n'}
+[17.905422] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[17.905529] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[17.905634] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[17.905743] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/dds_fastrtps\n'}
+[17.905847] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv\n'}
+[17.905951] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail\n'}
+[17.906053] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[17.906188] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/dds_fastrtps\n'}
+[17.906297] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action\n'}
+[17.906415] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail\n'}
+[17.906519] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[17.906637] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/dds_fastrtps\n'}
+[17.906747] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_fastrtps_cpp.so\n'}
+[17.906850] (tello_msg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[17.906955] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg\n'}
+[17.907057] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg\n'}
+[17.907224] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail\n'}
+[17.907333] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__rosidl_typesupport_introspection_cpp.hpp\n'}
+[17.907436] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__type_support.cpp\n'}
+[17.907543] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__type_support.cpp\n'}
+[17.907646] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[17.907750] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__rosidl_typesupport_introspection_cpp.hpp\n'}
+[17.907853] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__type_support.cpp\n'}
+[17.907962] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv\n'}
+[17.908074] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail\n'}
+[17.908205] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__rosidl_typesupport_introspection_cpp.hpp\n'}
+[17.908315] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__type_support.cpp\n'}
+[17.908424] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action\n'}
+[17.908534] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail\n'}
+[17.908644] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__type_support.cpp\n'}
+[17.908758] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__rosidl_typesupport_introspection_cpp.hpp\n'}
+[17.908869] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_introspection_cpp.so\n'}
+[17.908986] (tello_msg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[17.909195] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_cpp.so\n'}
+[17.909317] (tello_msg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_cpp.so" to ""\n'}
+[17.909450] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/pythonpath.sh\n'}
+[17.909567] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/pythonpath.dsv\n'}
+[17.909677] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg-0.0.1-py3.12.egg-info\n'}
+[17.909794] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg-0.0.1-py3.12.egg-info/dependency_links.txt\n'}
+[17.909941] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg-0.0.1-py3.12.egg-info/SOURCES.txt\n'}
+[17.910057] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg-0.0.1-py3.12.egg-info/top_level.txt\n'}
+[17.910700] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg-0.0.1-py3.12.egg-info/PKG-INFO\n'}
+[17.910826] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg\n'}
+[17.910943] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/_tello_msg_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[17.911067] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/_tello_msg_s.ep.rosidl_typesupport_c.c\n'}
+[17.911216] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg\n'}
+[17.911342] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_id.py\n'}
+[17.911462] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_wifi_config.py\n'}
+[17.911590] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/__init__.py\n'}
+[17.911717] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_id_s.c\n'}
+[17.911838] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_status.py\n'}
+[17.911977] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_status_s.c\n'}
+[17.912110] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_wifi_config_s.c\n'}
+[17.912282] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so\n'}
+[17.912406] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/srv\n'}
+[17.912527] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/srv/__init__.py\n'}
+[17.912651] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/srv/_drone_mode_s.c\n'}
+[17.912771] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/srv/_drone_mode.py\n'}
+[17.912890] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_introspection_c.so\n'}
+[17.913011] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_c.so\n'}
+[17.913158] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/__init__.py\n'}
+[17.913303] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/action\n'}
+[17.913434] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/action/_spielberg.py\n'}
+[17.913538] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/action/__init__.py\n'}
+[17.913642] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/action/_spielberg_s.c\n'}
+[17.913745] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[17.994166] (tello_msg) StdoutLine: {'line': b"Listing '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg'...\n"}
+[17.994452] (tello_msg) StdoutLine: {'line': b"Compiling '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/__init__.py'...\n"}
+[17.994572] (tello_msg) StdoutLine: {'line': b"Listing '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/action'...\n"}
+[17.994685] (tello_msg) StdoutLine: {'line': b"Compiling '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/action/__init__.py'...\n"}
+[17.994796] (tello_msg) StdoutLine: {'line': b"Compiling '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/action/_spielberg.py'...\n"}
+[17.994904] (tello_msg) StdoutLine: {'line': b"Listing '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg'...\n"}
+[17.995011] (tello_msg) StdoutLine: {'line': b"Compiling '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/__init__.py'...\n"}
+[17.995126] (tello_msg) StdoutLine: {'line': b"Compiling '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_id.py'...\n"}
+[17.995242] (tello_msg) StdoutLine: {'line': b"Compiling '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_status.py'...\n"}
+[17.995355] (tello_msg) StdoutLine: {'line': b"Compiling '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_wifi_config.py'...\n"}
+[17.995460] (tello_msg) StdoutLine: {'line': b"Listing '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/srv'...\n"}
+[17.995563] (tello_msg) StdoutLine: {'line': b"Compiling '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/srv/__init__.py'...\n"}
+[17.995665] (tello_msg) StdoutLine: {'line': b"Compiling '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/srv/_drone_mode.py'...\n"}
+[17.995767] (-) TimerEvent: {}
+[18.016958] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so\n'}
+[18.017263] (tello_msg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[18.017386] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_introspection_c.so\n'}
+[18.017499] (tello_msg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[18.017617] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_c.so\n'}
+[18.017729] (tello_msg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_c.so" to ""\n'}
+[18.017841] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_generator_py.so\n'}
+[18.021945] (tello_msg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_generator_py.so" to ""\n'}
+[18.025403] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloStatus.idl\n'}
+[18.025802] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloID.idl\n'}
+[18.025935] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloWifiConfig.idl\n'}
+[18.026059] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/srv/DroneMode.idl\n'}
+[18.026202] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/action/Spielberg.idl\n'}
+[18.026325] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloStatus.msg\n'}
+[18.026442] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloID.msg\n'}
+[18.026556] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloWifiConfig.msg\n'}
+[18.026672] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/srv/DroneMode.srv\n'}
+[18.026820] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/action/Spielberg.action\n'}
+[18.026932] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/ament_index/resource_index/package_run_dependencies/tello_msg\n'}
+[18.027037] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/ament_index/resource_index/parent_prefix_path/tello_msg\n'}
+[18.033156] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/ament_prefix_path.sh\n'}
+[18.033292] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/ament_prefix_path.dsv\n'}
+[18.033405] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/path.sh\n'}
+[18.033517] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/path.dsv\n'}
+[18.033623] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/local_setup.bash\n'}
+[18.033729] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/local_setup.sh\n'}
+[18.033834] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/local_setup.zsh\n'}
+[18.033938] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/local_setup.dsv\n'}
+[18.034041] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/package.dsv\n'}
+[18.034159] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/ament_index/resource_index/packages/tello_msg\n'}
+[18.034269] (tello_msg) StdoutLine: {'line': b'-- Old export file "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_generator_cExport.cmake" will be replaced.  Removing files [/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_generator_cExport-noconfig.cmake].\n'}
+[18.034380] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_generator_cExport.cmake\n'}
+[18.034485] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_generator_cExport-noconfig.cmake\n'}
+[18.034590] (tello_msg) StdoutLine: {'line': b'-- Old export file "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_typesupport_fastrtps_cExport.cmake" will be replaced.  Removing files [/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake].\n'}
+[18.034697] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[18.040777] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[18.041030] (tello_msg) StdoutLine: {'line': b'-- Old export file "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_introspection_cExport.cmake" will be replaced.  Removing files [/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake].\n'}
+[18.052162] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_introspection_cExport.cmake\n'}
+[18.052411] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[18.052529] (tello_msg) StdoutLine: {'line': b'-- Old export file "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_cExport.cmake" will be replaced.  Removing files [/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_cExport-noconfig.cmake].\n'}
+[18.056163] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_cExport.cmake\n'}
+[18.063461] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[18.063708] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_generator_cppExport.cmake\n'}
+[18.068153] (tello_msg) StdoutLine: {'line': b'-- Old export file "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_typesupport_fastrtps_cppExport.cmake" will be replaced.  Removing files [/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake].\n'}
+[18.077257] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[18.079416] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[18.088376] (tello_msg) StdoutLine: {'line': b'-- Old export file "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_introspection_cppExport.cmake" will be replaced.  Removing files [/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake].\n'}
+[18.088713] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[18.088867] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[18.088992] (tello_msg) StdoutLine: {'line': b'-- Old export file "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_cppExport.cmake" will be replaced.  Removing files [/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_cppExport-noconfig.cmake].\n'}
+[18.089163] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_cppExport.cmake\n'}
+[18.101175] (-) TimerEvent: {}
+[18.103150] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[18.103388] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_generator_pyExport.cmake\n'}
+[18.103505] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_generator_pyExport-noconfig.cmake\n'}
+[18.103630] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/rosidl_cmake-extras.cmake\n'}
+[18.103740] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[18.103847] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[18.107034] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[18.107442] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[18.107572] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[18.107695] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[18.107808] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msgConfig.cmake\n'}
+[18.107924] (tello_msg) StdoutLine: {'line': b'-- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msgConfig-version.cmake\n'}
+[18.108038] (tello_msg) StdoutLine: {'line': b'-- Installing: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/package.xml\n'}
+[18.137145] (tello_msg) CommandEnded: {'returncode': 0}
+[18.201280] (-) TimerEvent: {}
+[18.266227] (tello_msg) JobEnded: {'identifier': 'tello_msg', 'rc': 0}
+[18.271123] (-) EventReactorShutdown: {}

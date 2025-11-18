@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os
+from glob import glob
 
 package_name = 'controller'
 
@@ -10,6 +12,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'action'), glob('action/*.action')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -27,7 +30,9 @@ setup(
              'manual_control = controller.manual_control:main',
              'tello_behaviour = controller.tello_behaviour:main',
              'spielberg = controller.spielberg:main',
-             'surveillance = controller.surveillance:main'
+             'surveillance = controller.surveillance:main',
+             'qr_code_follower = controller.qr_code_follower:main',
+             'qr_code_reader = controller.qr_code_reader:main'
         ],
     },
 )

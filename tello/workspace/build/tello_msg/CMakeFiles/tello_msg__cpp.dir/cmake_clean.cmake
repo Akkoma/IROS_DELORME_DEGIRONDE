@@ -1,5 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/tello_msg__cpp"
+  "rosidl_generator_cpp/tello_msg/action/detail/spielberg__builder.hpp"
+  "rosidl_generator_cpp/tello_msg/action/detail/spielberg__struct.hpp"
+  "rosidl_generator_cpp/tello_msg/action/detail/spielberg__traits.hpp"
+  "rosidl_generator_cpp/tello_msg/action/detail/spielberg__type_support.hpp"
+  "rosidl_generator_cpp/tello_msg/action/spielberg.hpp"
   "rosidl_generator_cpp/tello_msg/msg/detail/tello_id__builder.hpp"
   "rosidl_generator_cpp/tello_msg/msg/detail/tello_id__struct.hpp"
   "rosidl_generator_cpp/tello_msg/msg/detail/tello_id__traits.hpp"
