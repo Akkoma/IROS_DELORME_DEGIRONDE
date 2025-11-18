@@ -54,7 +54,10 @@ class TelloBehaviour(Node):
             self.handle_mode_change
         )
         
-        self._action_client = ActionClient(self, Spielberg, 'spielberg')
+        # Action client pour le mode Spielberg
+        self._spielberg_action_client = ActionClient(self, Spielberg, 'spielberg')
+        self._spielberg_goal_handle = None
+        
         self.surveillance_client = self.create_client(
             SurveillanceSrv,
             '/surveillance/control'
@@ -111,11 +114,15 @@ class TelloBehaviour(Node):
             self.get_logger().error(response.message)
             return response
         
-        # Changer le mode
+        # Arrêter les modes actifs avant de changer
         old_mode = self.current_mode
-        self.current_mode = requested_mode  
         if old_mode == DroneModes.SURVEILLANCE and requested_mode != DroneModes.SURVEILLANCE:
             self.stop_surveillance_mode()
+        if old_mode == DroneModes.SPIELBERG and requested_mode != DroneModes.SPIELBERG:
+            self.stop_spielberg_mode()
+        
+        # Changer le mode
+        self.current_mode = requested_mode
         
         response.success = True
         response.message = (
@@ -244,49 +251,87 @@ class TelloBehaviour(Node):
         # - Envoi de commandes de correction via self.pub_control
         self.get_logger().info("Mode QR Follower: Implémentation à compléter")
     
-    def send_goal(self):
-        """Envoie le goal à l'action server Spielberg"""
-        goal_msg = Spielberg.Goal()
-        goal_msg.flag = True
-
-        self._action_client.wait_for_server()
-        
-        # Envoyer le goal de manière asynchrone
-        future = self._action_client.send_goal_async(goal_msg)
-        future.add_done_callback(self.goal_response_callback)
-    
-    def goal_response_callback(self, future):
-        """Callback quand le goal est accepté ou rejeté"""
-        goal_handle = future.result()
-        if not goal_handle.accepted:
-            self.get_logger().error('Goal Spielberg rejeté')
-            return
-        
-        self.get_logger().info('Goal Spielberg accepté')
-        
-        # Attendre le résultat
-        result_future = goal_handle.get_result_async()
-        result_future.add_done_callback(self.get_result_callback)
-    
-    def get_result_callback(self, future):
-        """Callback quand l'action est terminée"""
-        result = future.result().result
-        if result.success:
-            self.get_logger().info('Séquence Spielberg terminée avec succès')
-        else:
-            self.get_logger().warn('Séquence Spielberg échouée')
-
     def start_spielberg_mode(self):
         """
         Initialise le mode Spielberg (cinématique).
-        
-        Dans ce mode, le drone doit:
-        - Effectuer des mouvements cinématiques fluides
-        - Suivre des trajectoires prédéfinies ou contrôlées
-        - Maintenir une stabilité optimale pour la prise de vue
+        Envoie un goal à l'action server Spielberg.
         """
         self.get_logger().info("Initialisation du mode Spielberg...")
-        self.send_goal()
+        
+        # Attendre que le serveur d'action soit disponible
+        if not self._spielberg_action_client.wait_for_server(timeout_sec=2.0):
+            self.get_logger().error(
+                "Action server Spielberg non disponible! "
+                "Assurez-vous que le noeud spielberg est lancé."
+            )
+            return
+        
+        # Créer et envoyer le goal
+        goal_msg = Spielberg.Goal()
+        goal_msg.start = True
+        
+        self.get_logger().info("Envoi du goal Spielberg...")
+        send_goal_future = self._spielberg_action_client.send_goal_async(
+            goal_msg,
+            feedback_callback=self.spielberg_feedback_callback
+        )
+        send_goal_future.add_done_callback(self.spielberg_goal_response_callback)
+    
+    def spielberg_goal_response_callback(self, future):
+        """Callback quand le goal Spielberg est accepté ou rejeté"""
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().error('Goal Spielberg rejeté par le serveur')
+            self._spielberg_goal_handle = None
+            return
+        
+        self.get_logger().info('Goal Spielberg accepté - Séquence démarrée')
+        self._spielberg_goal_handle = goal_handle
+        
+        # Attendre le résultat
+        result_future = goal_handle.get_result_async()
+        result_future.add_done_callback(self.spielberg_result_callback)
+    
+    def spielberg_feedback_callback(self, feedback_msg):
+        """Callback pour les feedbacks de l'action Spielberg"""
+        feedback = feedback_msg.feedback
+        self.get_logger().info(
+            f'Spielberg - Étape {feedback.current_step + 1}/{feedback.total_steps} '
+            f'(temps écoulé: {feedback.elapsed_time:.1f}s)',
+            throttle_duration_sec=1.0
+        )
+    
+    def spielberg_result_callback(self, future):
+        """Callback quand l'action Spielberg est terminée"""
+        result = future.result().result
+        self._spielberg_goal_handle = None
+        
+        if result.success:
+            self.get_logger().info(f'Séquence Spielberg terminée: {result.message}')
+        else:
+            self.get_logger().warn(f'Séquence Spielberg échouée: {result.message}')
+    
+    def stop_spielberg_mode(self):
+        """Arrête le mode Spielberg en annulant l'action en cours"""
+        if self._spielberg_goal_handle is not None:
+            self.get_logger().info("Annulation de la séquence Spielberg...")
+            try:
+                cancel_future = self._spielberg_goal_handle.cancel_goal_async()
+                cancel_future.add_done_callback(self.spielberg_cancel_callback)
+            except Exception as e:
+                self.get_logger().error(f"Erreur lors de l'annulation du goal Spielberg: {e}")
+                self._spielberg_goal_handle = None
+        else:
+            self.get_logger().info("Aucune séquence Spielberg active à arrêter")
+    
+    def spielberg_cancel_callback(self, future):
+        """Callback pour l'annulation de l'action Spielberg"""
+        cancel_response = future.result()
+        if len(cancel_response.goals_canceling) > 0:
+            self.get_logger().info('Séquence Spielberg annulée avec succès')
+        else:
+            self.get_logger().warn('Échec de l\'annulation de la séquence Spielberg')
+        self._spielberg_goal_handle = None
 
     def start_surveillance_mode(self):
         """
