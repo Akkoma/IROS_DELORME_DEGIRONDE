@@ -51,11 +51,20 @@ node :
 ros2 topic pub /takeoff std_msgs/msg/Empty {} --once
 ros2 topic pub /land std_msgs/msg/Empty {} --once
 
+colcon build
+source install/local_setup.bash
 ros2 run controller tello_behaviour
+ros2 run controller qr_code_reader
+ros2 run controller qr_code_follower
+ros2 run controller spielberg
+ros2 run controller spielberg
 ros2 run controller manual_control
 ros2 run joy joy_node
 ros2 run tello tello
+
+
 ros2 topic info /joy
+ros2 service call /drone_mode tello_msg/srv/DroneMode "{mode: 0}"
 
 [INFO] tello.py - 438 - Send command: 'wifi?'
 [INFO] tello.py - 471 - Send command (no response expected): 'rc 0 0 0 0'
@@ -69,3 +78,16 @@ ros2 topic info /joy
 
 
 colcon build --packages-select 
+
+#!/home/alix.degironde/Public/ven_IROS/bin python3
+
+
+
+TOUT LANCER EN 1 lignes
+
+scripts/launch.sh
+workspace/src/controller/launch/tello.launch.py
+workspace/src/controller/setup.py 
+
+dans terminal:
+ros2 launch controller tello.launch.py
