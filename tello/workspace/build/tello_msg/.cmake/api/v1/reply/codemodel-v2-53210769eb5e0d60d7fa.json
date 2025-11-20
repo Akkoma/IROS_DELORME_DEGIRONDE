@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-62904b1f2c1a25f5b314.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "tello_msg__py",
+					"jsonFile" : "directory-tello_msg__py-7d2840b18c62ee27f3f4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/tello_msg__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "tello_msg",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_tello_msg_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_tello_msg_egg-40f73f0e0754e0291134.json",
+					"name" : "ament_cmake_python_build_tello_msg_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_tello_msg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_tello_msg-da27d8aa7afa308aca2d.json",
+					"name" : "ament_cmake_python_symlink_tello_msg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg-591e79a46edadebf82e8.json",
+					"name" : "tello_msg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg__cpp-c16c8944763666a0f72a.json",
+					"name" : "tello_msg__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "tello_msg__py::@f2ed7d45d986778bf60f",
+					"jsonFile" : "target-tello_msg__py-a5f542bd74843b1611a4.json",
+					"name" : "tello_msg__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg__rosidl_generator_c-e2f519c0352945297982.json",
+					"name" : "tello_msg__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg__rosidl_generator_py-58494df857f04d09bc23.json",
+					"name" : "tello_msg__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg__rosidl_generator_type_description-fb8d8fdd6c38deccf6b7.json",
+					"name" : "tello_msg__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg__rosidl_typesupport_c-790e26e208543d381060.json",
+					"name" : "tello_msg__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg__rosidl_typesupport_cpp-f54adcfff33401a49155.json",
+					"name" : "tello_msg__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg__rosidl_typesupport_fastrtps_c-94ed372f2e455b5f1d0b.json",
+					"name" : "tello_msg__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg__rosidl_typesupport_fastrtps_cpp-e99023f61439dc6044ad.json",
+					"name" : "tello_msg__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg__rosidl_typesupport_introspection_c-696e91bce90465425b3b.json",
+					"name" : "tello_msg__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg__rosidl_typesupport_introspection_cpp-88914059fe20f9887cc9.json",
+					"name" : "tello_msg__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg_s__rosidl_typesupport_c-aaae1366fa6ba4b3d5fe.json",
+					"name" : "tello_msg_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg_s__rosidl_typesupport_fastrtps_c-9972b5223b1bc83bba09.json",
+					"name" : "tello_msg_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg_s__rosidl_typesupport_introspection_c-27ee2f0852e045c0cc83.json",
+					"name" : "tello_msg_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_msg_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_msg_uninstall-8cfa75652f81e720da2c.json",
+					"name" : "tello_msg_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-014ac4cbb4b298c9a85c.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg",
+		"source" : "/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

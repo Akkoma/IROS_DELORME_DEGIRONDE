@@ -1,8 +1,8 @@
-# Request
-bool flag
+bool start
 ---
-# Result
 bool success
+string message
 ---
-# Feedback
-int32 time_remaining
+int32 current_step
+int32 total_steps
+float32 elapsed_time

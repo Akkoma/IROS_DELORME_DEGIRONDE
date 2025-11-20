@@ -1,5 +1,0 @@
-  File "/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/manual_control.py", line 95
-    self.get_logger().info(
-                          ^
-SyntaxError: '(' was never closed
-

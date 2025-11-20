@@ -4,9 +4,29 @@
       "type_name": "tello_msg/action/Spielberg_Feedback",
       "fields": [
         {
-          "name": "time_remaining",
+          "name": "current_step",
           "type": {
             "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "total_steps",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "elapsed_time",
+          "type": {
+            "type_id": 10,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -20,7 +40,7 @@
   "type_hashes": [
     {
       "type_name": "tello_msg/action/Spielberg_Feedback",
-      "hash_string": "RIHS01_341a4893a85b2c15515f6fb8a1c82b1db25ec99e7eb70c7a2dcaf9385aa9f5c1"
+      "hash_string": "RIHS01_558110bacfe7420adf0a61140609a42e2d8b536d024e22c63966f9da6940883b"
     }
   ]
 }

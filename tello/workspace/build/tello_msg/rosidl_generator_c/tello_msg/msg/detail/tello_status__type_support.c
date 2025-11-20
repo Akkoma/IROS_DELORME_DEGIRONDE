@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "tello_msg/msg/detail/tello_status__functions.h"
-#include "tello_msg/msg/detail/tello_status__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "tello_msg/msg/detail/tello_status__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "tello_msg/msg/detail/tello_status__struct.h"
+#include "tello_msg/msg/detail/tello_status__functions.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -1,5 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000219] (-) JobUnselected: {'identifier': 'controller'}
-[0.000282] (-) JobUnselected: {'identifier': 'tello_control'}
-[0.000307] (-) JobUnselected: {'identifier': 'tello_msg'}
-[0.001652] (-) EventReactorShutdown: {}

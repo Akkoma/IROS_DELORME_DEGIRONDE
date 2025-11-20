@@ -1,18 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from tello_msg/msg/TelloWifiConfig.msg
-// generated code does not contain a copyright notice
-
-
-module tello_msg {
-  module msg {
-    @verbatim (language="comment", text=
-      "Wifi SSID name")
-    struct TelloWifiConfig {
-      string ssid;
-
-      @verbatim (language="comment", text=
-        "Wifi network password")
-      string password;
-    };
-  };
-};
+/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/msg/TelloWifiConfig.idl

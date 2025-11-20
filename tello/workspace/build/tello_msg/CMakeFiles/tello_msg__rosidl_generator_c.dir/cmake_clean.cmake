@@ -29,6 +29,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__functions.c.o.d"
   "CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.o"
   "CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c.o.d"
+  "CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/surveillance__description.c.o"
+  "CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/surveillance__description.c.o.d"
+  "CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/surveillance__functions.c.o"
+  "CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/surveillance__functions.c.o.d"
+  "CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/surveillance__type_support.c.o"
+  "CMakeFiles/tello_msg__rosidl_generator_c.dir/rosidl_generator_c/tello_msg/srv/detail/surveillance__type_support.c.o.d"
   "libtello_msg__rosidl_generator_c.pdb"
   "libtello_msg__rosidl_generator_c.so"
   "rosidl_generator_c/tello_msg/action/detail/spielberg__description.c"
@@ -65,7 +71,14 @@ file(REMOVE_RECURSE
   "rosidl_generator_c/tello_msg/srv/detail/drone_mode__struct.h"
   "rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.c"
   "rosidl_generator_c/tello_msg/srv/detail/drone_mode__type_support.h"
+  "rosidl_generator_c/tello_msg/srv/detail/surveillance__description.c"
+  "rosidl_generator_c/tello_msg/srv/detail/surveillance__functions.c"
+  "rosidl_generator_c/tello_msg/srv/detail/surveillance__functions.h"
+  "rosidl_generator_c/tello_msg/srv/detail/surveillance__struct.h"
+  "rosidl_generator_c/tello_msg/srv/detail/surveillance__type_support.c"
+  "rosidl_generator_c/tello_msg/srv/detail/surveillance__type_support.h"
   "rosidl_generator_c/tello_msg/srv/drone_mode.h"
+  "rosidl_generator_c/tello_msg/srv/surveillance.h"
 )
 
 # Per-language clean rules from dependency scanning.

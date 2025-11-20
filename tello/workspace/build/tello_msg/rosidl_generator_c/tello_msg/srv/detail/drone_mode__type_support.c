@@ -4,9 +4,9 @@
 
 #include <string.h>
 
+#include "tello_msg/srv/detail/drone_mode__functions.h"
 #include "tello_msg/srv/detail/drone_mode__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "tello_msg/srv/detail/drone_mode__functions.h"
 #include "tello_msg/srv/detail/drone_mode__struct.h"
 
 #ifdef __cplusplus

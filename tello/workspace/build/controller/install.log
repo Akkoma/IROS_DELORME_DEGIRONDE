@@ -1,4 +1,5 @@
 /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/qr_code_follower.py
+/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/spielberg_old.py
 /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/qr_code_reader.py
 /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/tello_behaviour.py
 /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/surveillance.py
@@ -6,6 +7,7 @@
 /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/spielberg.py
 /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/manual_control.py
 /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/__pycache__/qr_code_follower.cpython-312.pyc
+/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/__pycache__/spielberg_old.cpython-312.pyc
 /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/__pycache__/qr_code_reader.cpython-312.pyc
 /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/__pycache__/tello_behaviour.cpython-312.pyc
 /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller/__pycache__/surveillance.cpython-312.pyc

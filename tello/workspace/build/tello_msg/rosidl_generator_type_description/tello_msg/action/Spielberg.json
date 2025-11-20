@@ -140,9 +140,29 @@
         "type_name": "tello_msg/action/Spielberg_Feedback",
         "fields": [
           {
-            "name": "time_remaining",
+            "name": "current_step",
             "type": {
               "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "total_steps",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "elapsed_time",
+            "type": {
+              "type_id": 10,
               "capacity": 0,
               "string_capacity": 0,
               "nested_type_name": ""
@@ -290,7 +310,7 @@
         "type_name": "tello_msg/action/Spielberg_Goal",
         "fields": [
           {
-            "name": "flag",
+            "name": "start",
             "type": {
               "type_id": 15,
               "capacity": 0,
@@ -308,6 +328,16 @@
             "name": "success",
             "type": {
               "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "message",
+            "type": {
+              "type_id": 17,
               "capacity": 0,
               "string_capacity": 0,
               "nested_type_name": ""
@@ -456,7 +486,7 @@
   "type_hashes": [
     {
       "type_name": "tello_msg/action/Spielberg",
-      "hash_string": "RIHS01_758614cb4233ae6eeba0c8d908e5922cbe950b97f83a130ca4df45a0f726b083"
+      "hash_string": "RIHS01_b1d093e1f4b0820411393b1964c31b8a233bfc5ff283c47cb2850dfe644594fa"
     },
     {
       "type_name": "builtin_interfaces/msg/Time",
@@ -468,19 +498,19 @@
     },
     {
       "type_name": "tello_msg/action/Spielberg_Feedback",
-      "hash_string": "RIHS01_341a4893a85b2c15515f6fb8a1c82b1db25ec99e7eb70c7a2dcaf9385aa9f5c1"
+      "hash_string": "RIHS01_558110bacfe7420adf0a61140609a42e2d8b536d024e22c63966f9da6940883b"
     },
     {
       "type_name": "tello_msg/action/Spielberg_FeedbackMessage",
-      "hash_string": "RIHS01_2f09f22ee4c6cf42a391d328a554212c1fa5f9a97733b5220c6e710998f7539e"
+      "hash_string": "RIHS01_94b50cf891afe8f49ce249bfa160a58640eec54f9bee64c052a7d67c65049216"
     },
     {
       "type_name": "tello_msg/action/Spielberg_GetResult",
-      "hash_string": "RIHS01_f4034f105b356af93b0a0e26a4377b7e90615aab9b01f61233ca7b71b70fe500"
+      "hash_string": "RIHS01_de97e43e59492abfb4864d4768cde4869ce8259b61749e899cba7b8a47d5cdb0"
     },
     {
       "type_name": "tello_msg/action/Spielberg_GetResult_Event",
-      "hash_string": "RIHS01_c739850472db8cce39470a30fe39e16cc2200fa16da142a4407ceda2f853cff0"
+      "hash_string": "RIHS01_20494011055a8bb00f25cd3628eb659eca65afd212bfb71dfbdd5d0311432a9c"
     },
     {
       "type_name": "tello_msg/action/Spielberg_GetResult_Request",
@@ -488,27 +518,27 @@
     },
     {
       "type_name": "tello_msg/action/Spielberg_GetResult_Response",
-      "hash_string": "RIHS01_88b7efe0abf6c7d0b25921bcc37f648f73ec031e21faff8a3ca0c30adcf7da03"
+      "hash_string": "RIHS01_eb8a1f8fbd352840c17ec30380de52f09c5372a3ab03d57bc9ba912c012e6676"
     },
     {
       "type_name": "tello_msg/action/Spielberg_Goal",
-      "hash_string": "RIHS01_90c9cd1035d0b195b1ac06e1f4f4ce53a9cf5bd71b716b63e4e6302a74a88211"
+      "hash_string": "RIHS01_e969163c706fd5c374bb89dc6c21fb185a637e92141b2e7bf3e47a187343651f"
     },
     {
       "type_name": "tello_msg/action/Spielberg_Result",
-      "hash_string": "RIHS01_d82f2e5bb0bf0ba1ffed701c2b3361d924f873759ffc9117961102e53e4d28b9"
+      "hash_string": "RIHS01_9e74a5933389f3b688f35d0a1015472d0b92c4100ec568b12a79e440fff34ecf"
     },
     {
       "type_name": "tello_msg/action/Spielberg_SendGoal",
-      "hash_string": "RIHS01_a6f50f8e0cb3711bc99b0f7238f59e5991482c695cd80f99ad0dce7f983822e4"
+      "hash_string": "RIHS01_d4413fd80af3c9c2e9aad108e2d71fb9aef1683ce6b7f3721ebb481a9e4fbf71"
     },
     {
       "type_name": "tello_msg/action/Spielberg_SendGoal_Event",
-      "hash_string": "RIHS01_8b836e801aea4e48051da8f15414c199a693dcc40acdd10b21a832d29fe716ca"
+      "hash_string": "RIHS01_d4312d53cd8f8c68d7de61177248edabfd6ef5adb373c4d7592b74687d8fcf93"
     },
     {
       "type_name": "tello_msg/action/Spielberg_SendGoal_Request",
-      "hash_string": "RIHS01_d2ca601dd564f1e8c7ab34ca347f5d6b6e78fd292eb755dc0d908966d7c2c75c"
+      "hash_string": "RIHS01_3df036c8c21b1998986c299adb56a3e4d303f2c6adb50a429e232f6182a4ea9a"
     },
     {
       "type_name": "tello_msg/action/Spielberg_SendGoal_Response",

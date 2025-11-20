@@ -2,28 +2,25 @@
 
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Int32
 from geometry_msgs.msg import Twist
+from tello_msg.srv import Surveillance as SurveillanceSrv
 
 
 class Surveillance(Node):
-    SURVEILLANCE_MODE = 3
-
     def __init__(self):
         super().__init__('surveillance')
         
-        # État du mode actuel
-        self.current_mode = 0
+        # État de surveillance (activé/désactivé)
+        self.is_active = False
         
         # Timer pour envoyer des commandes à 20 Hz (toutes les 0.05 secondes)
         self.timer = self.create_timer(0.05, self.timer_callback)
         
-        # Subscriber pour écouter le mode du drone
-        self.mode_sub = self.create_subscription(
-            Int32,
-            '/drone_mode/state',
-            self.mode_callback,
-            10
+        # Service pour activer/désactiver la surveillance
+        self.surveillance_service = self.create_service(
+            SurveillanceSrv,
+            '/surveillance/control',
+            self.handle_surveillance_request
         )
         
         # Publisher pour envoyer les commandes de mouvement
@@ -33,22 +30,32 @@ class Surveillance(Node):
             10
         )
         
-        self.get_logger().info('Noeud surveillance initialisé')
+        self.get_logger().info('noeud surveillance initialisé')
     
-    def mode_callback(self, msg):
-        """Callback qui reçoit les changements de mode"""
-        old_mode = self.current_mode
-        self.current_mode = msg.data
+    def handle_surveillance_request(self, request, response):
+        """Gère les demandes d'activation/désactivation de la surveillance"""
+        old_state = self.is_active
+        self.is_active = request.data
         
-        if old_mode != self.current_mode:
-            if self.current_mode == self.SURVEILLANCE_MODE:
-                self.get_logger().info('Mode surveillance activé - Rotation démarrée')
+        if old_state != self.is_active:
+            if self.is_active:
+                self.get_logger().info('Mode surveillance ACTIVÉ - Rotation démarrée')
             else:
-                self.get_logger().info(f'Mode surveillance désactivé (mode actuel: {self.current_mode})')
+                self.get_logger().info('Mode surveillance DÉSACTIVÉ')
+                # Arrêter le drone quand on désactive
+                self.send_stop_command()
+        
+        response.success = True
+        return response
+    
+    def send_stop_command(self):
+        """Envoie une commande d'arrêt au drone"""
+        twist = Twist()
+        self.cmd_vel_pub.publish(twist)
     
     def timer_callback(self):
         """Appelé à 20 Hz pour envoyer les commandes de rotation"""
-        if self.current_mode == self.SURVEILLANCE_MODE:
+        if self.is_active:
             # Créer un message Twist pour la rotation
             twist = Twist()
             twist.linear.x = 0.0

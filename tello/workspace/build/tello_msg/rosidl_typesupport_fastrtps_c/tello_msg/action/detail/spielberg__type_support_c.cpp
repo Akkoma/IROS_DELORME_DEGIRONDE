@@ -48,9 +48,9 @@ bool cdr_serialize_tello_msg__action__Spielberg_Goal(
   const tello_msg__action__Spielberg_Goal * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: flag
+  // Field name: start
   {
-    cdr << (ros_message->flag ? true : false);
+    cdr << (ros_message->start ? true : false);
   }
 
   return true;
@@ -61,11 +61,11 @@ bool cdr_deserialize_tello_msg__action__Spielberg_Goal(
   eprosima::fastcdr::Cdr & cdr,
   tello_msg__action__Spielberg_Goal * ros_message)
 {
-  // Field name: flag
+  // Field name: start
   {
     uint8_t tmp;
     cdr >> tmp;
-    ros_message->flag = tmp ? true : false;
+    ros_message->start = tmp ? true : false;
   }
 
   return true;
@@ -86,9 +86,9 @@ size_t get_serialized_size_tello_msg__action__Spielberg_Goal(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: flag
+  // Field name: start
   {
-    size_t item_size = sizeof(ros_message->flag);
+    size_t item_size = sizeof(ros_message->start);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -115,7 +115,7 @@ size_t max_serialized_size_tello_msg__action__Spielberg_Goal(
   full_bounded = true;
   is_plain = true;
 
-  // Field name: flag
+  // Field name: start
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -131,7 +131,7 @@ size_t max_serialized_size_tello_msg__action__Spielberg_Goal(
     using DataType = tello_msg__action__Spielberg_Goal;
     is_plain =
       (
-      offsetof(DataType, flag) +
+      offsetof(DataType, start) +
       last_member_size
       ) == ret_val;
   }
@@ -143,9 +143,9 @@ bool cdr_serialize_key_tello_msg__action__Spielberg_Goal(
   const tello_msg__action__Spielberg_Goal * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: flag
+  // Field name: start
   {
-    cdr << (ros_message->flag ? true : false);
+    cdr << (ros_message->start ? true : false);
   }
 
   return true;
@@ -166,9 +166,9 @@ size_t get_serialized_size_key_tello_msg__action__Spielberg_Goal(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: flag
+  // Field name: start
   {
-    size_t item_size = sizeof(ros_message->flag);
+    size_t item_size = sizeof(ros_message->start);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -193,7 +193,7 @@ size_t max_serialized_size_key_tello_msg__action__Spielberg_Goal(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: flag
+  // Field name: start
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -208,7 +208,7 @@ size_t max_serialized_size_key_tello_msg__action__Spielberg_Goal(
     using DataType = tello_msg__action__Spielberg_Goal;
     is_plain =
       (
-      offsetof(DataType, flag) +
+      offsetof(DataType, start) +
       last_member_size
       ) == ret_val;
   }
@@ -337,6 +337,8 @@ extern "C"
 {
 #endif
 
+#include "rosidl_runtime_c/string.h"  // message
+#include "rosidl_runtime_c/string_functions.h"  // message
 
 // forward declare type support functions
 
@@ -354,6 +356,20 @@ bool cdr_serialize_tello_msg__action__Spielberg_Result(
     cdr << (ros_message->success ? true : false);
   }
 
+  // Field name: message
+  {
+    const rosidl_runtime_c__String * str = &ros_message->message;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
   return true;
 }
 
@@ -367,6 +383,22 @@ bool cdr_deserialize_tello_msg__action__Spielberg_Result(
     uint8_t tmp;
     cdr >> tmp;
     ros_message->success = tmp ? true : false;
+  }
+
+  // Field name: message
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->message.data) {
+      rosidl_runtime_c__String__init(&ros_message->message);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->message,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'message'\n");
+      return false;
+    }
   }
 
   return true;
@@ -393,6 +425,11 @@ size_t get_serialized_size_tello_msg__action__Spielberg_Result(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+
+  // Field name: message
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->message.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -423,6 +460,18 @@ size_t max_serialized_size_tello_msg__action__Spielberg_Result(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Field name: message
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -432,7 +481,7 @@ size_t max_serialized_size_tello_msg__action__Spielberg_Result(
     using DataType = tello_msg__action__Spielberg_Result;
     is_plain =
       (
-      offsetof(DataType, success) +
+      offsetof(DataType, message) +
       last_member_size
       ) == ret_val;
   }
@@ -447,6 +496,20 @@ bool cdr_serialize_key_tello_msg__action__Spielberg_Result(
   // Field name: success
   {
     cdr << (ros_message->success ? true : false);
+  }
+
+  // Field name: message
+  {
+    const rosidl_runtime_c__String * str = &ros_message->message;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
   }
 
   return true;
@@ -473,6 +536,11 @@ size_t get_serialized_size_key_tello_msg__action__Spielberg_Result(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+
+  // Field name: message
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->message.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -501,6 +569,18 @@ size_t max_serialized_size_key_tello_msg__action__Spielberg_Result(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Field name: message
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -509,7 +589,7 @@ size_t max_serialized_size_key_tello_msg__action__Spielberg_Result(
     using DataType = tello_msg__action__Spielberg_Result;
     is_plain =
       (
-      offsetof(DataType, success) +
+      offsetof(DataType, message) +
       last_member_size
       ) == ret_val;
   }
@@ -650,9 +730,19 @@ bool cdr_serialize_tello_msg__action__Spielberg_Feedback(
   const tello_msg__action__Spielberg_Feedback * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: time_remaining
+  // Field name: current_step
   {
-    cdr << ros_message->time_remaining;
+    cdr << ros_message->current_step;
+  }
+
+  // Field name: total_steps
+  {
+    cdr << ros_message->total_steps;
+  }
+
+  // Field name: elapsed_time
+  {
+    cdr << ros_message->elapsed_time;
   }
 
   return true;
@@ -663,9 +753,19 @@ bool cdr_deserialize_tello_msg__action__Spielberg_Feedback(
   eprosima::fastcdr::Cdr & cdr,
   tello_msg__action__Spielberg_Feedback * ros_message)
 {
-  // Field name: time_remaining
+  // Field name: current_step
   {
-    cdr >> ros_message->time_remaining;
+    cdr >> ros_message->current_step;
+  }
+
+  // Field name: total_steps
+  {
+    cdr >> ros_message->total_steps;
+  }
+
+  // Field name: elapsed_time
+  {
+    cdr >> ros_message->elapsed_time;
   }
 
   return true;
@@ -686,9 +786,23 @@ size_t get_serialized_size_tello_msg__action__Spielberg_Feedback(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: time_remaining
+  // Field name: current_step
   {
-    size_t item_size = sizeof(ros_message->time_remaining);
+    size_t item_size = sizeof(ros_message->current_step);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: total_steps
+  {
+    size_t item_size = sizeof(ros_message->total_steps);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: elapsed_time
+  {
+    size_t item_size = sizeof(ros_message->elapsed_time);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -715,7 +829,23 @@ size_t max_serialized_size_tello_msg__action__Spielberg_Feedback(
   full_bounded = true;
   is_plain = true;
 
-  // Field name: time_remaining
+  // Field name: current_step
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: total_steps
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: elapsed_time
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -732,7 +862,7 @@ size_t max_serialized_size_tello_msg__action__Spielberg_Feedback(
     using DataType = tello_msg__action__Spielberg_Feedback;
     is_plain =
       (
-      offsetof(DataType, time_remaining) +
+      offsetof(DataType, elapsed_time) +
       last_member_size
       ) == ret_val;
   }
@@ -744,9 +874,19 @@ bool cdr_serialize_key_tello_msg__action__Spielberg_Feedback(
   const tello_msg__action__Spielberg_Feedback * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: time_remaining
+  // Field name: current_step
   {
-    cdr << ros_message->time_remaining;
+    cdr << ros_message->current_step;
+  }
+
+  // Field name: total_steps
+  {
+    cdr << ros_message->total_steps;
+  }
+
+  // Field name: elapsed_time
+  {
+    cdr << ros_message->elapsed_time;
   }
 
   return true;
@@ -767,9 +907,23 @@ size_t get_serialized_size_key_tello_msg__action__Spielberg_Feedback(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: time_remaining
+  // Field name: current_step
   {
-    size_t item_size = sizeof(ros_message->time_remaining);
+    size_t item_size = sizeof(ros_message->current_step);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: total_steps
+  {
+    size_t item_size = sizeof(ros_message->total_steps);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: elapsed_time
+  {
+    size_t item_size = sizeof(ros_message->elapsed_time);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -794,7 +948,23 @@ size_t max_serialized_size_key_tello_msg__action__Spielberg_Feedback(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: time_remaining
+  // Field name: current_step
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: total_steps
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: elapsed_time
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -810,7 +980,7 @@ size_t max_serialized_size_key_tello_msg__action__Spielberg_Feedback(
     using DataType = tello_msg__action__Spielberg_Feedback;
     is_plain =
       (
-      offsetof(DataType, time_remaining) +
+      offsetof(DataType, elapsed_time) +
       last_member_size
       ) == ret_val;
   }

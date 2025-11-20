@@ -1,0 +1,41 @@
+[0.037s] Invoking command in '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T PS1=(ven_IROS) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/cmake /home/alix.degironde/Public/tello-ros2/workspace/src/tello_control -DCMAKE_INSTALL_PREFIX=/home/alix.degironde/Public/tello-ros2/workspace/install/tello_control
+[0.065s] -- Found OpenCV version 4.6.0
+[0.065s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.291s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.302s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.344s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.357s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.375s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.398s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.506s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.509s] -- Found rmw_cyclonedds_cpp: 2.2.3 (/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake)
+[0.556s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.639s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.657s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.800s] -- Configuring done (0.8s)
+[0.818s] -- Generating done (0.0s)
+[0.823s] -- Build files have been written to: /home/alix.degironde/Public/tello-ros2/workspace/build/tello_control
+[0.832s] Invoked command in '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T PS1=(ven_IROS) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/cmake /home/alix.degironde/Public/tello-ros2/workspace/src/tello_control -DCMAKE_INSTALL_PREFIX=/home/alix.degironde/Public/tello-ros2/workspace/install/tello_control
+[0.834s] Invoking command in '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T PS1=(ven_IROS) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/cmake --build /home/alix.degironde/Public/tello-ros2/workspace/build/tello_control -- -j4 -l4
+[0.910s] [100%] Built target tello_control
+[0.924s] Invoked command in '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T PS1=(ven_IROS) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/cmake --build /home/alix.degironde/Public/tello-ros2/workspace/build/tello_control -- -j4 -l4
+[0.936s] Invoking command in '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T PS1=(ven_IROS) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/cmake --install /home/alix.degironde/Public/tello-ros2/workspace/build/tello_control
+[0.946s] -- Install configuration: ""
+[0.946s] -- Execute custom install script
+[0.947s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/lib/tello_control/tello_control
+[0.947s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/ament_index/resource_index/package_run_dependencies/tello_control
+[0.947s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/ament_index/resource_index/parent_prefix_path/tello_control
+[0.947s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/tello_control/environment/ament_prefix_path.sh
+[0.948s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/tello_control/environment/ament_prefix_path.dsv
+[0.948s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/tello_control/environment/path.sh
+[0.948s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/tello_control/environment/path.dsv
+[0.948s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/tello_control/local_setup.bash
+[0.949s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/tello_control/local_setup.sh
+[0.949s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/tello_control/local_setup.zsh
+[0.949s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/tello_control/local_setup.dsv
+[0.949s] -- Symlinking: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/tello_control/package.dsv
+[0.961s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/ament_index/resource_index/packages/tello_control
+[0.961s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/tello_control/cmake/tello_controlConfig.cmake
+[0.961s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/tello_control/cmake/tello_controlConfig-version.cmake
+[0.961s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_control/share/tello_control/package.xml
+[0.964s] Invoked command in '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T PS1=(ven_IROS) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/cmake --install /home/alix.degironde/Public/tello-ros2/workspace/build/tello_control

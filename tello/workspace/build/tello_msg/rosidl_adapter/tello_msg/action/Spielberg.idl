@@ -5,20 +5,20 @@
 
 module tello_msg {
   module action {
-    @verbatim (language="comment", text=
-      "Request")
     struct Spielberg_Goal {
-      boolean flag;
+      boolean start;
     };
-    @verbatim (language="comment", text=
-      "Result")
     struct Spielberg_Result {
       boolean success;
+
+      string message;
     };
-    @verbatim (language="comment", text=
-      "Feedback")
     struct Spielberg_Feedback {
-      int32 time_remaining;
+      int32 current_step;
+
+      int32 total_steps;
+
+      float elapsed_time;
     };
   };
 };

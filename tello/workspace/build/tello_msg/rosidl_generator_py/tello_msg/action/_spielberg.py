@@ -62,12 +62,12 @@ class Spielberg_Goal(metaclass=Metaclass_Spielberg_Goal):
     """Message class 'Spielberg_Goal'."""
 
     __slots__ = [
-        '_flag',
+        '_start',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
-        'flag': 'boolean',
+        'start': 'boolean',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -85,7 +85,7 @@ class Spielberg_Goal(metaclass=Metaclass_Spielberg_Goal):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.flag = kwargs.get('flag', bool())
+        self.start = kwargs.get('start', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -117,7 +117,7 @@ class Spielberg_Goal(metaclass=Metaclass_Spielberg_Goal):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.flag != other.flag:
+        if self.start != other.start:
             return False
         return True
 
@@ -127,17 +127,17 @@ class Spielberg_Goal(metaclass=Metaclass_Spielberg_Goal):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def flag(self):
-        """Message field 'flag'."""
-        return self._flag
+    def start(self):
+        """Message field 'start'."""
+        return self._start
 
-    @flag.setter
-    def flag(self, value):
+    @start.setter
+    def start(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, bool), \
-                "The 'flag' field must be of type 'bool'"
-        self._flag = value
+                "The 'start' field must be of type 'bool'"
+        self._start = value
 
 
 # Import statements for member types
@@ -195,17 +195,20 @@ class Spielberg_Result(metaclass=Metaclass_Spielberg_Result):
 
     __slots__ = [
         '_success',
+        '_message',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
         'success': 'boolean',
+        'message': 'string',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -218,6 +221,7 @@ class Spielberg_Result(metaclass=Metaclass_Spielberg_Result):
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.success = kwargs.get('success', bool())
+        self.message = kwargs.get('message', str())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -251,6 +255,8 @@ class Spielberg_Result(metaclass=Metaclass_Spielberg_Result):
             return False
         if self.success != other.success:
             return False
+        if self.message != other.message:
+            return False
         return True
 
     @classmethod
@@ -271,11 +277,26 @@ class Spielberg_Result(metaclass=Metaclass_Spielberg_Result):
                 "The 'success' field must be of type 'bool'"
         self._success = value
 
+    @builtins.property
+    def message(self):
+        """Message field 'message'."""
+        return self._message
+
+    @message.setter
+    def message(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, str), \
+                "The 'message' field must be of type 'str'"
+        self._message = value
+
 
 # Import statements for member types
 
 # already imported above
 # import builtins
+
+import math  # noqa: E402, I100
 
 # already imported above
 # import rosidl_parser.definition
@@ -326,18 +347,24 @@ class Spielberg_Feedback(metaclass=Metaclass_Spielberg_Feedback):
     """Message class 'Spielberg_Feedback'."""
 
     __slots__ = [
-        '_time_remaining',
+        '_current_step',
+        '_total_steps',
+        '_elapsed_time',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
-        'time_remaining': 'int32',
+        'current_step': 'int32',
+        'total_steps': 'int32',
+        'elapsed_time': 'float',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -349,7 +376,9 @@ class Spielberg_Feedback(metaclass=Metaclass_Spielberg_Feedback):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.time_remaining = kwargs.get('time_remaining', int())
+        self.current_step = kwargs.get('current_step', int())
+        self.total_steps = kwargs.get('total_steps', int())
+        self.elapsed_time = kwargs.get('elapsed_time', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -381,7 +410,11 @@ class Spielberg_Feedback(metaclass=Metaclass_Spielberg_Feedback):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.time_remaining != other.time_remaining:
+        if self.current_step != other.current_step:
+            return False
+        if self.total_steps != other.total_steps:
+            return False
+        if self.elapsed_time != other.elapsed_time:
             return False
         return True
 
@@ -391,19 +424,49 @@ class Spielberg_Feedback(metaclass=Metaclass_Spielberg_Feedback):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def time_remaining(self):
-        """Message field 'time_remaining'."""
-        return self._time_remaining
+    def current_step(self):
+        """Message field 'current_step'."""
+        return self._current_step
 
-    @time_remaining.setter
-    def time_remaining(self, value):
+    @current_step.setter
+    def current_step(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, int), \
-                "The 'time_remaining' field must be of type 'int'"
+                "The 'current_step' field must be of type 'int'"
             assert value >= -2147483648 and value < 2147483648, \
-                "The 'time_remaining' field must be an integer in [-2147483648, 2147483647]"
-        self._time_remaining = value
+                "The 'current_step' field must be an integer in [-2147483648, 2147483647]"
+        self._current_step = value
+
+    @builtins.property
+    def total_steps(self):
+        """Message field 'total_steps'."""
+        return self._total_steps
+
+    @total_steps.setter
+    def total_steps(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, int), \
+                "The 'total_steps' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'total_steps' field must be an integer in [-2147483648, 2147483647]"
+        self._total_steps = value
+
+    @builtins.property
+    def elapsed_time(self):
+        """Message field 'elapsed_time'."""
+        return self._elapsed_time
+
+    @elapsed_time.setter
+    def elapsed_time(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, float), \
+                "The 'elapsed_time' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'elapsed_time' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._elapsed_time = value
 
 
 # Import statements for member types

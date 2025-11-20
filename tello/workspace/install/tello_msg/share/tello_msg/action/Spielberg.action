@@ -1,8 +1,1 @@
-# Request
-bool flag
----
-# Result
-bool success
----
-# Feedback
-int32 time_remaining
+/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg/action/Spielberg.action

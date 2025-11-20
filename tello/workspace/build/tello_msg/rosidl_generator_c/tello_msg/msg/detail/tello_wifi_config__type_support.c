@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "tello_msg/msg/detail/tello_wifi_config__struct.h"
-#include "tello_msg/msg/detail/tello_wifi_config__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "tello_msg/msg/detail/tello_wifi_config__type_support.h"
+#include "tello_msg/msg/detail/tello_wifi_config__functions.h"
+#include "tello_msg/msg/detail/tello_wifi_config__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

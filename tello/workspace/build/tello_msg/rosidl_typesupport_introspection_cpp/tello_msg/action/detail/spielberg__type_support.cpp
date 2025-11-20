@@ -40,7 +40,7 @@ void Spielberg_Goal_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember Spielberg_Goal_message_member_array[1] = {
   {
-    "flag",  // name
+    "start",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
@@ -48,7 +48,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Spielberg_Goa
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(tello_msg::action::Spielberg_Goal, flag),  // bytes offset in struct
+    offsetof(tello_msg::action::Spielberg_Goal, start),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -164,7 +164,7 @@ void Spielberg_Result_fini_function(void * message_memory)
   typed_message->~Spielberg_Result();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Spielberg_Result_message_member_array[1] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Spielberg_Result_message_member_array[2] = {
   {
     "success",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
@@ -182,13 +182,31 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Spielberg_Res
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "message",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(tello_msg::action::Spielberg_Result, message),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Spielberg_Result_message_members = {
   "tello_msg::action",  // message namespace
   "Spielberg_Result",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(tello_msg::action::Spielberg_Result),
   false,  // has_any_key_member_
   Spielberg_Result_message_member_array,  // message members
@@ -290,9 +308,9 @@ void Spielberg_Feedback_fini_function(void * message_memory)
   typed_message->~Spielberg_Feedback();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Spielberg_Feedback_message_member_array[1] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Spielberg_Feedback_message_member_array[3] = {
   {
-    "time_remaining",  // name
+    "current_step",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
@@ -300,7 +318,43 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Spielberg_Fee
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(tello_msg::action::Spielberg_Feedback, time_remaining),  // bytes offset in struct
+    offsetof(tello_msg::action::Spielberg_Feedback, current_step),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "total_steps",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(tello_msg::action::Spielberg_Feedback, total_steps),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "elapsed_time",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(tello_msg::action::Spielberg_Feedback, elapsed_time),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -314,7 +368,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Spielberg_Fee
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Spielberg_Feedback_message_members = {
   "tello_msg::action",  // message namespace
   "Spielberg_Feedback",  // message name
-  1,  // number of fields
+  3,  // number of fields
   sizeof(tello_msg::action::Spielberg_Feedback),
   false,  // has_any_key_member_
   Spielberg_Feedback_message_member_array,  // message members

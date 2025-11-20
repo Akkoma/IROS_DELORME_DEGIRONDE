@@ -14,6 +14,7 @@ controller/manual_control.py
 controller/qr_code_follower.py
 controller/qr_code_reader.py
 controller/spielberg.py
+controller/spielberg_old.py
 controller/surveillance.py
 controller/tello_behaviour.py
 resource/controller

@@ -25,7 +25,12 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__struct.hpp"
   "rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__traits.hpp"
   "rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__type_support.hpp"
+  "rosidl_generator_cpp/tello_msg/srv/detail/surveillance__builder.hpp"
+  "rosidl_generator_cpp/tello_msg/srv/detail/surveillance__struct.hpp"
+  "rosidl_generator_cpp/tello_msg/srv/detail/surveillance__traits.hpp"
+  "rosidl_generator_cpp/tello_msg/srv/detail/surveillance__type_support.hpp"
   "rosidl_generator_cpp/tello_msg/srv/drone_mode.hpp"
+  "rosidl_generator_cpp/tello_msg/srv/surveillance.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

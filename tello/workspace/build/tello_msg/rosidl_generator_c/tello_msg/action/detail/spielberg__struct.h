@@ -23,7 +23,7 @@ extern "C"
 /// Struct defined in action/Spielberg in the package tello_msg.
 typedef struct tello_msg__action__Spielberg_Goal
 {
-  bool flag;
+  bool start;
 } tello_msg__action__Spielberg_Goal;
 
 // Struct for a sequence of tello_msg__action__Spielberg_Goal.
@@ -38,10 +38,15 @@ typedef struct tello_msg__action__Spielberg_Goal__Sequence
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'message'
+#include "rosidl_runtime_c/string.h"
+
 /// Struct defined in action/Spielberg in the package tello_msg.
 typedef struct tello_msg__action__Spielberg_Result
 {
   bool success;
+  rosidl_runtime_c__String message;
 } tello_msg__action__Spielberg_Result;
 
 // Struct for a sequence of tello_msg__action__Spielberg_Result.
@@ -59,7 +64,9 @@ typedef struct tello_msg__action__Spielberg_Result__Sequence
 /// Struct defined in action/Spielberg in the package tello_msg.
 typedef struct tello_msg__action__Spielberg_Feedback
 {
-  int32_t time_remaining;
+  int32_t current_step;
+  int32_t total_steps;
+  float elapsed_time;
 } tello_msg__action__Spielberg_Feedback;
 
 // Struct for a sequence of tello_msg__action__Spielberg_Feedback.

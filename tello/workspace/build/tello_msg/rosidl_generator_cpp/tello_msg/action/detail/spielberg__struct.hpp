@@ -41,7 +41,7 @@ struct Spielberg_Goal_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->flag = false;
+      this->start = false;
     }
   }
 
@@ -51,20 +51,20 @@ struct Spielberg_Goal_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->flag = false;
+      this->start = false;
     }
   }
 
   // field types and members
-  using _flag_type =
+  using _start_type =
     bool;
-  _flag_type flag;
+  _start_type start;
 
   // setters for named parameter idiom
-  Type & set__flag(
+  Type & set__start(
     const bool & _arg)
   {
-    this->flag = _arg;
+    this->start = _arg;
     return *this;
   }
 
@@ -110,7 +110,7 @@ struct Spielberg_Goal_
   // comparison operators
   bool operator==(const Spielberg_Goal_ & other) const
   {
-    if (this->flag != other.flag) {
+    if (this->start != other.start) {
       return false;
     }
     return true;
@@ -156,16 +156,18 @@ struct Spielberg_Result_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->success = false;
+      this->message = "";
     }
   }
 
   explicit Spielberg_Result_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : message(_alloc)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->success = false;
+      this->message = "";
     }
   }
 
@@ -173,12 +175,21 @@ struct Spielberg_Result_
   using _success_type =
     bool;
   _success_type success;
+  using _message_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _message_type message;
 
   // setters for named parameter idiom
   Type & set__success(
     const bool & _arg)
   {
     this->success = _arg;
+    return *this;
+  }
+  Type & set__message(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->message = _arg;
     return *this;
   }
 
@@ -227,6 +238,9 @@ struct Spielberg_Result_
     if (this->success != other.success) {
       return false;
     }
+    if (this->message != other.message) {
+      return false;
+    }
     return true;
   }
   bool operator!=(const Spielberg_Result_ & other) const
@@ -269,7 +283,9 @@ struct Spielberg_Feedback_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->time_remaining = 0l;
+      this->current_step = 0l;
+      this->total_steps = 0l;
+      this->elapsed_time = 0.0f;
     }
   }
 
@@ -279,20 +295,40 @@ struct Spielberg_Feedback_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->time_remaining = 0l;
+      this->current_step = 0l;
+      this->total_steps = 0l;
+      this->elapsed_time = 0.0f;
     }
   }
 
   // field types and members
-  using _time_remaining_type =
+  using _current_step_type =
     int32_t;
-  _time_remaining_type time_remaining;
+  _current_step_type current_step;
+  using _total_steps_type =
+    int32_t;
+  _total_steps_type total_steps;
+  using _elapsed_time_type =
+    float;
+  _elapsed_time_type elapsed_time;
 
   // setters for named parameter idiom
-  Type & set__time_remaining(
+  Type & set__current_step(
     const int32_t & _arg)
   {
-    this->time_remaining = _arg;
+    this->current_step = _arg;
+    return *this;
+  }
+  Type & set__total_steps(
+    const int32_t & _arg)
+  {
+    this->total_steps = _arg;
+    return *this;
+  }
+  Type & set__elapsed_time(
+    const float & _arg)
+  {
+    this->elapsed_time = _arg;
     return *this;
   }
 
@@ -338,7 +374,13 @@ struct Spielberg_Feedback_
   // comparison operators
   bool operator==(const Spielberg_Feedback_ & other) const
   {
-    if (this->time_remaining != other.time_remaining) {
+    if (this->current_step != other.current_step) {
+      return false;
+    }
+    if (this->total_steps != other.total_steps) {
+      return false;
+    }
+    if (this->elapsed_time != other.elapsed_time) {
       return false;
     }
     return true;

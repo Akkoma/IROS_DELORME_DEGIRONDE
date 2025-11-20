@@ -12,6 +12,16 @@
             "nested_type_name": ""
           },
           "default_value": ""
+        },
+        {
+          "name": "message",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
         }
       ]
     },
@@ -20,7 +30,7 @@
   "type_hashes": [
     {
       "type_name": "tello_msg/action/Spielberg_Result",
-      "hash_string": "RIHS01_d82f2e5bb0bf0ba1ffed701c2b3361d924f873759ffc9117961102e53e4d28b9"
+      "hash_string": "RIHS01_9e74a5933389f3b688f35d0a1015472d0b92c4100ec568b12a79e440fff34ecf"
     }
   ]
 }

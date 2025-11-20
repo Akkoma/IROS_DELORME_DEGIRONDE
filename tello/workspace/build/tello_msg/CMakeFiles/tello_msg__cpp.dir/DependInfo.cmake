@@ -36,7 +36,12 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__struct.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__traits.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__type_support.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/detail/surveillance__builder.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/detail/surveillance__struct.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/detail/surveillance__traits.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/detail/surveillance__type_support.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/drone_mode.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/surveillance.hpp" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/msg/tello_status.hpp"
   )
 
 

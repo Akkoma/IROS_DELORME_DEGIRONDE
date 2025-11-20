@@ -24,15 +24,15 @@ namespace action
 namespace builder
 {
 
-class Init_Spielberg_Goal_flag
+class Init_Spielberg_Goal_start
 {
 public:
-  Init_Spielberg_Goal_flag()
+  Init_Spielberg_Goal_start()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::tello_msg::action::Spielberg_Goal flag(::tello_msg::action::Spielberg_Goal::_flag_type arg)
+  ::tello_msg::action::Spielberg_Goal start(::tello_msg::action::Spielberg_Goal::_start_type arg)
   {
-    msg_.flag = std::move(arg);
+    msg_.start = std::move(arg);
     return std::move(msg_);
   }
 
@@ -51,7 +51,7 @@ template<>
 inline
 auto build<::tello_msg::action::Spielberg_Goal>()
 {
-  return tello_msg::action::builder::Init_Spielberg_Goal_flag();
+  return tello_msg::action::builder::Init_Spielberg_Goal_start();
 }
 
 }  // namespace tello_msg
@@ -66,16 +66,32 @@ namespace action
 namespace builder
 {
 
+class Init_Spielberg_Result_message
+{
+public:
+  explicit Init_Spielberg_Result_message(::tello_msg::action::Spielberg_Result & msg)
+  : msg_(msg)
+  {}
+  ::tello_msg::action::Spielberg_Result message(::tello_msg::action::Spielberg_Result::_message_type arg)
+  {
+    msg_.message = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::tello_msg::action::Spielberg_Result msg_;
+};
+
 class Init_Spielberg_Result_success
 {
 public:
   Init_Spielberg_Result_success()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::tello_msg::action::Spielberg_Result success(::tello_msg::action::Spielberg_Result::_success_type arg)
+  Init_Spielberg_Result_message success(::tello_msg::action::Spielberg_Result::_success_type arg)
   {
     msg_.success = std::move(arg);
-    return std::move(msg_);
+    return Init_Spielberg_Result_message(msg_);
   }
 
 private:
@@ -108,16 +124,48 @@ namespace action
 namespace builder
 {
 
-class Init_Spielberg_Feedback_time_remaining
+class Init_Spielberg_Feedback_elapsed_time
 {
 public:
-  Init_Spielberg_Feedback_time_remaining()
+  explicit Init_Spielberg_Feedback_elapsed_time(::tello_msg::action::Spielberg_Feedback & msg)
+  : msg_(msg)
+  {}
+  ::tello_msg::action::Spielberg_Feedback elapsed_time(::tello_msg::action::Spielberg_Feedback::_elapsed_time_type arg)
+  {
+    msg_.elapsed_time = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::tello_msg::action::Spielberg_Feedback msg_;
+};
+
+class Init_Spielberg_Feedback_total_steps
+{
+public:
+  explicit Init_Spielberg_Feedback_total_steps(::tello_msg::action::Spielberg_Feedback & msg)
+  : msg_(msg)
+  {}
+  Init_Spielberg_Feedback_elapsed_time total_steps(::tello_msg::action::Spielberg_Feedback::_total_steps_type arg)
+  {
+    msg_.total_steps = std::move(arg);
+    return Init_Spielberg_Feedback_elapsed_time(msg_);
+  }
+
+private:
+  ::tello_msg::action::Spielberg_Feedback msg_;
+};
+
+class Init_Spielberg_Feedback_current_step
+{
+public:
+  Init_Spielberg_Feedback_current_step()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::tello_msg::action::Spielberg_Feedback time_remaining(::tello_msg::action::Spielberg_Feedback::_time_remaining_type arg)
+  Init_Spielberg_Feedback_total_steps current_step(::tello_msg::action::Spielberg_Feedback::_current_step_type arg)
   {
-    msg_.time_remaining = std::move(arg);
-    return std::move(msg_);
+    msg_.current_step = std::move(arg);
+    return Init_Spielberg_Feedback_total_steps(msg_);
   }
 
 private:
@@ -135,7 +183,7 @@ template<>
 inline
 auto build<::tello_msg::action::Spielberg_Feedback>()
 {
-  return tello_msg::action::builder::Init_Spielberg_Feedback_time_remaining();
+  return tello_msg::action::builder::Init_Spielberg_Feedback_current_step();
 }
 
 }  // namespace tello_msg

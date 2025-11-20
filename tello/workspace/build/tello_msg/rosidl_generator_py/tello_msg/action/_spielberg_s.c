@@ -50,13 +50,13 @@ bool tello_msg__action__spielberg__goal__convert_from_py(PyObject * _pymsg, void
     assert(strncmp("tello_msg.action._spielberg.Spielberg_Goal", full_classname_dest, 42) == 0);
   }
   tello_msg__action__Spielberg_Goal * ros_message = _ros_message;
-  {  // flag
-    PyObject * field = PyObject_GetAttrString(_pymsg, "flag");
+  {  // start
+    PyObject * field = PyObject_GetAttrString(_pymsg, "start");
     if (!field) {
       return false;
     }
     assert(PyBool_Check(field));
-    ros_message->flag = (Py_True == field);
+    ros_message->start = (Py_True == field);
     Py_DECREF(field);
   }
 
@@ -81,11 +81,11 @@ PyObject * tello_msg__action__spielberg__goal__convert_to_py(void * raw_ros_mess
     }
   }
   tello_msg__action__Spielberg_Goal * ros_message = (tello_msg__action__Spielberg_Goal *)raw_ros_message;
-  {  // flag
+  {  // start
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->flag ? 1 : 0);
+    field = PyBool_FromLong(ros_message->start ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "flag", field);
+      int rc = PyObject_SetAttrString(_pymessage, "start", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -110,6 +110,9 @@ PyObject * tello_msg__action__spielberg__goal__convert_to_py(void * raw_ros_mess
 // #include "tello_msg/action/detail/spielberg__struct.h"
 // already included above
 // #include "tello_msg/action/detail/spielberg__functions.h"
+
+#include "rosidl_runtime_c/string.h"
+#include "rosidl_runtime_c/string_functions.h"
 
 
 ROSIDL_GENERATOR_C_EXPORT
@@ -154,6 +157,21 @@ bool tello_msg__action__spielberg__result__convert_from_py(PyObject * _pymsg, vo
     ros_message->success = (Py_True == field);
     Py_DECREF(field);
   }
+  {  // message
+    PyObject * field = PyObject_GetAttrString(_pymsg, "message");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->message, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -181,6 +199,23 @@ PyObject * tello_msg__action__spielberg__result__convert_to_py(void * raw_ros_me
     field = PyBool_FromLong(ros_message->success ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "success", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // message
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->message.data,
+      strlen(ros_message->message.data),
+      "replace");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "message", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -240,13 +275,31 @@ bool tello_msg__action__spielberg__feedback__convert_from_py(PyObject * _pymsg, 
     assert(strncmp("tello_msg.action._spielberg.Spielberg_Feedback", full_classname_dest, 46) == 0);
   }
   tello_msg__action__Spielberg_Feedback * ros_message = _ros_message;
-  {  // time_remaining
-    PyObject * field = PyObject_GetAttrString(_pymsg, "time_remaining");
+  {  // current_step
+    PyObject * field = PyObject_GetAttrString(_pymsg, "current_step");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->time_remaining = (int32_t)PyLong_AsLong(field);
+    ros_message->current_step = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // total_steps
+    PyObject * field = PyObject_GetAttrString(_pymsg, "total_steps");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->total_steps = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // elapsed_time
+    PyObject * field = PyObject_GetAttrString(_pymsg, "elapsed_time");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->elapsed_time = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -271,11 +324,33 @@ PyObject * tello_msg__action__spielberg__feedback__convert_to_py(void * raw_ros_
     }
   }
   tello_msg__action__Spielberg_Feedback * ros_message = (tello_msg__action__Spielberg_Feedback *)raw_ros_message;
-  {  // time_remaining
+  {  // current_step
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->time_remaining);
+    field = PyLong_FromLong(ros_message->current_step);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "time_remaining", field);
+      int rc = PyObject_SetAttrString(_pymessage, "current_step", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // total_steps
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->total_steps);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "total_steps", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // elapsed_time
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->elapsed_time);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "elapsed_time", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

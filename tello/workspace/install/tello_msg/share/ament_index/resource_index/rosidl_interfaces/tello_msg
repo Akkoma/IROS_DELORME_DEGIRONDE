@@ -1,10 +1,1 @@
-action/Spielberg.action
-action/Spielberg.idl
-msg/TelloID.idl
-msg/TelloID.msg
-msg/TelloStatus.idl
-msg/TelloStatus.msg
-msg/TelloWifiConfig.idl
-msg/TelloWifiConfig.msg
-srv/DroneMode.idl
-srv/DroneMode.srv
+/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/tello_msg

@@ -7,6 +7,7 @@
     "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:msg/TelloID.idl",
     "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:msg/TelloWifiConfig.idl",
     "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:srv/DroneMode.idl",
+    "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:srv/Surveillance.idl",
     "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:action/Spielberg.idl"
   ],
   "ros_interface_dependencies": [
@@ -105,6 +106,7 @@
     "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/msg/TelloID.idl",
     "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/msg/TelloWifiConfig.idl",
     "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/srv/DroneMode.idl",
+    "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/srv/Surveillance.idl",
     "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/action/Spielberg.idl",
     "/opt/ros/jazzy/share/std_msgs/msg/Bool.idl",
     "/opt/ros/jazzy/share/std_msgs/msg/Byte.idl",
@@ -182,6 +184,7 @@
     "msg/TelloID.idl:/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/msg/TelloID.json",
     "msg/TelloWifiConfig.idl:/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/msg/TelloWifiConfig.json",
     "srv/DroneMode.idl:/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/srv/DroneMode.json",
+    "srv/Surveillance.idl:/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/srv/Surveillance.json",
     "action/Spielberg.idl:/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/action/Spielberg.json"
   ]
 }

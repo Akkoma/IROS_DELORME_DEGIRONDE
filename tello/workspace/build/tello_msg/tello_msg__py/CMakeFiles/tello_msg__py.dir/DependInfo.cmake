@@ -27,6 +27,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/srv/__init__.py" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/srv/_drone_mode.py" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/srv/_drone_mode_s.c" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/srv/_surveillance.py" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/srv/_surveillance_s.c" "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c"
   )
 
 

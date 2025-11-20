@@ -1,4 +1,4 @@
-int32 start
+bool start
 ---
 bool success
 string message

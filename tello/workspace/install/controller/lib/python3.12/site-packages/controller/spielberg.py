@@ -1,34 +1,26 @@
 #!/home/alix.degironde/Public/ven_IROS/bin python3
 
-import sys
-import time
 import rclpy
-from rclpy.action import ActionServer
 from rclpy.node import Node
-from sensor_msgs.msg import Image
-from tello_msg.msg import TelloStatus
-from std_msgs.msg import Int32
+from rclpy.action import ActionServer, CancelResponse, GoalResponse
 from geometry_msgs.msg import Twist
-import cv2
-import numpy as np
-
 from tello_msg.action import Spielberg
+import time
 
-class SpielbergNode(Node):
-    # Définition des modes
-    SPIELBERG_MODE = 2
-    
+
+class SpielbergActionServer(Node):
     def __init__(self):
-        super().__init__('spielberg')
+        super().__init__('spielberg_action_server')
         
-        # Mode actuel
-        self.current_mode = 0
-        self.current_goal_handle = None
+        # Action Server
         self._action_server = ActionServer(
             self,
             Spielberg,
             'spielberg',
-            self.execute_callback)
+            goal_callback=self.goal_callback,
+            cancel_callback=self.cancel_callback,
+            execute_callback=self.execute_callback,
+        )
         
         # Publisher pour envoyer les commandes de mouvement
         self.cmd_vel_pub = self.create_publisher(
@@ -37,113 +29,128 @@ class SpielbergNode(Node):
             10
         )
         
-        # Variables pour la séquence de commandes
-        self.sequence_timer = None
-        self.sequence_index = 0
-        self.sequence_start_time = None
-        
-        # Définir la séquence de commandes : [(durée_en_secondes, commande_twist)]
-        self.command_sequence = [
-            (2.0, self.create_twist(0.0, 50.0, 0.0, 0.0, 0.0, 0.0)),  # Avancer 5s
-            (1.0, self.create_twist(0.0, 0.0, 0.0, 0.0, 0.0, 40.0)),  # Rotation 3s
-            (2.0, self.create_twist(0.0, -50.0, 0.0, 0.0, 0.0, 0.0)),  # recule 2s
-            (1.0, self.create_twist(0.0, 0.0, 0.0, 0.0, 0.0, -40.0)), # Rotation inverse 3s
-            (2.0, self.create_twist(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)),   # Stop 2s
-        ]
+        self.get_logger().info('Noeud spielberg_action_server initialisé')
+        self.get_logger().info("Action server 'spielberg' disponible")
     
-    def create_twist(self, lx, ly, lz, ax, ay, az):
-        """Crée un message Twist avec les valeurs données"""
-        twist = Twist()
-        twist.linear.x = lx
-        twist.linear.y = ly
-        twist.linear.z = lz
-        twist.angular.x = ax
-        twist.angular.y = ay
-        twist.angular.z = az
-        return twist
+    def goal_callback(self, goal_request):
+        """Accepte ou rejette un goal reçu"""
+        self.get_logger().info('Réception d\'un goal Spielberg...')
+        return GoalResponse.ACCEPT
+    
+    def cancel_callback(self, goal_handle):
+        """Gère l'annulation d'un goal en cours"""
+        self.get_logger().info('Réception d\'une demande d\'annulation Spielberg')
+        return CancelResponse.ACCEPT
     
     def execute_callback(self, goal_handle):
-        """Callback de l'action qui démarre la séquence"""
-        self.get_logger().info('Action Spielberg reçue - Séquence démarrée')
-        self.current_goal_handle = goal_handle
+        """Exécute la séquence Spielberg cinématique"""
+        self.get_logger().info('Exécution de la séquence Spielberg...')
         
-        # Démarrer la séquence
-        self.start_sequence()
+        # Paramètres de la séquence
+        total_steps = 3
+        start_time = time.time()
         
-        # L'action continue en arrière-plan via le timer
-        # On retourne le goal_handle pour qu'il reste actif
-        return goal_handle
-    
-    def start_sequence(self):
-        """Démarre la séquence de commandes"""
-        self.sequence_index = 0
-        self.sequence_start_time = self.get_clock().now()
-        
-        # Créer un timer qui s'exécute à 10Hz (toutes les 0.1s)
-        if self.sequence_timer is not None:
-            self.sequence_timer.cancel()
-        
-        self.sequence_timer = self.create_timer(0.1, self.execute_sequence)
-        self.get_logger().info('Séquence de commandes démarrée')
-    
-    def stop_sequence(self):
-        """Arrête la séquence de commandes"""
-        if self.sequence_timer is not None:
-            self.sequence_timer.cancel()
-            self.sequence_timer = None
-        
-        # Envoyer une commande d'arrêt
-        stop_cmd = self.create_twist(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-        self.cmd_vel_pub.publish(stop_cmd)
-        self.get_logger().info('Séquence de commandes arrêtée')
-    
-    def execute_sequence(self):
-        """Exécute la séquence de commandes selon les timings"""
-        # Envoyer le feedback si on a un goal actif
-        if self.current_goal_handle is not None:
-            feedback_msg = Spielberg.Feedback()
-            feedback_msg.time_remaining = len(self.command_sequence) - self.sequence_index
-            self.current_goal_handle.publish_feedback(feedback_msg)
-        
-        if self.sequence_index >= len(self.command_sequence):
-            # Séquence terminée
-            self.get_logger().info('Séquence terminée')
-            self.stop_sequence()
+        try:
+            # Étape 1 : Avancer
+            self.get_logger().info('[Étape 1/3] Avancement...')
+            twist = Twist()
+            twist.linear.x = float(0.0)
+            twist.linear.y = float(50.0)
+            twist.linear.z = float(0.0)
+            twist.angular.x = float(0.0)
+            twist.angular.y = float(0.0)
+            twist.angular.z = float(0.0)
+            self.cmd_vel_pub.publish(twist)
+            self.publish_feedback(goal_handle, 1, total_steps, float(0.0))
+            time.sleep(2)
             
-            # Envoyer le résultat de l'action
-            if self.current_goal_handle is not None:
+            if goal_handle.is_cancel_requested:
+                self.send_stop_command()
+                goal_handle.canceled()
+                self.get_logger().warn('Séquence Spielberg annulée')
                 result = Spielberg.Result()
-                result.success = True
-                self.current_goal_handle.succeed()
-                self.current_goal_handle = None
-            return
-        
-        # Calculer le temps écoulé depuis le début de la séquence
-        current_time = self.get_clock().now()
-        elapsed = (current_time - self.sequence_start_time).nanoseconds / 1e9  # Convertir en secondes
-        
-        # Calculer le temps cumulé jusqu'à l'étape actuelle
-        cumulative_time = sum(duration for duration, _ in self.command_sequence[:self.sequence_index])
-        
-        # Vérifier si on doit passer à l'étape suivante
-        current_duration, current_command = self.command_sequence[self.sequence_index]
-        
-        if elapsed >= cumulative_time + current_duration:
-            # Passer à l'étape suivante
-            self.sequence_index += 1
-            if self.sequence_index < len(self.command_sequence):
-                next_duration, next_command = self.command_sequence[self.sequence_index]
-                self.get_logger().info(f'Étape {self.sequence_index + 1}/{len(self.command_sequence)} - Durée: {next_duration}s')
-        
-        # Publier la commande actuelle
-        if self.sequence_index < len(self.command_sequence):
-            _, command = self.command_sequence[self.sequence_index]
-            self.cmd_vel_pub.publish(command)
+                result.success = False
+                result.message = "Séquence annulée"
+                return result
+            
+            # Étape 2 : Rotation (tourner la caméra)
+            self.get_logger().info('[Étape 2/3] Rotation caméra...')
+            twist = Twist()
+            twist.linear.x = float(0.0)
+            twist.linear.y = float(0.0)
+            twist.linear.z = float(0.0)
+            twist.angular.x = float(0.0)
+            twist.angular.y = float(0.0)
+            twist.angular.z = float(40.0)
+            self.cmd_vel_pub.publish(twist)
+            self.publish_feedback(goal_handle, 2, total_steps, float(time.time() - start_time))
+            time.sleep(1)
+            
+            if goal_handle.is_cancel_requested:
+                self.send_stop_command()
+                goal_handle.canceled()
+                self.get_logger().warn('Séquence Spielberg annulée')
+                result = Spielberg.Result()
+                result.success = False
+                result.message = "Séquence annulée"
+                return result
+            
+            # Étape 3 : Reculer
+            self.get_logger().info('[Étape 3/3] Recul...')
+            twist = Twist()
+            twist.linear.x = float(0.0)
+            twist.linear.y = float(-50.0)
+            twist.linear.z = float(0.0)
+            twist.angular.x = float(0.0)
+            twist.angular.y = float(0.0)
+            twist.angular.z = float(0.0)
+            self.cmd_vel_pub.publish(twist)
+            self.publish_feedback(goal_handle, 3, total_steps, float(time.time() - start_time))
+            time.sleep(2)
+            
+            # Arrêter le drone
+            self.send_stop_command()
+            
+            # Succès
+            result = Spielberg.Result()
+            result.success = True
+            result.message = f"Séquence Spielberg complétée en {time.time() - start_time:.1f}s"
+            self.get_logger().info(f"✓ {result.message}")
+            goal_handle.succeed()
+            return result
+            
+        except Exception as e:
+            self.get_logger().error(f"Erreur lors de l'exécution Spielberg: {e}")
+            self.send_stop_command()
+            result = Spielberg.Result()
+            result.success = False
+            result.message = f"Erreur: {str(e)}"
+            goal_handle.abort()
+            return result
     
+    def send_stop_command(self):
+        """Envoie une commande d'arrêt au drone"""
+        twist = Twist()
+        twist.linear.x = float(0.0)
+        twist.linear.y = float(0.0)
+        twist.linear.z = float(0.0)
+        twist.angular.x = float(0.0)
+        twist.angular.y = float(0.0)
+        twist.angular.z = float(0.0)
+        self.cmd_vel_pub.publish(twist)
+    
+    def publish_feedback(self, goal_handle, current_step, total_steps, elapsed_time):
+        """Publie le feedback de progression"""
+        feedback_msg = Spielberg.Feedback()
+        feedback_msg.current_step = int(current_step)
+        feedback_msg.total_steps = int(total_steps)
+        feedback_msg.elapsed_time = float(elapsed_time)
+        goal_handle.publish_feedback(feedback_msg)
+
 
 def main(args=None):
     rclpy.init(args=args)
-    node = SpielbergNode()
+    node = SpielbergActionServer()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
@@ -151,6 +158,7 @@ def main(args=None):
     finally:
         node.destroy_node()
         rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()

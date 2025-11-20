@@ -1,11 +1,1 @@
-# Service pour changer le mode du drone
-# Modes:
-# 0 = Manuel
-# 1 = QR Code Follower
-# 2 = Spielberg
-# 3 = Surveillance
-
-int32 mode
----
-bool success
-string message
+/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg/srv/DroneMode.srv

@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/msg/tello_wifi_config__type_support.cpp.o.d"
   "CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/srv/drone_mode__type_support.cpp.o"
   "CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/srv/drone_mode__type_support.cpp.o.d"
+  "CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/srv/surveillance__type_support.cpp.o"
+  "CMakeFiles/tello_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msg/srv/surveillance__type_support.cpp.o.d"
   "libtello_msg__rosidl_typesupport_c.pdb"
   "libtello_msg__rosidl_typesupport_c.so"
   "rosidl_typesupport_c/tello_msg/action/spielberg__type_support.cpp"
@@ -16,6 +18,7 @@ file(REMOVE_RECURSE
   "rosidl_typesupport_c/tello_msg/msg/tello_status__type_support.cpp"
   "rosidl_typesupport_c/tello_msg/msg/tello_wifi_config__type_support.cpp"
   "rosidl_typesupport_c/tello_msg/srv/drone_mode__type_support.cpp"
+  "rosidl_typesupport_c/tello_msg/srv/surveillance__type_support.cpp"
 )
 
 # Per-language clean rules from dependency scanning.

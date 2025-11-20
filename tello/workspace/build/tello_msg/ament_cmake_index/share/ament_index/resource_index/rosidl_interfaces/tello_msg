@@ -8,3 +8,5 @@ msg/TelloWifiConfig.idl
 msg/TelloWifiConfig.msg
 srv/DroneMode.idl
 srv/DroneMode.srv
+srv/Surveillance.idl
+srv/Surveillance.srv

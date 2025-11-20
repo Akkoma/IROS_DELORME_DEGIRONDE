@@ -28,10 +28,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: flag
+  // member: start
   {
-    out << "flag: ";
-    rosidl_generator_traits::value_to_yaml(msg.flag, out);
+    out << "start: ";
+    rosidl_generator_traits::value_to_yaml(msg.start, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -40,13 +40,13 @@ inline void to_block_style_yaml(
   const Spielberg_Goal & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: flag
+  // member: start
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "flag: ";
-    rosidl_generator_traits::value_to_yaml(msg.flag, out);
+    out << "start: ";
+    rosidl_generator_traits::value_to_yaml(msg.start, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
@@ -124,6 +124,13 @@ inline void to_flow_style_yaml(
   {
     out << "success: ";
     rosidl_generator_traits::value_to_yaml(msg.success, out);
+    out << ", ";
+  }
+
+  // member: message
+  {
+    out << "message: ";
+    rosidl_generator_traits::value_to_yaml(msg.message, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -139,6 +146,16 @@ inline void to_block_style_yaml(
     }
     out << "success: ";
     rosidl_generator_traits::value_to_yaml(msg.success, out);
+    out << "\n";
+  }
+
+  // member: message
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "message: ";
+    rosidl_generator_traits::value_to_yaml(msg.message, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
@@ -189,11 +206,11 @@ inline const char * name<tello_msg::action::Spielberg_Result>()
 
 template<>
 struct has_fixed_size<tello_msg::action::Spielberg_Result>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<tello_msg::action::Spielberg_Result>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<tello_msg::action::Spielberg_Result>
@@ -212,10 +229,24 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: time_remaining
+  // member: current_step
   {
-    out << "time_remaining: ";
-    rosidl_generator_traits::value_to_yaml(msg.time_remaining, out);
+    out << "current_step: ";
+    rosidl_generator_traits::value_to_yaml(msg.current_step, out);
+    out << ", ";
+  }
+
+  // member: total_steps
+  {
+    out << "total_steps: ";
+    rosidl_generator_traits::value_to_yaml(msg.total_steps, out);
+    out << ", ";
+  }
+
+  // member: elapsed_time
+  {
+    out << "elapsed_time: ";
+    rosidl_generator_traits::value_to_yaml(msg.elapsed_time, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -224,13 +255,33 @@ inline void to_block_style_yaml(
   const Spielberg_Feedback & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: time_remaining
+  // member: current_step
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "time_remaining: ";
-    rosidl_generator_traits::value_to_yaml(msg.time_remaining, out);
+    out << "current_step: ";
+    rosidl_generator_traits::value_to_yaml(msg.current_step, out);
+    out << "\n";
+  }
+
+  // member: total_steps
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "total_steps: ";
+    rosidl_generator_traits::value_to_yaml(msg.total_steps, out);
+    out << "\n";
+  }
+
+  // member: elapsed_time
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "elapsed_time: ";
+    rosidl_generator_traits::value_to_yaml(msg.elapsed_time, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

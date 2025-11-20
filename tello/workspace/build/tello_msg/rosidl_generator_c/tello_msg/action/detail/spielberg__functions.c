@@ -17,7 +17,7 @@ tello_msg__action__Spielberg_Goal__init(tello_msg__action__Spielberg_Goal * msg)
   if (!msg) {
     return false;
   }
-  // flag
+  // start
   return true;
 }
 
@@ -27,7 +27,7 @@ tello_msg__action__Spielberg_Goal__fini(tello_msg__action__Spielberg_Goal * msg)
   if (!msg) {
     return;
   }
-  // flag
+  // start
 }
 
 bool
@@ -36,8 +36,8 @@ tello_msg__action__Spielberg_Goal__are_equal(const tello_msg__action__Spielberg_
   if (!lhs || !rhs) {
     return false;
   }
-  // flag
-  if (lhs->flag != rhs->flag) {
+  // start
+  if (lhs->start != rhs->start) {
     return false;
   }
   return true;
@@ -51,8 +51,8 @@ tello_msg__action__Spielberg_Goal__copy(
   if (!input || !output) {
     return false;
   }
-  // flag
-  output->flag = input->flag;
+  // start
+  output->start = input->start;
   return true;
 }
 
@@ -236,6 +236,10 @@ tello_msg__action__Spielberg_Goal__Sequence__copy(
 }
 
 
+// Include directives for member types
+// Member `message`
+#include "rosidl_runtime_c/string_functions.h"
+
 bool
 tello_msg__action__Spielberg_Result__init(tello_msg__action__Spielberg_Result * msg)
 {
@@ -243,6 +247,11 @@ tello_msg__action__Spielberg_Result__init(tello_msg__action__Spielberg_Result * 
     return false;
   }
   // success
+  // message
+  if (!rosidl_runtime_c__String__init(&msg->message)) {
+    tello_msg__action__Spielberg_Result__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -253,6 +262,8 @@ tello_msg__action__Spielberg_Result__fini(tello_msg__action__Spielberg_Result * 
     return;
   }
   // success
+  // message
+  rosidl_runtime_c__String__fini(&msg->message);
 }
 
 bool
@@ -263,6 +274,12 @@ tello_msg__action__Spielberg_Result__are_equal(const tello_msg__action__Spielber
   }
   // success
   if (lhs->success != rhs->success) {
+    return false;
+  }
+  // message
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->message), &(rhs->message)))
+  {
     return false;
   }
   return true;
@@ -278,6 +295,12 @@ tello_msg__action__Spielberg_Result__copy(
   }
   // success
   output->success = input->success;
+  // message
+  if (!rosidl_runtime_c__String__copy(
+      &(input->message), &(output->message)))
+  {
+    return false;
+  }
   return true;
 }
 
@@ -467,7 +490,9 @@ tello_msg__action__Spielberg_Feedback__init(tello_msg__action__Spielberg_Feedbac
   if (!msg) {
     return false;
   }
-  // time_remaining
+  // current_step
+  // total_steps
+  // elapsed_time
   return true;
 }
 
@@ -477,7 +502,9 @@ tello_msg__action__Spielberg_Feedback__fini(tello_msg__action__Spielberg_Feedbac
   if (!msg) {
     return;
   }
-  // time_remaining
+  // current_step
+  // total_steps
+  // elapsed_time
 }
 
 bool
@@ -486,8 +513,16 @@ tello_msg__action__Spielberg_Feedback__are_equal(const tello_msg__action__Spielb
   if (!lhs || !rhs) {
     return false;
   }
-  // time_remaining
-  if (lhs->time_remaining != rhs->time_remaining) {
+  // current_step
+  if (lhs->current_step != rhs->current_step) {
+    return false;
+  }
+  // total_steps
+  if (lhs->total_steps != rhs->total_steps) {
+    return false;
+  }
+  // elapsed_time
+  if (lhs->elapsed_time != rhs->elapsed_time) {
     return false;
   }
   return true;
@@ -501,8 +536,12 @@ tello_msg__action__Spielberg_Feedback__copy(
   if (!input || !output) {
     return false;
   }
-  // time_remaining
-  output->time_remaining = input->time_remaining;
+  // current_step
+  output->current_step = input->current_step;
+  // total_steps
+  output->total_steps = input->total_steps;
+  // elapsed_time
+  output->elapsed_time = input->elapsed_time;
   return true;
 }
 

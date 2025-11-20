@@ -5,7 +5,7 @@ from rclpy.node import Node
 from rclpy.action import ActionClient
 from std_msgs.msg import Empty, String, Int32
 from geometry_msgs.msg import Twist
-from tello_msg.srv import DroneMode
+from tello_msg.srv import DroneMode, Surveillance as SurveillanceSrv
 from tello_msg.action import Spielberg
 
 
@@ -54,8 +54,14 @@ class TelloBehaviour(Node):
             self.handle_mode_change
         )
         
-        self._action_client = ActionClient(self, Spielberg, 'spielberg')
-
+        # Action client pour le mode Spielberg
+        self._spielberg_action_client = ActionClient(self, Spielberg, 'spielberg')
+        self._spielberg_goal_handle = None
+        
+        self.surveillance_client = self.create_client(
+            SurveillanceSrv,
+            '/surveillance/control'
+        )
         # --- Subscribers (depuis le noeud control/manual_control) ---
         self.sub_takeoff = self.create_subscription(
             Empty, '/control/takeoff', self.callback_takeoff, 10
@@ -108,8 +114,14 @@ class TelloBehaviour(Node):
             self.get_logger().error(response.message)
             return response
         
-        # Changer le mode
+        # Arrêter les modes actifs avant de changer
         old_mode = self.current_mode
+        if old_mode == DroneModes.SURVEILLANCE and requested_mode != DroneModes.SURVEILLANCE:
+            self.stop_surveillance_mode()
+        if old_mode == DroneModes.SPIELBERG and requested_mode != DroneModes.SPIELBERG:
+            self.stop_spielberg_mode()
+        
+        # Changer le mode
         self.current_mode = requested_mode
         
         response.success = True
@@ -239,67 +251,166 @@ class TelloBehaviour(Node):
         # - Envoi de commandes de correction via self.pub_control
         self.get_logger().info("Mode QR Follower: Implémentation à compléter")
     
-    def send_goal(self):
-        """Envoie le goal à l'action server Spielberg"""
-        goal_msg = Spielberg.Goal()
-        goal_msg.flag = True
-
-        self._action_client.wait_for_server()
-        
-        # Envoyer le goal de manière asynchrone
-        future = self._action_client.send_goal_async(goal_msg)
-        future.add_done_callback(self.goal_response_callback)
-    
-    def goal_response_callback(self, future):
-        """Callback quand le goal est accepté ou rejeté"""
-        goal_handle = future.result()
-        if not goal_handle.accepted:
-            self.get_logger().error('Goal Spielberg rejeté')
-            return
-        
-        self.get_logger().info('Goal Spielberg accepté')
-        
-        # Attendre le résultat
-        result_future = goal_handle.get_result_async()
-        result_future.add_done_callback(self.get_result_callback)
-    
-    def get_result_callback(self, future):
-        """Callback quand l'action est terminée"""
-        result = future.result().result
-        if result.success:
-            self.get_logger().info('Séquence Spielberg terminée avec succès')
-        else:
-            self.get_logger().warn('Séquence Spielberg échouée')
+    # === REMPLACER LA MÉTHODE start_spielberg_mode ===
 
     def start_spielberg_mode(self):
         """
         Initialise le mode Spielberg (cinématique).
-        
-        Dans ce mode, le drone doit:
-        - Effectuer des mouvements cinématiques fluides
-        - Suivre des trajectoires prédéfinies ou contrôlées
-        - Maintenir une stabilité optimale pour la prise de vue
+        Envoie un goal à l'action server Spielberg.
         """
         self.get_logger().info("Initialisation du mode Spielberg...")
-        self.send_goal()
+        
+        # Attendre que le serveur d'action soit disponible
+        if not self._spielberg_action_client.wait_for_server(timeout_sec=2.0):
+            self.get_logger().error(
+                "Action server Spielberg non disponible! "
+                "Assurez-vous que le noeud spielberg est lancé."
+            )
+            return
+        
+        # Créer et envoyer le goal
+        goal_msg = Spielberg.Goal()
+        goal_msg.start = True
+        
+        self.get_logger().info("Envoi du goal Spielberg...")
+        send_goal_future = self._spielberg_action_client.send_goal_async(
+            goal_msg,
+            feedback_callback=self.spielberg_feedback_callback
+        )
+        send_goal_future.add_done_callback(self.spielberg_goal_response_callback)
 
-    
+
+    # === REMPLACER LA MÉTHODE spielberg_goal_response_callback ===
+
+    def spielberg_goal_response_callback(self, future):
+        """Callback quand le goal Spielberg est accepté ou rejeté"""
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().error('Goal Spielberg rejeté par le serveur')
+            self._spielberg_goal_handle = None
+            return
+        
+        self.get_logger().info('Goal Spielberg accepté - Séquence démarrée')
+        self._spielberg_goal_handle = goal_handle
+        
+        # Attendre le résultat
+        result_future = goal_handle.get_result_async()
+        result_future.add_done_callback(self.spielberg_result_callback)
+
+
+    # === REMPLACER LA MÉTHODE spielberg_feedback_callback ===
+
+    def spielberg_feedback_callback(self, feedback_msg):
+        """Callback pour les feedbacks de l'action Spielberg"""
+        feedback = feedback_msg.feedback
+        self.get_logger().info(
+            f'Spielberg - Étape {feedback.current_step}/{feedback.total_steps} '
+            f'(temps écoulé: {feedback.elapsed_time:.1f}s)',
+            throttle_duration_sec=1.0
+        )
+
+
+    # === REMPLACER LA MÉTHODE spielberg_result_callback ===
+
+    def spielberg_result_callback(self, future):
+        """Callback quand l'action Spielberg est terminée"""
+        try:
+            result = future.result().result
+            self._spielberg_goal_handle = None
+            
+            if result.success:
+                self.get_logger().info(f'✓ Séquence Spielberg terminée: {result.message}')
+            else:
+                self.get_logger().warn(f'✗ Séquence Spielberg échouée: {result.message}')
+        except Exception as e:
+            self.get_logger().error(f'Erreur lors de la récupération du résultat Spielberg: {e}')
+            self._spielberg_goal_handle = None
+
+
+    # === REMPLACER LA MÉTHODE stop_spielberg_mode ===
+
+    def stop_spielberg_mode(self):
+        """Arrête le mode Spielberg en annulant l'action en cours"""
+        if self._spielberg_goal_handle is not None:
+            self.get_logger().info("Annulation de la séquence Spielberg...")
+            try:
+                cancel_future = self._spielberg_goal_handle.cancel_goal_async()
+                cancel_future.add_done_callback(self.spielberg_cancel_callback)
+            except Exception as e:
+                self.get_logger().error(f"Erreur lors de l'annulation du goal Spielberg: {e}")
+                self._spielberg_goal_handle = None
+        else:
+            self.get_logger().info("Aucune séquence Spielberg active à arrêter")
+
+
+    # === REMPLACER LA MÉTHODE spielberg_cancel_callback ===
+
+    def spielberg_cancel_callback(self, future):
+        """Callback pour l'annulation de l'action Spielberg"""
+        try:
+            cancel_response = future.result()
+            if len(cancel_response.goals_canceling) > 0:
+                self.get_logger().info('✓ Séquence Spielberg annulée avec succès')
+            else:
+                self.get_logger().warn('✗ Échec de l\'annulation de la séquence Spielberg')
+        except Exception as e:
+            self.get_logger().error(f"Erreur lors de l'annulation: {e}")
+        finally:
+            self._spielberg_goal_handle = None
+
     def start_surveillance_mode(self):
         """
-        Initialise le mode Surveillance.
+        Initialise le mode Surveillance via le service.
         
         Dans ce mode, le drone doit:
         - Patrouiller selon un schéma défini
         - Détecter les mouvements suspects
         - Enregistrer ou transmettre les images
         """
-        self.get_logger().info("Initialisation du mode Surveillance...")
-        # TODO: Ajouter la logique de surveillance
-        # - Définition de waypoints pour la patrouille
-        # - Détection de mouvement dans l'image
-        # - Rotation panoramique pour scanner l'environnement
-        self.get_logger().info("Mode Surveillance: Implémentation à compléter")
+        self.get_logger().info("Activation du mode Surveillance via service...")
         
+        # Attendre que le service soit disponible
+        if not self.surveillance_client.wait_for_service(timeout_sec=2.0):
+            self.get_logger().error(
+                "Service /surveillance/control non disponible! "
+                "Assurez-vous que le noeud surveillance est lancé."
+            )
+            return
+        
+        # Créer la requête pour activer la surveillance
+        request = SurveillanceSrv.Request()
+        request.data = True  # Activer
+        
+        # Appeler le service de manière asynchrone
+        future = self.surveillance_client.call_async(request)
+        future.add_done_callback(self.surveillance_response_callback)
+    
+    def stop_surveillance_mode(self):
+        """Désactive le mode Surveillance via le service."""
+        self.get_logger().info("Désactivation du mode Surveillance via service...")
+        
+        if not self.surveillance_client.service_is_ready():
+            self.get_logger().warn("Service de surveillance non disponible pour désactivation")
+            return
+        
+        # Créer la requête pour désactiver la surveillance
+        request = SurveillanceSrv.Request()
+        request.data = False  # Désactiver
+        
+        # Appeler le service de manière asynchrone
+        future = self.surveillance_client.call_async(request)
+        future.add_done_callback(self.surveillance_response_callback)
+    
+    def surveillance_response_callback(self, future):
+        """Callback pour la réponse du service de surveillance"""
+        try:
+            response = future.result()
+            if response.success:
+                self.get_logger().info("Service de surveillance : Commande exécutée avec succès")
+            else:
+                self.get_logger().warn("Service de surveillance : Échec de la commande")
+        except Exception as e:
+            self.get_logger().error(f"Erreur lors de l'appel du service de surveillance: {e}")
 
 
 def main(args=None):

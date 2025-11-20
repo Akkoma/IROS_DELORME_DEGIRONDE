@@ -1,5 +1,1 @@
-# Wifi SSID name
-string ssid
-
-# Wifi network password
-string password
+/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg/msg/TelloWifiConfig.msg

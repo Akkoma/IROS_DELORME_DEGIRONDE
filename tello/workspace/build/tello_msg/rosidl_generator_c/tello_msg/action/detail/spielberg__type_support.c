@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "tello_msg/action/detail/spielberg__struct.h"
-#include "tello_msg/action/detail/spielberg__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "tello_msg/action/detail/spielberg__type_support.h"
+#include "tello_msg/action/detail/spielberg__functions.h"
+#include "tello_msg/action/detail/spielberg__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

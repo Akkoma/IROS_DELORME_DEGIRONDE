@@ -1,0 +1,24 @@
+running develop
+running egg_info
+creating tello.egg-info
+writing tello.egg-info/PKG-INFO
+writing dependency_links to tello.egg-info/dependency_links.txt
+writing entry points to tello.egg-info/entry_points.txt
+writing requirements to tello.egg-info/requires.txt
+writing top-level names to tello.egg-info/top_level.txt
+writing manifest file 'tello.egg-info/SOURCES.txt'
+reading manifest file 'tello.egg-info/SOURCES.txt'
+writing manifest file 'tello.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/alix.degironde/Public/tello-ros2/workspace/install/tello/lib/python3.12/site-packages/tello.egg-link (link to .)
+Installing tello script to /home/alix.degironde/Public/tello-ros2/workspace/install/tello/lib/tello
+
+Installed /home/alix.degironde/Public/tello-ros2/workspace/build/tello
+running symlink_data
+creating /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/ament_index
+creating /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/ament_index/resource_index
+creating /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/ament_index/resource_index/packages
+symbolically linking /home/alix.degironde/Public/tello-ros2/workspace/build/tello/resource/tello -> /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/ament_index/resource_index/packages
+symbolically linking /home/alix.degironde/Public/tello-ros2/workspace/build/tello/package.xml -> /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/tello
+symbolically linking /home/alix.degironde/Public/tello-ros2/workspace/build/tello/resource/ost.txt -> /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/tello
+symbolically linking /home/alix.degironde/Public/tello-ros2/workspace/build/tello/resource/ost.yaml -> /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/tello

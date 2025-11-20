@@ -1,1 +1,1 @@
-prepend-non-duplicate;PYTHONPATH;lib/python3.12/site-packages
+/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_environment_hooks/pythonpath.dsv

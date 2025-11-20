@@ -1,0 +1,241 @@
+[0.026s] Invoking command in '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/home/alix.degironde/Public/tello-ros2/workspace/install/tello:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/cmake /home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg
+[0.054s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.088s] -- Found Python3: /home/alix.degironde/Public/ven_IROS/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.216s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.229s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.237s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.307s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.358s] -- Found rosidl_adapter: 4.6.6 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.364s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.411s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.435s] -- Found action_msgs: 2.0.3 (/opt/ros/jazzy/share/action_msgs/cmake)
+[1.146s] -- Found ament_cmake_cppcheck: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_cppcheck/cmake)
+[1.147s] -- Found ament_cmake_cpplint: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_cpplint/cmake)
+[1.148s] -- Found ament_cmake_uncrustify: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_uncrustify/cmake)
+[1.150s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.448s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.832s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.841s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[2.271s] -- Found Python3: /home/alix.degironde/Public/ven_IROS/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[2.347s] -- Found ament_cmake_flake8: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_flake8/cmake)
+[2.348s] -- Found ament_cmake_pep257: 0.17.3 (/opt/ros/jazzy/share/ament_cmake_pep257/cmake)
+[2.363s] -- Configuring done (2.3s)
+[2.446s] -- Generating done (0.1s)
+[2.466s] -- Build files have been written to: /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg
+[2.483s] Invoked command in '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/home/alix.degironde/Public/tello-ros2/workspace/install/tello:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/cmake /home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg
+[2.485s] Invoking command in '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/home/alix.degironde/Public/tello-ros2/workspace/install/tello:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/cmake --build /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg -- -j4 -l4
+[2.566s] [  1%] Built target tello_msg__rosidl_generator_type_description
+[2.582s] [  1%] Built target ament_cmake_python_symlink_tello_msg
+[2.608s] [  2%] Built target tello_msg__cpp
+[2.625s] [ 26%] Built target tello_msg__rosidl_generator_c
+[2.681s] [ 35%] Built target tello_msg__rosidl_typesupport_introspection_c
+[2.701s] [ 45%] Built target tello_msg__rosidl_typesupport_fastrtps_c
+[2.707s] [ 54%] Built target tello_msg__rosidl_typesupport_cpp
+[2.735s] [ 64%] Built target tello_msg__rosidl_typesupport_c
+[2.760s] [ 73%] Built target tello_msg__rosidl_typesupport_introspection_cpp
+[2.791s] [ 83%] Built target tello_msg__rosidl_typesupport_fastrtps_cpp
+[2.828s] [ 83%] Built target tello_msg
+[2.865s] [ 84%] Built target tello_msg__py
+[2.916s] [ 92%] Built target tello_msg__rosidl_generator_py
+[2.941s] running egg_info
+[2.967s] writing tello_msg.egg-info/PKG-INFO
+[2.968s] writing dependency_links to tello_msg.egg-info/dependency_links.txt
+[2.969s] writing top-level names to tello_msg.egg-info/top_level.txt
+[2.976s] [ 95%] Built target tello_msg_s__rosidl_typesupport_introspection_c
+[2.981s] [100%] Built target tello_msg_s__rosidl_typesupport_fastrtps_c
+[2.981s] [100%] Built target tello_msg_s__rosidl_typesupport_c
+[3.041s] reading manifest file 'tello_msg.egg-info/SOURCES.txt'
+[3.043s] writing manifest file 'tello_msg.egg-info/SOURCES.txt'
+[3.109s] [100%] Built target ament_cmake_python_build_tello_msg_egg
+[3.130s] Invoked command in '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/home/alix.degironde/Public/tello-ros2/workspace/install/tello:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/cmake --build /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg -- -j4 -l4
+[3.131s] Invoking command in '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/home/alix.degironde/Public/tello-ros2/workspace/install/tello:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/cmake --install /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg
+[3.146s] -- Install configuration: ""
+[3.146s] -- Execute custom install script
+[3.147s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/ament_index/resource_index/rosidl_interfaces/tello_msg
+[3.147s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloStatus.json
+[3.147s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloID.json
+[3.147s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloWifiConfig.json
+[3.148s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/srv/DroneMode.json
+[3.148s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/srv/Surveillance.json
+[3.148s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/action/Spielberg.json
+[3.149s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__functions.h
+[3.149s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__struct.h
+[3.150s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__type_support.h
+[3.150s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/spielberg.h
+[3.150s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__functions.h
+[3.150s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__struct.h
+[3.150s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__type_support.h
+[3.150s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__functions.h
+[3.151s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__struct.h
+[3.151s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__type_support.h
+[3.151s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__functions.h
+[3.151s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__struct.h
+[3.151s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__type_support.h
+[3.151s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/rosidl_generator_c__visibility_control.h
+[3.152s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/tello_id.h
+[3.152s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/tello_status.h
+[3.153s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/tello_wifi_config.h
+[3.153s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__functions.h
+[3.154s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__struct.h
+[3.155s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__type_support.h
+[3.155s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/surveillance__functions.h
+[3.155s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/surveillance__struct.h
+[3.156s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/surveillance__type_support.h
+[3.156s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/drone_mode.h
+[3.156s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/surveillance.h
+[3.157s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/library_path.sh
+[3.157s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/library_path.dsv
+[3.157s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__rosidl_typesupport_fastrtps_c.h
+[3.158s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__rosidl_typesupport_fastrtps_c.h
+[3.158s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__rosidl_typesupport_fastrtps_c.h
+[3.158s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__rosidl_typesupport_fastrtps_c.h
+[3.159s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.159s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__rosidl_typesupport_fastrtps_c.h
+[3.159s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/surveillance__rosidl_typesupport_fastrtps_c.h
+[3.159s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__rosidl_typesupport_introspection_c.h
+[3.159s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__rosidl_typesupport_introspection_c.h
+[3.159s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__rosidl_typesupport_introspection_c.h
+[3.159s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__rosidl_typesupport_introspection_c.h
+[3.160s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.160s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__rosidl_typesupport_introspection_c.h
+[3.160s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/surveillance__rosidl_typesupport_introspection_c.h
+[3.160s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__builder.hpp
+[3.160s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__struct.hpp
+[3.160s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__traits.hpp
+[3.160s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__type_support.hpp
+[3.161s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/spielberg.hpp
+[3.161s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__builder.hpp
+[3.161s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__struct.hpp
+[3.161s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__traits.hpp
+[3.161s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__type_support.hpp
+[3.161s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__builder.hpp
+[3.161s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__struct.hpp
+[3.162s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__traits.hpp
+[3.162s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__type_support.hpp
+[3.162s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__builder.hpp
+[3.162s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__struct.hpp
+[3.162s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__traits.hpp
+[3.162s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__type_support.hpp
+[3.162s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.163s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/tello_id.hpp
+[3.163s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/tello_status.hpp
+[3.163s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/tello_wifi_config.hpp
+[3.163s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__builder.hpp
+[3.163s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__struct.hpp
+[3.163s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__traits.hpp
+[3.164s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__type_support.hpp
+[3.164s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/surveillance__builder.hpp
+[3.164s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/surveillance__struct.hpp
+[3.164s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/surveillance__traits.hpp
+[3.164s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/surveillance__type_support.hpp
+[3.164s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/drone_mode.hpp
+[3.164s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/surveillance.hpp
+[3.165s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__rosidl_typesupport_fastrtps_cpp.hpp
+[3.165s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__rosidl_typesupport_fastrtps_cpp.hpp
+[3.165s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__rosidl_typesupport_fastrtps_cpp.hpp
+[3.165s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__rosidl_typesupport_fastrtps_cpp.hpp
+[3.165s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.166s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[3.166s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/surveillance__rosidl_typesupport_fastrtps_cpp.hpp
+[3.166s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/action/detail/spielberg__rosidl_typesupport_introspection_cpp.hpp
+[3.167s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_id__rosidl_typesupport_introspection_cpp.hpp
+[3.167s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_status__rosidl_typesupport_introspection_cpp.hpp
+[3.167s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/msg/detail/tello_wifi_config__rosidl_typesupport_introspection_cpp.hpp
+[3.167s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/drone_mode__rosidl_typesupport_introspection_cpp.hpp
+[3.167s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/include/tello_msg/tello_msg/srv/detail/surveillance__rosidl_typesupport_introspection_cpp.hpp
+[3.167s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/pythonpath.sh
+[3.168s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/pythonpath.dsv
+[3.168s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg-0.0.1-py3.12.egg-info/PKG-INFO
+[3.169s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg-0.0.1-py3.12.egg-info/SOURCES.txt
+[3.169s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg-0.0.1-py3.12.egg-info/dependency_links.txt
+[3.171s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg-0.0.1-py3.12.egg-info/top_level.txt
+[3.171s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/__init__.py
+[3.171s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/_tello_msg_s.ep.rosidl_typesupport_c.c
+[3.171s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/_tello_msg_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.172s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/_tello_msg_s.ep.rosidl_typesupport_introspection_c.c
+[3.174s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/action/__init__.py
+[3.174s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/action/_spielberg.py
+[3.174s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/action/_spielberg_s.c
+[3.174s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/__init__.py
+[3.174s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_id.py
+[3.174s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_id_s.c
+[3.174s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_status.py
+[3.175s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_status_s.c
+[3.175s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_wifi_config.py
+[3.175s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg/_tello_wifi_config_s.c
+[3.175s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/srv/__init__.py
+[3.175s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/srv/_drone_mode.py
+[3.175s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/srv/_drone_mode_s.c
+[3.175s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/srv/_surveillance.py
+[3.175s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/srv/_surveillance_s.c
+[3.175s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_c.so
+[3.176s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so
+[3.176s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_introspection_c.so
+[3.176s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so
+[3.176s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_introspection_c.so
+[3.176s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_c.so
+[3.176s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloStatus.idl
+[3.176s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloID.idl
+[3.176s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloWifiConfig.idl
+[3.177s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/srv/DroneMode.idl
+[3.177s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/srv/Surveillance.idl
+[3.177s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/action/Spielberg.idl
+[3.177s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloStatus.msg
+[3.177s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloID.msg
+[3.177s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/msg/TelloWifiConfig.msg
+[3.178s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/srv/DroneMode.srv
+[3.178s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/srv/Surveillance.srv
+[3.178s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/action/Spielberg.action
+[3.179s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/ament_index/resource_index/package_run_dependencies/tello_msg
+[3.179s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/ament_index/resource_index/parent_prefix_path/tello_msg
+[3.179s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/ament_prefix_path.sh
+[3.179s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/ament_prefix_path.dsv
+[3.179s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/path.sh
+[3.179s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/environment/path.dsv
+[3.180s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/local_setup.bash
+[3.180s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/local_setup.sh
+[3.180s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/local_setup.zsh
+[3.180s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/local_setup.dsv
+[3.180s] -- Symlinking: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/package.dsv
+[3.197s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/ament_index/resource_index/packages/tello_msg
+[3.197s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/rosidl_cmake-extras.cmake
+[3.197s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.197s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.198s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/ament_cmake_export_libraries-extras.cmake
+[3.198s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/ament_cmake_export_targets-extras.cmake
+[3.198s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.198s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.198s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msgConfig.cmake
+[3.198s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msgConfig-version.cmake
+[3.199s] -- Up-to-date symlink: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/package.xml
+[3.200s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_generator_c.so
+[3.200s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_fastrtps_c.so
+[3.200s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_introspection_c.so
+[3.200s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_c.so
+[3.201s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_fastrtps_cpp.so
+[3.201s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_introspection_cpp.so
+[3.202s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_typesupport_cpp.so
+[3.256s] Listing '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg'...
+[3.256s] Compiling '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/__init__.py'...
+[3.256s] Listing '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/action'...
+[3.256s] Listing '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/msg'...
+[3.257s] Listing '/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg/srv'...
+[3.264s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/libtello_msg__rosidl_generator_py.so
+[3.264s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_generator_cExport.cmake
+[3.265s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_generator_cExport-noconfig.cmake
+[3.265s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_typesupport_fastrtps_cExport.cmake
+[3.265s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.265s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_introspection_cExport.cmake
+[3.265s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.265s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_cExport.cmake
+[3.265s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_cExport-noconfig.cmake
+[3.265s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_generator_cppExport.cmake
+[3.266s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.266s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.266s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_introspection_cppExport.cmake
+[3.266s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.266s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_cppExport.cmake
+[3.266s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/tello_msg__rosidl_typesupport_cppExport-noconfig.cmake
+[3.266s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_generator_pyExport.cmake
+[3.266s] -- Up-to-date: /home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/share/tello_msg/cmake/export_tello_msg__rosidl_generator_pyExport-noconfig.cmake
+[3.271s] Invoked command in '/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alix.degironde/Public/tello-ros2/workspace/install/controller:/home/alix.degironde/Public/tello-ros2/workspace/install/tello:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/cmake --install /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg

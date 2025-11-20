@@ -110,7 +110,7 @@
         "type_name": "tello_msg/action/Spielberg_Goal",
         "fields": [
           {
-            "name": "flag",
+            "name": "start",
             "type": {
               "type_id": 15,
               "capacity": 0,
@@ -191,7 +191,7 @@
   "type_hashes": [
     {
       "type_name": "tello_msg/action/Spielberg_SendGoal_Event",
-      "hash_string": "RIHS01_8b836e801aea4e48051da8f15414c199a693dcc40acdd10b21a832d29fe716ca"
+      "hash_string": "RIHS01_d4312d53cd8f8c68d7de61177248edabfd6ef5adb373c4d7592b74687d8fcf93"
     },
     {
       "type_name": "builtin_interfaces/msg/Time",
@@ -203,11 +203,11 @@
     },
     {
       "type_name": "tello_msg/action/Spielberg_Goal",
-      "hash_string": "RIHS01_90c9cd1035d0b195b1ac06e1f4f4ce53a9cf5bd71b716b63e4e6302a74a88211"
+      "hash_string": "RIHS01_e969163c706fd5c374bb89dc6c21fb185a637e92141b2e7bf3e47a187343651f"
     },
     {
       "type_name": "tello_msg/action/Spielberg_SendGoal_Request",
-      "hash_string": "RIHS01_d2ca601dd564f1e8c7ab34ca347f5d6b6e78fd292eb755dc0d908966d7c2c75c"
+      "hash_string": "RIHS01_3df036c8c21b1998986c299adb56a3e4d303f2c6adb50a429e232f6182a4ea9a"
     },
     {
       "type_name": "tello_msg/action/Spielberg_SendGoal_Response",

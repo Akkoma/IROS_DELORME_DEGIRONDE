@@ -43,39 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/rosidl_interfaces" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/tello_msg")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/msg/TelloStatus.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/msg/TelloID.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/msg/TelloWifiConfig.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/srv" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/srv/DroneMode.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/action" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_type_description/tello_msg/action/Spielberg.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/tello_msg/tello_msg" TYPE DIRECTORY FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_c/tello_msg/" REGEX "/[^/]*\\.h$")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/environment" TYPE FILE FILES "/opt/ros/jazzy/lib/python3.12/site-packages/ament_package/template/environment_hook/library_path.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/environment" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_environment_hooks/library_path.dsv")
+  include("/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -102,10 +70,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/tello_msg/tello_msg" TYPE DIRECTORY FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_typesupport_fastrtps_c/tello_msg/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtello_msg__rosidl_typesupport_fastrtps_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtello_msg__rosidl_typesupport_fastrtps_c.so")
     file(RPATH_CHECK
@@ -126,10 +90,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/tello_msg/tello_msg" TYPE DIRECTORY FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_typesupport_introspection_c/tello_msg/" REGEX "/[^/]*\\.h$")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -179,14 +139,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/tello_msg/tello_msg" TYPE DIRECTORY FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/" REGEX "/[^/]*\\.hpp$")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/tello_msg/tello_msg" TYPE DIRECTORY FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_typesupport_fastrtps_cpp/tello_msg/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtello_msg__rosidl_typesupport_fastrtps_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtello_msg__rosidl_typesupport_fastrtps_cpp.so")
     file(RPATH_CHECK
@@ -207,10 +159,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/tello_msg/tello_msg" TYPE DIRECTORY FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_typesupport_introspection_cpp/tello_msg/" REGEX "/[^/]*\\.hpp$")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -260,99 +208,11 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/environment" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_environment_hooks/pythonpath.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/environment" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_environment_hooks/pythonpath.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg-0.0.1-py3.12.egg-info" TYPE DIRECTORY FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_python/tello_msg/tello_msg.egg-info/")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg" TYPE DIRECTORY FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
-        "/usr/bin/python3" "-m" "compileall"
+        "/home/alix.degironde/Public/ven_IROS/bin/python3" "-m" "compileall"
         "/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages/tello_msg"
       )
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg" TYPE MODULE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so"
-         OLD_RPATH "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg:/opt/ros/jazzy/lib:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_fastrtps_c.so")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles/tello_msg_s__rosidl_typesupport_fastrtps_c.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_introspection_c.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_introspection_c.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_introspection_c.so"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg" TYPE MODULE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_introspection_c.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_introspection_c.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_introspection_c.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_introspection_c.so"
-         OLD_RPATH "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg:/opt/ros/jazzy/lib:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_introspection_c.so")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles/tello_msg_s__rosidl_typesupport_introspection_c.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_c.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_c.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_c.so"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg" TYPE MODULE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_py/tello_msg/tello_msg_s__rosidl_typesupport_c.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_c.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_c.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_c.so"
-         OLD_RPATH "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg:/opt/ros/jazzy/lib:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/tello_msg/tello_msg_s__rosidl_typesupport_c.so")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles/tello_msg_s__rosidl_typesupport_c.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -376,94 +236,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/msg/TelloStatus.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/msg/TelloID.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/msg/TelloWifiConfig.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/srv" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/srv/DroneMode.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/action" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg/action/Spielberg.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg/msg/TelloStatus.msg")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg/msg/TelloID.msg")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg/msg/TelloWifiConfig.msg")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/srv" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg/srv/DroneMode.srv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/action" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg/action/Spielberg.action")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/tello_msg")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/tello_msg")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/environment" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_environment_hooks/ament_prefix_path.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/environment" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_environment_hooks/path.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_environment_hooks/local_setup.bash")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_environment_hooks/local_setup.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_environment_hooks/local_setup.zsh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_environment_hooks/local_setup.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_environment_hooks/package.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_index/share/ament_index/resource_index/packages/tello_msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -668,45 +440,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
     file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/cmake" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/CMakeFiles/Export/17090cb1f14b9ac7b7e98a05d9bf27d1/export_tello_msg__rosidl_generator_pyExport-noconfig.cmake")
   endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/cmake" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_cmake/rosidl_cmake-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/cmake" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/cmake" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/cmake" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/cmake" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/cmake" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/cmake" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg/cmake" TYPE FILE FILES
-    "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_core/tello_msgConfig.cmake"
-    "/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/ament_cmake_core/tello_msgConfig-version.cmake"
-    )
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tello_msg" TYPE FILE FILES "/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

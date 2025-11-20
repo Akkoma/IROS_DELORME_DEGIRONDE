@@ -1,5 +1,1 @@
-# SDK version
-string sdk_version
-
-# Serial number
-string serial_number
+/home/alix.degironde/Public/tello-ros2/workspace/src/tello_msg/msg/TelloID.msg

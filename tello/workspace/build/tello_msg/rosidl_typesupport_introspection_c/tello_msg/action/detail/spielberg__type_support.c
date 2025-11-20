@@ -33,7 +33,7 @@ void tello_msg__action__Spielberg_Goal__rosidl_typesupport_introspection_c__Spie
 
 static rosidl_typesupport_introspection_c__MessageMember tello_msg__action__Spielberg_Goal__rosidl_typesupport_introspection_c__Spielberg_Goal_message_member_array[1] = {
   {
-    "flag",  // name
+    "start",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
@@ -41,7 +41,7 @@ static rosidl_typesupport_introspection_c__MessageMember tello_msg__action__Spie
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(tello_msg__action__Spielberg_Goal, flag),  // bytes offset in struct
+    offsetof(tello_msg__action__Spielberg_Goal, start),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -105,6 +105,10 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 // #include "tello_msg/action/detail/spielberg__struct.h"
 
 
+// Include directives for member types
+// Member `message`
+#include "rosidl_runtime_c/string_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -124,7 +128,7 @@ void tello_msg__action__Spielberg_Result__rosidl_typesupport_introspection_c__Sp
   tello_msg__action__Spielberg_Result__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember tello_msg__action__Spielberg_Result__rosidl_typesupport_introspection_c__Spielberg_Result_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember tello_msg__action__Spielberg_Result__rosidl_typesupport_introspection_c__Spielberg_Result_message_member_array[2] = {
   {
     "success",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
@@ -142,13 +146,31 @@ static rosidl_typesupport_introspection_c__MessageMember tello_msg__action__Spie
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "message",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(tello_msg__action__Spielberg_Result, message),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers tello_msg__action__Spielberg_Result__rosidl_typesupport_introspection_c__Spielberg_Result_message_members = {
   "tello_msg__action",  // message namespace
   "Spielberg_Result",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(tello_msg__action__Spielberg_Result),
   false,  // has_any_key_member_
   tello_msg__action__Spielberg_Result__rosidl_typesupport_introspection_c__Spielberg_Result_message_member_array,  // message members
@@ -217,9 +239,9 @@ void tello_msg__action__Spielberg_Feedback__rosidl_typesupport_introspection_c__
   tello_msg__action__Spielberg_Feedback__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember tello_msg__action__Spielberg_Feedback__rosidl_typesupport_introspection_c__Spielberg_Feedback_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember tello_msg__action__Spielberg_Feedback__rosidl_typesupport_introspection_c__Spielberg_Feedback_message_member_array[3] = {
   {
-    "time_remaining",  // name
+    "current_step",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
@@ -227,7 +249,43 @@ static rosidl_typesupport_introspection_c__MessageMember tello_msg__action__Spie
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(tello_msg__action__Spielberg_Feedback, time_remaining),  // bytes offset in struct
+    offsetof(tello_msg__action__Spielberg_Feedback, current_step),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "total_steps",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(tello_msg__action__Spielberg_Feedback, total_steps),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "elapsed_time",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(tello_msg__action__Spielberg_Feedback, elapsed_time),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -241,7 +299,7 @@ static rosidl_typesupport_introspection_c__MessageMember tello_msg__action__Spie
 static const rosidl_typesupport_introspection_c__MessageMembers tello_msg__action__Spielberg_Feedback__rosidl_typesupport_introspection_c__Spielberg_Feedback_message_members = {
   "tello_msg__action",  // message namespace
   "Spielberg_Feedback",  // message name
-  1,  // number of fields
+  3,  // number of fields
   sizeof(tello_msg__action__Spielberg_Feedback),
   false,  // has_any_key_member_
   tello_msg__action__Spielberg_Feedback__rosidl_typesupport_introspection_c__Spielberg_Feedback_message_member_array,  // message members

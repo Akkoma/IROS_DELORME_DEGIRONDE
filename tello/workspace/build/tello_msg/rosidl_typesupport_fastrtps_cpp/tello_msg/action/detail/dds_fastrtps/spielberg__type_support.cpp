@@ -36,8 +36,8 @@ cdr_serialize(
   const tello_msg::action::Spielberg_Goal & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: flag
-  cdr << (ros_message.flag ? true : false);
+  // Member: start
+  cdr << (ros_message.start ? true : false);
 
   return true;
 }
@@ -48,11 +48,11 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   tello_msg::action::Spielberg_Goal & ros_message)
 {
-  // Member: flag
+  // Member: start
   {
     uint8_t tmp;
     cdr >> tmp;
-    ros_message.flag = tmp ? true : false;
+    ros_message.start = tmp ? true : false;
   }
 
   return true;
@@ -72,9 +72,9 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: flag
+  // Member: start
   {
-    size_t item_size = sizeof(ros_message.flag);
+    size_t item_size = sizeof(ros_message.start);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -102,7 +102,7 @@ max_serialized_size_Spielberg_Goal(
   full_bounded = true;
   is_plain = true;
 
-  // Member: flag
+  // Member: start
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -117,7 +117,7 @@ max_serialized_size_Spielberg_Goal(
     using DataType = tello_msg::action::Spielberg_Goal;
     is_plain =
       (
-      offsetof(DataType, flag) +
+      offsetof(DataType, start) +
       last_member_size
       ) == ret_val;
   }
@@ -131,8 +131,8 @@ cdr_serialize_key(
   const tello_msg::action::Spielberg_Goal & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: flag
-  cdr << (ros_message.flag ? true : false);
+  // Member: start
+  cdr << (ros_message.start ? true : false);
 
   return true;
 }
@@ -150,9 +150,9 @@ get_serialized_size_key(
   (void)padding;
   (void)wchar_size;
 
-  // Member: flag
+  // Member: start
   {
-    size_t item_size = sizeof(ros_message.flag);
+    size_t item_size = sizeof(ros_message.start);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -179,7 +179,7 @@ max_serialized_size_key_Spielberg_Goal(
   full_bounded = true;
   is_plain = true;
 
-  // Member: flag
+  // Member: start
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -194,7 +194,7 @@ max_serialized_size_key_Spielberg_Goal(
     using DataType = tello_msg::action::Spielberg_Goal;
     is_plain =
       (
-      offsetof(DataType, flag) +
+      offsetof(DataType, start) +
       last_member_size
       ) == ret_val;
   }
@@ -342,6 +342,9 @@ cdr_serialize(
   // Member: success
   cdr << (ros_message.success ? true : false);
 
+  // Member: message
+  cdr << ros_message.message;
+
   return true;
 }
 
@@ -357,6 +360,9 @@ cdr_deserialize(
     cdr >> tmp;
     ros_message.success = tmp ? true : false;
   }
+
+  // Member: message
+  cdr >> ros_message.message;
 
   return true;
 }  // NOLINT(readability/fn_size)
@@ -381,6 +387,11 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+
+  // Member: message
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.message.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -411,6 +422,17 @@ max_serialized_size_Spielberg_Result(
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
+  // Member: message
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -420,7 +442,7 @@ max_serialized_size_Spielberg_Result(
     using DataType = tello_msg::action::Spielberg_Result;
     is_plain =
       (
-      offsetof(DataType, success) +
+      offsetof(DataType, message) +
       last_member_size
       ) == ret_val;
   }
@@ -436,6 +458,9 @@ cdr_serialize_key(
 {
   // Member: success
   cdr << (ros_message.success ? true : false);
+
+  // Member: message
+  cdr << ros_message.message;
 
   return true;
 }
@@ -459,6 +484,11 @@ get_serialized_size_key(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+
+  // Member: message
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.message.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -489,6 +519,18 @@ max_serialized_size_key_Spielberg_Result(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Member: message
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -497,7 +539,7 @@ max_serialized_size_key_Spielberg_Result(
     using DataType = tello_msg::action::Spielberg_Result;
     is_plain =
       (
-      offsetof(DataType, success) +
+      offsetof(DataType, message) +
       last_member_size
       ) == ret_val;
   }
@@ -642,8 +684,14 @@ cdr_serialize(
   const tello_msg::action::Spielberg_Feedback & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: time_remaining
-  cdr << ros_message.time_remaining;
+  // Member: current_step
+  cdr << ros_message.current_step;
+
+  // Member: total_steps
+  cdr << ros_message.total_steps;
+
+  // Member: elapsed_time
+  cdr << ros_message.elapsed_time;
 
   return true;
 }
@@ -654,8 +702,14 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   tello_msg::action::Spielberg_Feedback & ros_message)
 {
-  // Member: time_remaining
-  cdr >> ros_message.time_remaining;
+  // Member: current_step
+  cdr >> ros_message.current_step;
+
+  // Member: total_steps
+  cdr >> ros_message.total_steps;
+
+  // Member: elapsed_time
+  cdr >> ros_message.elapsed_time;
 
   return true;
 }  // NOLINT(readability/fn_size)
@@ -674,9 +728,23 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: time_remaining
+  // Member: current_step
   {
-    size_t item_size = sizeof(ros_message.time_remaining);
+    size_t item_size = sizeof(ros_message.current_step);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: total_steps
+  {
+    size_t item_size = sizeof(ros_message.total_steps);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: elapsed_time
+  {
+    size_t item_size = sizeof(ros_message.elapsed_time);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -704,7 +772,21 @@ max_serialized_size_Spielberg_Feedback(
   full_bounded = true;
   is_plain = true;
 
-  // Member: time_remaining
+  // Member: current_step
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // Member: total_steps
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // Member: elapsed_time
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -720,7 +802,7 @@ max_serialized_size_Spielberg_Feedback(
     using DataType = tello_msg::action::Spielberg_Feedback;
     is_plain =
       (
-      offsetof(DataType, time_remaining) +
+      offsetof(DataType, elapsed_time) +
       last_member_size
       ) == ret_val;
   }
@@ -734,8 +816,14 @@ cdr_serialize_key(
   const tello_msg::action::Spielberg_Feedback & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: time_remaining
-  cdr << ros_message.time_remaining;
+  // Member: current_step
+  cdr << ros_message.current_step;
+
+  // Member: total_steps
+  cdr << ros_message.total_steps;
+
+  // Member: elapsed_time
+  cdr << ros_message.elapsed_time;
 
   return true;
 }
@@ -753,9 +841,23 @@ get_serialized_size_key(
   (void)padding;
   (void)wchar_size;
 
-  // Member: time_remaining
+  // Member: current_step
   {
-    size_t item_size = sizeof(ros_message.time_remaining);
+    size_t item_size = sizeof(ros_message.current_step);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: total_steps
+  {
+    size_t item_size = sizeof(ros_message.total_steps);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: elapsed_time
+  {
+    size_t item_size = sizeof(ros_message.elapsed_time);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -782,7 +884,23 @@ max_serialized_size_key_Spielberg_Feedback(
   full_bounded = true;
   is_plain = true;
 
-  // Member: time_remaining
+  // Member: current_step
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: total_steps
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: elapsed_time
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -798,7 +916,7 @@ max_serialized_size_key_Spielberg_Feedback(
     using DataType = tello_msg::action::Spielberg_Feedback;
     is_plain =
       (
-      offsetof(DataType, time_remaining) +
+      offsetof(DataType, elapsed_time) +
       last_member_size
       ) == ret_val;
   }

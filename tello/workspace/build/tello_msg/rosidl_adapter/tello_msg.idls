@@ -2,4 +2,5 @@
 /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:msg/TelloID.idl
 /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:msg/TelloWifiConfig.idl
 /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:srv/DroneMode.idl
+/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:srv/Surveillance.idl
 /home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_adapter/tello_msg:action/Spielberg.idl
