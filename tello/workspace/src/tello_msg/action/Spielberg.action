@@ -1,11 +1,8 @@
-# Goal: Start the Spielberg cinematic sequence
-bool start  # true to start the sequence
+int32 start
 ---
-# Result: Indicates if the sequence completed successfully
-bool success  # true if sequence completed, false if aborted/cancelled
-string message  # Optional status message
+bool success
+string message
 ---
-# Feedback: Progress information during execution
-int32 current_step  # Current step in the sequence (0-based index)
-int32 total_steps  # Total number of steps in the sequence
-float32 elapsed_time  # Time elapsed since start (seconds)
+int32 current_step
+int32 total_steps
+float32 elapsed_time

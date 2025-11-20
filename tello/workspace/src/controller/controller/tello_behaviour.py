@@ -251,6 +251,8 @@ class TelloBehaviour(Node):
         # - Envoi de commandes de correction via self.pub_control
         self.get_logger().info("Mode QR Follower: Implémentation à compléter")
     
+    # === REMPLACER LA MÉTHODE start_spielberg_mode ===
+
     def start_spielberg_mode(self):
         """
         Initialise le mode Spielberg (cinématique).
@@ -276,7 +278,10 @@ class TelloBehaviour(Node):
             feedback_callback=self.spielberg_feedback_callback
         )
         send_goal_future.add_done_callback(self.spielberg_goal_response_callback)
-    
+
+
+    # === REMPLACER LA MÉTHODE spielberg_goal_response_callback ===
+
     def spielberg_goal_response_callback(self, future):
         """Callback quand le goal Spielberg est accepté ou rejeté"""
         goal_handle = future.result()
@@ -291,26 +296,39 @@ class TelloBehaviour(Node):
         # Attendre le résultat
         result_future = goal_handle.get_result_async()
         result_future.add_done_callback(self.spielberg_result_callback)
-    
+
+
+    # === REMPLACER LA MÉTHODE spielberg_feedback_callback ===
+
     def spielberg_feedback_callback(self, feedback_msg):
         """Callback pour les feedbacks de l'action Spielberg"""
         feedback = feedback_msg.feedback
         self.get_logger().info(
-            f'Spielberg - Étape {feedback.current_step + 1}/{feedback.total_steps} '
+            f'Spielberg - Étape {feedback.current_step}/{feedback.total_steps} '
             f'(temps écoulé: {feedback.elapsed_time:.1f}s)',
             throttle_duration_sec=1.0
         )
-    
+
+
+    # === REMPLACER LA MÉTHODE spielberg_result_callback ===
+
     def spielberg_result_callback(self, future):
         """Callback quand l'action Spielberg est terminée"""
-        result = future.result().result
-        self._spielberg_goal_handle = None
-        
-        if result.success:
-            self.get_logger().info(f'Séquence Spielberg terminée: {result.message}')
-        else:
-            self.get_logger().warn(f'Séquence Spielberg échouée: {result.message}')
-    
+        try:
+            result = future.result().result
+            self._spielberg_goal_handle = None
+            
+            if result.success:
+                self.get_logger().info(f'✓ Séquence Spielberg terminée: {result.message}')
+            else:
+                self.get_logger().warn(f'✗ Séquence Spielberg échouée: {result.message}')
+        except Exception as e:
+            self.get_logger().error(f'Erreur lors de la récupération du résultat Spielberg: {e}')
+            self._spielberg_goal_handle = None
+
+
+    # === REMPLACER LA MÉTHODE stop_spielberg_mode ===
+
     def stop_spielberg_mode(self):
         """Arrête le mode Spielberg en annulant l'action en cours"""
         if self._spielberg_goal_handle is not None:
@@ -323,15 +341,22 @@ class TelloBehaviour(Node):
                 self._spielberg_goal_handle = None
         else:
             self.get_logger().info("Aucune séquence Spielberg active à arrêter")
-    
+
+
+    # === REMPLACER LA MÉTHODE spielberg_cancel_callback ===
+
     def spielberg_cancel_callback(self, future):
         """Callback pour l'annulation de l'action Spielberg"""
-        cancel_response = future.result()
-        if len(cancel_response.goals_canceling) > 0:
-            self.get_logger().info('Séquence Spielberg annulée avec succès')
-        else:
-            self.get_logger().warn('Échec de l\'annulation de la séquence Spielberg')
-        self._spielberg_goal_handle = None
+        try:
+            cancel_response = future.result()
+            if len(cancel_response.goals_canceling) > 0:
+                self.get_logger().info('✓ Séquence Spielberg annulée avec succès')
+            else:
+                self.get_logger().warn('✗ Échec de l\'annulation de la séquence Spielberg')
+        except Exception as e:
+            self.get_logger().error(f"Erreur lors de l'annulation: {e}")
+        finally:
+            self._spielberg_goal_handle = None
 
     def start_surveillance_mode(self):
         """
