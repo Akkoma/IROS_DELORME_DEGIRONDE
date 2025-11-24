@@ -1,6 +1,6 @@
 # Rapport de Projet : Pilotage et Autonomie sur Drone Tello (ROS2)
 
-**Auteurs :** Alix DEGIRONDE & Mathis DELORME  
+**Auteurs :** Alix DEGIRONDE & Pao DELORME  
 **Cadre :** TP Robotique Mobile & ROS2  
 **Date :** Novembre 2025
 
