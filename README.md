@@ -7,26 +7,67 @@
 ---
 
 ## Table des Matières
-
-1. [Introduction](#1-introduction)
-2. [Installation et Prise en main](#2-installation-et-prise-en-main)
-3. [Architecture de Contrôle](#3-architecture-de-contrôle-cœur-du-projet)
-4. [Perception et Vision (QR Code)](#4-perception-et-vision-qr-code)
-5. [Scénarios et Modes de Vol](#5-scénarios-et-modes-de-vol)
-6. [Services et Actions ROS2 Personnalisés](#6-services-et-actions-ros2-personnalisés)
-7. [Implémentation Technique](#7-implémentation-technique)
-8. [Démonstrations](#8-démonstrations)
-9. [Conclusion](#9-conclusion)
+- [Rapport de Projet : Pilotage et Autonomie sur Drone Tello (ROS2)](#rapport-de-projet--pilotage-et-autonomie-sur-drone-tello-ros2)
+  - [Table des Matières](#table-des-matières)
+  - [1. Introduction](#1-introduction)
+    - [1.1 Contexte et Objectifs](#11-contexte-et-objectifs)
+    - [1.2 Théorie : Mécanique du vol d'un quadrirotor](#12-théorie--mécanique-du-vol-dun-quadrirotor)
+  - [2. Installation et Prise en main](#2-installation-et-prise-en-main)
+    - [2.1 Configuration de l'environnement](#21-configuration-de-lenvironnement)
+    - [2.2 Analyse des Topics ROS2](#22-analyse-des-topics-ros2)
+    - [2.3 Visualisation et Validation](#23-visualisation-et-validation)
+    - [2.4 Organisation Non-Standard du Workspace](#24-organisation-non-standard-du-workspace)
+  - [3. Architecture de Contrôle (Cœur du projet)](#3-architecture-de-contrôle-cœur-du-projet)
+    - [3.1 Évolution du Graphe ROS2](#31-évolution-du-graphe-ros2)
+    - [3.2 Le nœud `tello_behaviour` : Multiplexeur intelligent](#32-le-nœud-tello_behaviour--multiplexeur-intelligent)
+    - [3.3 Système de Topics hiérarchique](#33-système-de-topics-hiérarchique)
+  - [4. Perception et Vision (QR Code)](#4-perception-et-vision-qr-code)
+    - [4.1 Chaîne de traitement](#41-chaîne-de-traitement)
+    - [4.2 Mode "QR Follower" : Asservissement visuel](#42-mode-qr-follower--asservissement-visuel)
+  - [5. Scénarios et Modes de Vol](#5-scénarios-et-modes-de-vol)
+    - [5.1 Les 4 Modes de vol](#51-les-4-modes-de-vol)
+    - [5.2 Mode Manuel](#52-mode-manuel)
+    - [5.3 Mode Surveillance](#53-mode-surveillance)
+    - [5.4 Mode "Spielberg"](#54-mode-spielberg)
+  - [6. Services et Actions ROS2 Personnalisés](#6-services-et-actions-ros2-personnalisés)
+    - [6.1 Architecture de Communication](#61-architecture-de-communication)
+    - [6.2 Service `/drone_mode` : Gestion des Modes](#62-service-drone_mode--gestion-des-modes)
+    - [6.3 Service `/surveillance/control` : Activation Surveillance](#63-service-surveillancecontrol--activation-surveillance)
+    - [6.4 Action `spielberg` : Séquence Cinématique](#64-action-spielberg--séquence-cinématique)
+    - [6.5 Comparaison Services vs Actions](#65-comparaison-services-vs-actions)
+    - [6.6 Topics ROS2 du Système](#66-topics-ros2-du-système)
+    - [6.7 Workflow de Communication Complet](#67-workflow-de-communication-complet)
+  - [7. Implémentation Technique](#7-implémentation-technique)
+    - [7.1 Structure du Package `controller`](#71-structure-du-package-controller)
+    - [7.2 Architecture Complète des Packages](#72-architecture-complète-des-packages)
+    - [7.3 Services et Actions personnalisés](#73-services-et-actions-personnalisés)
+    - [6.3 Workflow de développement](#63-workflow-de-développement)
+  - [8. Démonstrations](#8-démonstrations)
+    - [8.1 Commandes de Lancement Complètes](#81-commandes-de-lancement-complètes)
+    - [8.2 Tests en conditions réelles](#82-tests-en-conditions-réelles)
+    - [8.3 Scénario complet intégré](#83-scénario-complet-intégré)
+    - [8.4 Commandes de Test et Debug](#84-commandes-de-test-et-debug)
+    - [8.5 Logs Console Typiques](#85-logs-console-typiques)
+  - [9. Conclusion](#9-conclusion)
+    - [9.1 Bilan technique](#91-bilan-technique)
+    - [9.2 Réponses aux Questions du TP](#92-réponses-aux-questions-du-tp)
+    - [9.3 Difficultés rencontrées et solutions](#93-difficultés-rencontrées-et-solutions)
+    - [9.4 Améliorations futures](#94-améliorations-futures)
+    - [9.5 Ressources du projet](#95-ressources-du-projet)
+  - [Annexes](#annexes)
+    - [A. Tableau récapitulatif des nœuds](#a-tableau-récapitulatif-des-nœuds)
+    - [B. Commandes utiles](#b-commandes-utiles)
+    - [C. Références](#c-références)
 
 ---
 
 ## 1. Introduction
 
-Ce projet vise à développer une architecture logicielle complète sous **ROS2** pour contrôler un drone **DJI Tello EDU**. L'objectif est de maîtriser la chaîne complète : de l'installation des drivers à la réalisation de scénarios autonomes basés sur la vision par ordinateur (lecture de QR Codes), en passant par la gestion d'états et la sécurité.
+Ce projet vise à développer une architecture logicielle complète sous **ROS2** pour contrôler un drone **Tello**, en permettant à l'utilisateur différents modes de controle du drone.
 
 ### 1.1 Contexte et Objectifs
 
-Le drone DJI Tello EDU est une plateforme idéale pour l'apprentissage de la robotique aérienne. Ce projet s'articule autour de trois axes principaux :
+Ce projet s'articule autour de trois axes principaux :
 
 - **Maîtrise de ROS2** : Communication inter-nœuds, services, actions
 - **Vision par ordinateur** : Détection et suivi de QR codes avec OpenCV
@@ -44,7 +85,6 @@ Pour contrôler la trajectoire d'un quadrirotor, on agit sur la vitesse de rotat
 
 4. **Roulis (Roll) :** Déplacement latéral gauche/droite. On accélère les moteurs d'un côté et ralentit ceux de l'autre pour incliner le drone latéralement.
 
-Ces commandes sont combinées pour obtenir des trajectoires complexes dans l'espace 3D.
 
 ---
 
@@ -72,9 +112,8 @@ Les dépendances Python ont été gérées via un environnement virtuel (`venv`)
 - `rclpy` (ROS2 Python)
 - `opencv-python` (vision)
 - `cv_bridge` (conversion ROS ↔ OpenCV)
-- `pyzbar` (lecture QR codes)
 
-> **Observation importante** : Le dépôt cloné ne suivait pas exactement la structure standard ROS2. Nous avons dû adapter le placement des fichiers `setup.py` et réorganiser les dossiers `src` pour respecter les conventions de `colcon build`.
+> **Observation importante** : Le dépôt cloné ne suivait pas exactement la structure standard ROS2. Nous avons dû adapter le placement des fichiers `setup.py` et réorganiser les dossiers `src` pour respecter les conventions de `colcon build` et n'avoir qu'un seul workspace.
 
 ### 2.2 Analyse des Topics ROS2
 
@@ -82,10 +121,10 @@ Après lancement du driver Tello, voici les principaux topics identifiés :
 
 | Topic | Type de message | Description | Fréquence |
 | :--- | :--- | :--- | :--- |
-| `/control` | `geometry_msgs/Twist` | Commande de vitesse 3D + rotation | ~20 Hz |
+| `/control` | `geometry_msgs/Twist` : Pitch, Roll and Yaw in degrees: int32 | Commande de vitesse 3D + rotation | ~20 Hz |
 | `/image_raw` | `sensor_msgs/Image` | Flux vidéo caméra frontale | 30 FPS |
-| `/status` | `tello_msgs/TelloStatus` | Batterie, altitude, temps de vol | 10 Hz |
-| `/odom` | `nav_msgs/Odometry` | Estimation position/orientation | 20 Hz |
+| `/status` | `tello_msgs/TelloStatus` : uint8 | Batterie, altitude, temps de vol | 10 Hz |
+| `/odom` | `nav_msgs/Odometry` : int32 | Estimation position/orientation | 20 Hz |
 | `/takeoff` | `std_msgs/Empty` | Commande de décollage | Event |
 | `/land` | `std_msgs/Empty` | Commande d'atterrissage | Event |
 | `/emergency` | `std_msgs/Empty` | Arrêt d'urgence | Event |
@@ -128,7 +167,7 @@ Nous avons donc travaillé directement dans le workspace fourni (`tello/workspac
 
 ## 3. Architecture de Contrôle (Cœur du projet)
 
-Pour gérer la complexité des différents modes (Manuel, Automatique, Urgence), nous avons fait évoluer l'architecture simple vers une **architecture centralisée avec filtrage intelligent**.
+Pour gérer la complexité des différents modes (Manuel, Automatique, Urgence), nous avons fait évoluer l'architecture simple vers une architecture centralisée avec filtrage de certaines commandes en fonction du mode choisi.
 
 ### 3.1 Évolution du Graphe ROS2
 
@@ -143,7 +182,9 @@ Pour gérer la complexité des différents modes (Manuel, Automatique, Urgence),
 ```
 [Joystick] → [manual_control] → [/control/*] → [tello_behaviour] → [/control, /takeoff, /land] → [Drone]
                                                        ↑
+                                                       ↓
                                               [Service /drone_mode]
+                                                       ↑
                                                        ↓
                                     [Modes: surveillance, spielberg, qr_follower]
 ```
@@ -214,7 +255,7 @@ Cette séparation permet au `tello_behaviour` de décider quelle source de comma
 
 ## 4. Perception et Vision (QR Code)
 
-Nous utilisons la caméra embarquée (720p, 30 FPS) pour détecter et interpréter des QR codes comme système de waypoints visuels.
+Nous utilisons la caméra embarquée pour détecter et interpréter des QR codes comme système de waypoints visuels.
 
 ### 4.1 Chaîne de traitement
 
@@ -262,6 +303,8 @@ Pour éviter les oscillations, nous avons défini une zone de tolérance (1/3 de
 - **Stabilité** : Sans zone morte, le drone oscillait continuellement
 - **Luminosité** : La détection OpenCV est sensible aux conditions d'éclairage
 
+Pour surmonter ces défis et permettre la stabilisation du drone lorsque le QR code est au centre de l'image, nous avons dû simplifier la manière dont le drone suit le QR code avec une commande simple sur ses différents axes.*
+
 ---
 
 ## 5. Scénarios et Modes de Vol
@@ -283,16 +326,28 @@ Mode par défaut. Le pilote a un contrôle total via le joystick Xbox :
 
 **Mappage des boutons :**
 
-- **Stick Gauche** : Gaz (haut/bas) + Lacet (rotation)
-- **Stick Droit** : Tangage (avant/arrière) + Roulis (gauche/droite)
-- **Bouton Y** : Décollage
-- **Bouton A** : Atterrissage
-- **Bouton B** : Arrêt d'urgence
-- **Bouton X** : Flip avant
+- **Stick Droit** : Gaz (haut/bas) + Lacet (rotation)
+- **Stick Gauche** : Tangage (avant/arrière) + Roulis (gauche/droite)
+- **Bouton A** : Décollage
+- **Bouton B** : Atterrissage
+- **Bouton XBOX** : Arrêt d'urgence
+- **Bouton Y** : Flip avant
+- **Bouton X** : Flip arrière
+- **Bouton L1** : Flip gauche
+- **Bouton R1** : Flip droit
+
 
 ### 5.3 Mode Surveillance
 
-Ce mode fait tourner le drone sur lui-même pour effectuer une surveillance panoramique.
+Ce mode effectue une rotation panoramique continue via un nœud dédié "surveillance" exposant un service d'activation. Il a été implémenté avec un service (tello_msg/srv/Surveillance) car l'action demandée est un changement d'état binaire (on/off) et nécessite une confirmation synchrone à l'appelant.
+
+Fonctionnement et communication :
+- Service exposé : /surveillance/control (type tello_msg/srv/Surveillance, request: bool data → true = activer, false = désactiver). L'appel renvoie immédiatement success=True/False.
+- Activation : le nœud surveillance bascule son flag interne is_active et renvoie un accusé de réception; un log informe de l'état (ACTIVÉ / DÉSACTIVÉ).
+- Génération de commandes : quand is_active == True, le nœud publie à fréquence fixe (20 Hz) des messages geometry_msgs/Twist sur /surveillance/cmd_vel (twist.angular.z > 0 pour rotation continue).
+- Intégration avec tello_behaviour : tello_behaviour s'abonne à /surveillance/cmd_vel et, si le mode courant est Surveillance, relaie ces commandes vers le topic final /control après filtrage/sécurité. Si le mode n'est pas Surveillance, les messages sont ignorés.
+- Priorités et sécurité : commandes critiques (takeoff, land, emergency) restent prioritaires et peuvent interrompre la rotation. Lors de la désactivation, le nœud envoie une commande d'arrêt (Twist nul) pour sécuriser la fin de la rotation.
+- Observabilité : changement d'état peut être propagé sur /drone_mode/state (Int32) ou loggé pour le monitoring; le service fournit une confirmation immédiate utile pour les interfaces utilisateur et scripts d'automatisation.
 
 **Implémentation :**
 
@@ -316,24 +371,29 @@ class Surveillance(Node):
             self.cmd_vel_pub.publish(twist)
 ```
 
-![Mode Surveillance en action](readme_image/Capturevidodu2025-11-1214-08-15-ezgif.com-video-to-gif-converter.gif)
+![Mode Surveillance en action](readme_image/surveillance.gif)
 
 *Figure 4 : Mode surveillance - Le drone effectue une rotation panoramique continue à vitesse constante*
 
-**Cas d'usage :** Scan de zone, détection d'intrus, prise de vue 360°
 
-### 5.4 Mode "Spielberg" : Action Server pour mouvements complexes
+### 5.4 Mode "Spielberg" 
 
-Le mode Spielberg réalise un **travelling cinématique** avec plusieurs étapes. Nous avons choisi d'utiliser un **Action Server** plutôt qu'un simple Service.
+Le mode Spielberg exécute une séquence cinématique composée d'étapes ordonnées (avance, rotation, recul) exécutées sur plusieurs secondes, avec besoin de remontée de progression et possibilité d'annulation. Un Action Server est donc plus adapté qu'un service synchrone.
 
-**Pourquoi une Action plutôt qu'un Service ?**
+- Avantages d'une Action pour Spielberg :
+    - Exécution asynchrone (non bloquante) pour le nœud appelant.
+    - Feedback périodique (étape en cours / temps écoulé) pour monitoring et logs.
+    - Possibilité d'annulation propre (cancel_goal) à tout moment.
+    - Gestion explicite d'acceptation/rejet du goal (validation avant exécution).
 
-| Critère | Service | Action |
-|---------|---------|--------|
-| Durée | Bloquant, réponse immédiate | Non-bloquant, longue durée |
-| Feedback | Non | Oui (progression) |
-| Annulation | Non | Oui (cancel possible) |
-| Use case | Commandes instantanées | Trajectoires complexes |
+| Critère       | Service                         | Action                                         |
+|---------------|----------------------------------|------------------------------------------------|
+| Durée         | Bloquant, réponse immédiate      | Non-bloquant, conçue pour longue durée        |
+| Feedback      | Non                          | Oui (progression / étapes)                 |
+| Annulation    | Non                          | Oui (cancel_goal)                          |
+| Use case      | Changements d'état instantanés  | Trajectoires ou séquences complexes, pilotables |
+
+En pratique : le nœud `tello_behaviour` envoie un goal au `spielberg` action server, reçoit des feedbacks (ex. étape 1/3, 2/3, ...) et peut annuler la séquence si besoin. L'Action Server se charge d'exécuter la séquence temporelle et de publier les commandes Twist correspondantes vers le multiplexeur.
 
 **Structure de l'Action Spielberg :**
 
@@ -382,7 +442,7 @@ def execute_callback(self, goal_handle):
 
 *Figure 6 : Vue embarquée pendant la séquence cinématique Spielberg*
 
-![Mode Spielberg - Démonstration complète](readme_image/modespielberg-ezgif.com-video-to-gif-converter.gif)
+![Mode Spielberg - Démonstration complète](readme_image/spielbergvideo.gif)
 
 *Figure 7 : Travelling Spielberg complet (avance, rotation, recul)*
 

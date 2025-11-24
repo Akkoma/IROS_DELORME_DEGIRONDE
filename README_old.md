@@ -91,3 +91,45 @@ workspace/src/controller/setup.py
 
 dans terminal:
 ros2 launch controller tello.launch.py
+
+
+TODO : 
+
+2.2 --> 3
+3 serait plus une overview, 6 = deep dive dans le projet
+
+4 et 5 merge, faire une grosse partie 4 avec tout les modes
+
+Parler du tof distance (pb, mettre videos)
+
+refactor comment on organise le readme : peut etre inclure partie 6 dans les parties correspondantes (ex: service pour surveillance, action pour spielberg...), d'abord parler des noeuds en overview comment il communiquent avec tello behaviour puis faire détail des noeuds avec les différents modes de vol 
+On peut prendre partie 7 (a restructurer) et utiliser screen rqt pour expliquer comment la communication se fait avec de deep dive dans chaque mode
+
+A GARDER type :
+1. Utilisateur : ros2 service call /drone_mode "{mode: 2}"
+         ↓
+2. [tello_behaviour] : Reçoit requête DroneMode
+         ↓
+3. [tello_behaviour] : Arrête mode actuel (si nécessaire)
+         ↓
+4. [tello_behaviour] : Change current_mode = SPIELBERG
+         ↓
+5. [tello_behaviour] : Envoie Goal à Action Server spielberg
+         ↓
+6. [spielberg] : Accepte le Goal
+         ↓
+7. [spielberg] : Exécute séquence (avance → rotation → recul)
+         │
+         ├─> Feedback après chaque étape
+         │   (reçu par tello_behaviour et loggé)
+         │
+8. [spielberg] : Publie Result (success=true)
+         ↓
+9. [tello_behaviour] : Reçoit Result et affiche confirmation
+
+parler du lancement en 1 ligne de commande : 
+TOUT LANCER EN 1 lignes
+
+crée: scripts/launch.sh
+crée: workspace/src/controller/launch/tello.launch.py
+modfié: workspace/src/controller/setup.py 
