@@ -133,3 +133,7 @@ TOUT LANCER EN 1 lignes
 crée: scripts/launch.sh
 crée: workspace/src/controller/launch/tello.launch.py
 modfié: workspace/src/controller/setup.py 
+
+
+TODO2:
+CLEAN LE CODE + VIDEO YT
