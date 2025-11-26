@@ -1,18 +1,27 @@
-#!/home/alix.degironde/Public/ven_IROS/bin python3
+#!/usr/bin/env python3
+
+import time
 
 import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionServer, CancelResponse, GoalResponse
 from geometry_msgs.msg import Twist
 from tello_msg.action import Spielberg
-import time
 
 
 class SpielbergActionServer(Node):
+    """
+    Action Server ROS2 pour exécuter une séquence cinématique "Spielberg".
+    Séquence : Avancer -> Rotation -> Reculer
+    """
+
+    TOTAL_STEPS = 3
+    FORWARD_SPEED = 50.0
+    ROTATION_SPEED = 40.0
+
     def __init__(self):
         super().__init__('spielberg_action_server')
-        
-        # Action Server
+
         self._action_server = ActionServer(
             self,
             Spielberg,
@@ -21,293 +30,80 @@ class SpielbergActionServer(Node):
             cancel_callback=self.cancel_callback,
             execute_callback=self.execute_callback,
         )
-        
-        # Publisher pour envoyer les commandes de mouvement
-        self.cmd_vel_pub = self.create_publisher(
-            Twist,
-            '/control',
-            10
-        )
-        
-        self.get_logger().info('Noeud spielberg_action_server initialisé')
-        self.get_logger().info("Action server 'spielberg' disponible")
-    
+
+        self.cmd_vel_pub = self.create_publisher(Twist, '/control', 10)
+
+        self.get_logger().info('Spielberg Action Server initialisé')
+
     def goal_callback(self, goal_request):
-        """Accepte ou rejette un goal reçu"""
-        self.get_logger().info('Réception d\'un goal Spielberg...')
+        """Accepte tous les goals entrants."""
         return GoalResponse.ACCEPT
-    
+
     def cancel_callback(self, goal_handle):
-        """Gère l'annulation d'un goal en cours"""
-        self.get_logger().info('Réception d\'une demande d\'annulation Spielberg')
+        """Accepte les demandes d'annulation."""
         return CancelResponse.ACCEPT
-    
+
     def execute_callback(self, goal_handle):
-        """Exécute la séquence Spielberg cinématique"""
-        self.get_logger().info('Exécution de la séquence Spielberg...')
-        
-        # Paramètres de la séquence
-        total_steps = 3
+        """Exécute la séquence cinématique Spielberg en 3 étapes."""
         start_time = time.time()
-        
+
+        # Définition des étapes : (linear_y, angular_z, durée)
+        steps = [
+            (self.FORWARD_SPEED, 0.0, 2.0),   # Étape 1 : Avancer
+            (0.0, self.ROTATION_SPEED, 1.0),  # Étape 2 : Rotation
+            (-self.FORWARD_SPEED, 0.0, 2.0),  # Étape 3 : Reculer
+        ]
+
         try:
-            # Étape 1 : Avancer
-            self.get_logger().info('[Étape 1/3] Avancement...')
-            twist = Twist()
-            twist.linear.x = float(0.0)
-            twist.linear.y = float(50.0)
-            twist.linear.z = float(0.0)
-            twist.angular.x = float(0.0)
-            twist.angular.y = float(0.0)
-            twist.angular.z = float(0.0)
-            self.cmd_vel_pub.publish(twist)
-            self.publish_feedback(goal_handle, 1, total_steps, float(0.0))
-            time.sleep(2)
-            
-            if goal_handle.is_cancel_requested:
-                self.send_stop_command()
-                goal_handle.canceled()
-                self.get_logger().warn('Séquence Spielberg annulée')
-                result = Spielberg.Result()
-                result.success = False
-                result.message = "Séquence annulée"
-                return result
-            
-            # Étape 2 : Rotation (tourner la caméra)
-            self.get_logger().info('[Étape 2/3] Rotation caméra...')
-            twist = Twist()
-            twist.linear.x = float(0.0)
-            twist.linear.y = float(0.0)
-            twist.linear.z = float(0.0)
-            twist.angular.x = float(0.0)
-            twist.angular.y = float(0.0)
-            twist.angular.z = float(40.0)
-            self.cmd_vel_pub.publish(twist)
-            self.publish_feedback(goal_handle, 2, total_steps, float(time.time() - start_time))
-            time.sleep(1)
-            
-            if goal_handle.is_cancel_requested:
-                self.send_stop_command()
-                goal_handle.canceled()
-                self.get_logger().warn('Séquence Spielberg annulée')
-                result = Spielberg.Result()
-                result.success = False
-                result.message = "Séquence annulée"
-                return result
-            
-            # Étape 3 : Reculer
-            self.get_logger().info('[Étape 3/3] Recul...')
-            twist = Twist()
-            twist.linear.x = float(0.0)
-            twist.linear.y = float(-50.0)
-            twist.linear.z = float(0.0)
-            twist.angular.x = float(0.0)
-            twist.angular.y = float(0.0)
-            twist.angular.z = float(0.0)
-            self.cmd_vel_pub.publish(twist)
-            self.publish_feedback(goal_handle, 3, total_steps, float(time.time() - start_time))
-            time.sleep(2)
-            
-            # Arrêter le drone
-            self.send_stop_command()
-            
-            # Succès
+            for step_num, (linear_y, angular_z, duration) in enumerate(steps, start=1):
+                twist = Twist()
+                twist.linear.y = linear_y
+                twist.angular.z = angular_z
+                self.cmd_vel_pub.publish(twist)
+
+                self._publish_feedback(goal_handle, step_num, time.time() - start_time)
+                time.sleep(duration)
+
+                if goal_handle.is_cancel_requested:
+                    return self._cancel_sequence(goal_handle)
+
+            self._send_stop_command()
+
             result = Spielberg.Result()
             result.success = True
-            result.message = f"Séquence Spielberg complétée en {time.time() - start_time:.1f}s"
-            self.get_logger().info(f"✓ {result.message}")
+            result.message = f"Séquence complétée en {time.time() - start_time:.1f}s"
             goal_handle.succeed()
             return result
-            
+
         except Exception as e:
-            self.get_logger().error(f"Erreur lors de l'exécution Spielberg: {e}")
-            self.send_stop_command()
+            self.get_logger().error(f"Erreur Spielberg: {e}")
+            self._send_stop_command()
+
             result = Spielberg.Result()
             result.success = False
             result.message = f"Erreur: {str(e)}"
             goal_handle.abort()
             return result
-    
-    def send_stop_command(self):
-        """Envoie une commande d'arrêt au drone"""
-        twist = Twist()
-        twist.linear.x = float(0.0)
-        twist.linear.y = float(0.0)
-        twist.linear.z = float(0.0)
-        twist.angular.x = float(0.0)
-        twist.angular.y = float(0.0)
-        twist.angular.z = float(0.0)
-        self.cmd_vel_pub.publish(twist)
-    
-    def publish_feedback(self, goal_handle, current_step, total_steps, elapsed_time):
-        """Publie le feedback de progression"""
-        feedback_msg = Spielberg.Feedback()
-        feedback_msg.current_step = int(current_step)
-        feedback_msg.total_steps = int(total_steps)
-        feedback_msg.elapsed_time = float(elapsed_time)
-        goal_handle.publish_feedback(feedback_msg)
 
+    def _cancel_sequence(self, goal_handle):
+        """Annule la séquence et retourne le résultat approprié."""
+        self._send_stop_command()
+        goal_handle.canceled()
 
-def main(args=None):
-    rclpy.init(args=args)
-    node = SpielbergActionServer()
-    try:
-        rclpy.spin(node)
-    except KeyboardInterrupt:
-        pass
-    finally:
-        node.destroy_node()
-        rclpy.shutdown()
+        result = Spielberg.Result()
+        result.success = False
+        result.message = "Séquence annulée"
+        return result
 
+    def _send_stop_command(self):
+        """Envoie une commande d'arrêt au drone."""
+        self.cmd_vel_pub.publish(Twist())
 
-if __name__ == '__main__':
-    main()#!/home/alix.degironde/Public/ven_IROS/bin python3
-
-import rclpy
-from rclpy.node import Node
-from rclpy.action import ActionServer, CancelResponse, GoalResponse
-from geometry_msgs.msg import Twist
-from std_msgs.msg import Empty
-from tello_msg.action import Spielberg
-import time
-
-
-class SpielbergActionServer(Node):
-    def __init__(self):
-        super().__init__('spielberg_action_server')
-        
-        # Action Server
-        self._action_server = ActionServer(
-            self,
-            Spielberg,
-            'spielberg',
-            goal_callback=self.goal_callback,
-            cancel_callback=self.cancel_callback,
-            execute_callback=self.execute_callback,
-        )
-        
-        # Publishers vers le drone
-        self.pub_takeoff = self.create_publisher(Empty, '/takeoff', 10)
-        self.pub_land = self.create_publisher(Empty, '/land', 10)
-        self.pub_control = self.create_publisher(Twist, '/control', 10)
-        
-        self.get_logger().info('Noeud spielberg_action_server initialisé')
-        self.get_logger().info("Action server 'spielberg' disponible")
-    
-    def goal_callback(self, goal_request):
-        """Accepte ou rejette un goal reçu"""
-        self.get_logger().info('Réception d\'un goal Spielberg...')
-        # Accepter tous les goals
-        return GoalResponse.ACCEPT
-    
-    def cancel_callback(self, goal_handle):
-        """Gère l'annulation d'un goal en cours"""
-        self.get_logger().info('Réception d\'une demande d\'annulation Spielberg')
-        return CancelResponse.ACCEPT
-    
-    def execute_callback(self, goal_handle):
-        """Exécute la séquence Spielberg"""
-        self.get_logger().info('Exécution de la séquence Spielberg...')
-        
-        # Paramètres de la séquence cinématique
-        total_steps = 5
-        start_time = time.time()
-        
-        try:
-            # Étape 1 : Décollage
-            self.get_logger().info('[Étape 1/5] Décollage...')
-            self.pub_takeoff.publish(Empty())
-            self.publish_feedback(goal_handle, 1, total_steps, 0.0)
-            time.sleep(3)
-            
-            # Vérifier les annulations
-            if goal_handle.is_cancel_requested():
-                goal_handle.canceled()
-                self.get_logger().warn('Séquence Spielberg annulée')
-                result = Spielberg.Result()
-                result.success = False
-                result.message = "Séquence annulée"
-                return result
-            
-            # Étape 2 : Mouvement en avant
-            self.get_logger().info('[Étape 2/5] Mouvement en avant...')
-            twist = Twist()
-            twist.linear.x = 0.5
-            self.pub_control.publish(twist)
-            self.publish_feedback(goal_handle, 2, total_steps, time.time() - start_time)
-            time.sleep(2)
-            
-            if goal_handle.is_cancel_requested():
-                goal_handle.canceled()
-                self.get_logger().warn('Séquence Spielberg annulée')
-                result = Spielberg.Result()
-                result.success = False
-                result.message = "Séquence annulée"
-                return result
-            
-            # Étape 3 : Rotation
-            self.get_logger().info('[Étape 3/5] Rotation...')
-            twist = Twist()
-            twist.angular.z = 1.0
-            self.pub_control.publish(twist)
-            self.publish_feedback(goal_handle, 3, total_steps, time.time() - start_time)
-            time.sleep(3)
-            
-            if goal_handle.is_cancel_requested():
-                goal_handle.canceled()
-                self.get_logger().warn('Séquence Spielberg annulée')
-                result = Spielberg.Result()
-                result.success = False
-                result.message = "Séquence annulée"
-                return result
-            
-            # Étape 4 : Mouvement en arrière
-            self.get_logger().info('[Étape 4/5] Mouvement en arrière...')
-            twist = Twist()
-            twist.linear.x = -0.5
-            self.pub_control.publish(twist)
-            self.publish_feedback(goal_handle, 4, total_steps, time.time() - start_time)
-            time.sleep(2)
-            
-            if goal_handle.is_cancel_requested():
-                goal_handle.canceled()
-                self.get_logger().warn('Séquence Spielberg annulée')
-                result = Spielberg.Result()
-                result.success = False
-                result.message = "Séquence annulée"
-                return result
-            
-            # Étape 5 : Atterrissage
-            self.get_logger().info('[Étape 5/5] Atterrissage...')
-            self.pub_land.publish(Empty())
-            self.publish_feedback(goal_handle, total_steps, total_steps, time.time() - start_time)
-            time.sleep(2)
-            
-            # Arrêter le drone
-            twist_stop = Twist()
-            self.pub_control.publish(twist_stop)
-            
-            # Succès
-            goal_handle.succeed()
-            result = Spielberg.Result()
-            result.success = True
-            result.message = f"Séquence Spielberg complétée en {time.time() - start_time:.1f}s"
-            self.get_logger().info(f"✓ {result.message}")
-            return result
-            
-        except Exception as e:
-            self.get_logger().error(f"Erreur lors de l'exécution Spielberg: {e}")
-            goal_handle.abort()
-            result = Spielberg.Result()
-            result.success = False
-            result.message = f"Erreur: {str(e)}"
-            return result
-    
-    def publish_feedback(self, goal_handle, current_step, total_steps, elapsed_time):
-        """Publie le feedback de progression"""
+    def _publish_feedback(self, goal_handle, current_step, elapsed_time):
+        """Publie le feedback de progression."""
         feedback_msg = Spielberg.Feedback()
         feedback_msg.current_step = current_step
-        feedback_msg.total_steps = total_steps
+        feedback_msg.total_steps = self.TOTAL_STEPS
         feedback_msg.elapsed_time = elapsed_time
         goal_handle.publish_feedback(feedback_msg)
 

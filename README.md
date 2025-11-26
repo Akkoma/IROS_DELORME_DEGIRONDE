@@ -109,6 +109,16 @@ Nous avons utilisé **RViz2** et **rqt** pour valider le bon fonctionnement du s
 **Capteur Time-of-Flight (ToF) :**  
 Le topic `/status` contient un champ `distance_tof` qui fournit l'altitude précise du drone en centimètres. Ce capteur est crucial pour le vol stationnaire et les manœuvres automatiques. Une implémentation a été faite pour autoriser ou non au drone certaines actions en fonction de l'altitude de ce dernier (ex: ne pas pouvoir décoller si distance au sol > 30 cm). Cela été permis en écoutant le topic `/status`, mais ce dernier posait des problèmes de connexion avec le drone.
 
+Le champ Wi‑Fi du topic `/status` est obtenu en envoyant la commande "wifi?" au drone et en lisant la réponse (ex. `90`), comme montré dans les logs :
+
+```
+[INFO] tello.py - 438 - Send command: 'wifi?'
+[INFO] tello.py - 471 - Send command (no response expected): 'rc 0 0 0 0'
+[INFO] tello.py - 462 - Response wifi?: '90'
+```
+
+Lors de l'envoi simultané d'autres commandes (ex. décollage) ou en cas de batterie faible, le drone peut ne pas répondre à la requête "wifi?", la tentative de lecture échoue et provoque le crash du nœud `tello`.
+
 ```bash
 # Visualiser l'altitude en temps réel
 ros2 topic echo /status
@@ -599,4 +609,3 @@ Enfin, le nœud `qr_code_reader` fournit une lecture simple des données QR pour
 Ce projet utilise des topics pour les flux continus, des services pour changements d'état synchrones et des actions pour tâches nécessitant un feedback. Il intègre également la vision par ordinateur temps réel via cv_bridge, et illustre le pattern multiplexeur avec filtrage sélectif garantissant sécurité et flexibilité dans un système multi-modal.
 
 ---
-
