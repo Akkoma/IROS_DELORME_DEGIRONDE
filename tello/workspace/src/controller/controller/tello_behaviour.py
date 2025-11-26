@@ -244,12 +244,6 @@ class TelloBehaviour(Node):
         - Se centrer sur le QR code
         """
         self.get_logger().info("Initialisation du mode QR Follower...")
-        # TODO: Ajouter la logique de détection et suivi de QR code
-        # - Subscription au topic de la caméra
-        # - Détection de QR codes avec OpenCV/pyzbar
-        # - Calcul de la position relative
-        # - Envoi de commandes de correction via self.pub_control
-        self.get_logger().info("Mode QR Follower: Implémentation à compléter")
     
     # === REMPLACER LA MÉTHODE start_spielberg_mode ===
 
@@ -319,9 +313,9 @@ class TelloBehaviour(Node):
             self._spielberg_goal_handle = None
             
             if result.success:
-                self.get_logger().info(f'✓ Séquence Spielberg terminée: {result.message}')
+                self.get_logger().info(f'Séquence Spielberg terminée: {result.message}')
             else:
-                self.get_logger().warn(f'✗ Séquence Spielberg échouée: {result.message}')
+                self.get_logger().warn(f'Séquence Spielberg échouée: {result.message}')
         except Exception as e:
             self.get_logger().error(f'Erreur lors de la récupération du résultat Spielberg: {e}')
             self._spielberg_goal_handle = None
@@ -350,9 +344,9 @@ class TelloBehaviour(Node):
         try:
             cancel_response = future.result()
             if len(cancel_response.goals_canceling) > 0:
-                self.get_logger().info('✓ Séquence Spielberg annulée avec succès')
+                self.get_logger().info('Séquence Spielberg annulée avec succès')
             else:
-                self.get_logger().warn('✗ Échec de l\'annulation de la séquence Spielberg')
+                self.get_logger().warn('Échec de l\'annulation de la séquence Spielberg')
         except Exception as e:
             self.get_logger().error(f"Erreur lors de l'annulation: {e}")
         finally:

@@ -115,7 +115,7 @@ class SpielbergActionServer(Node):
             result = Spielberg.Result()
             result.success = True
             result.message = f"Séquence Spielberg complétée en {time.time() - start_time:.1f}s"
-            self.get_logger().info(f"✓ {result.message}")
+            self.get_logger().info(f"{result.message}")
             goal_handle.succeed()
             return result
             
@@ -292,7 +292,7 @@ class SpielbergActionServer(Node):
             result = Spielberg.Result()
             result.success = True
             result.message = f"Séquence Spielberg complétée en {time.time() - start_time:.1f}s"
-            self.get_logger().info(f"✓ {result.message}")
+            self.get_logger().info(f"{result.message}")
             return result
             
         except Exception as e:

@@ -61,6 +61,7 @@ class ManualControl(Node):
     #        self.altitude_condition = 1
     #    else:
     #        self.altitude_condition = 0
+    # Fonction originale utilisant le ToF pour vérifier l'altitude, permettant ou non le décollage/atterrissage
 
     def joy_callback(self, msg: Joy):
         buttons = msg.buttons
@@ -149,7 +150,7 @@ class ManualControl(Node):
                     # Bouton ignoré à cause du debounce
                     wait_time = self.button_debounce - time_since_last
                     self.get_logger().warn(
-                        f"⏱️  Bouton {btn_index} BLOQUÉ (anti-spam) - "
+                        f"Bouton {btn_index} BLOQUÉ (anti-spam) - "
                         f"attendez encore {wait_time:.1f}s"
                     )
 

@@ -76,9 +76,9 @@ class QRCodeReader(Node):
         try:
             response = future.result()
             if response.success:
-                self.get_logger().info(f'✓ {response.message}')
+                self.get_logger().info(f'{response.message}')
             else:
-                self.get_logger().error(f'✗ Échec: {response.message}')
+                self.get_logger().error(f'Échec: {response.message}')
         except Exception as e:
             self.get_logger().error(f'Erreur lors de l\'appel au service: {e}')
 
