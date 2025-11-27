@@ -31,6 +31,7 @@
     - [5.1 Architecture des Packages](#51-architecture-des-packages)
   - [6. Lancement du Système](#6-lancement-du-système)
   - [7. Conclusion](#7-conclusion)
+  - [8. Vidéo de présentation](#8-vidéo-de-présentation)
 
 ---
 
@@ -100,7 +101,7 @@ Nous avons donc travaillé directement dans le workspace fourni (`tello/workspac
 
 Nous avons utilisé **RViz2** et **rqt** pour valider le bon fonctionnement du système :
 
-![Interface RQt avec les topics du Tello](readme_image/rqt_with_return_on_status.png)
+![Interface RQt avec les topics du Tello](readme_image/rqt_final.png)
 
 *Figure 1 : Interface rqt_graph montrant l'architecture complète des nœuds ROS2*
 
@@ -609,3 +610,7 @@ Enfin, le nœud `qr_code_reader` fournit une lecture simple des données QR pour
 Ce projet utilise des topics pour les flux continus, des services pour changements d'état synchrones et des actions pour tâches nécessitant un feedback. Il intègre également la vision par ordinateur temps réel via cv_bridge, et illustre le pattern multiplexeur avec filtrage sélectif garantissant sécurité et flexibilité dans un système multi-modal.
 
 ---
+
+## 8. Vidéo de présentation
+
+[DEGIRONDE Alix DELORME Pao, Projet IROS CPE Lyon, Pilotage de drône - youtube](https://www.youtube.com/watch?v=y2BjpSPD7wQ)
