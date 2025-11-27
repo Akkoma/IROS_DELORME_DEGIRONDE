@@ -76,7 +76,7 @@ def generate_launch_description():
             Node(
                 package='controller',
                 executable='spielberg',
-                name='spielberg_action_server',
+                name='spielberg',
                 output='screen',
                 arguments=['--ros-args', '--log-level', log_level],
                 respawn=False
@@ -105,6 +105,15 @@ def generate_launch_description():
                 }],
                 respawn=False
             ),
+            Node(
+                package='controller',
+                executable='surveillance',
+                name='surveillance',
+                output='screen',
+                arguments=['--ros-args', '--log-level', log_level],
+                respawn=False
+            ),
+            
         ]
     )
     
