@@ -1,0 +1,41 @@
+[1.817s] Invoking command in '/home/alix.degironde/Public/tello-ros2/workspace/build/tello': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T PYTHONPATH=/home/alix.degironde/Public/tello-ros2/workspace/build/tello/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alix.degironde/Public/tello-ros2/workspace/install/tello/lib/python3.12/site-packages:/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages:/home/alix.degironde/Public/tello-ros2/workspace/build/controller:/home/alix.degironde/Public/tello-ros2/workspace/install/tello/lib/python3.12/site-packages:/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/alix.degironde/Public/tello-ros2/workspace/build/tello/build --no-deps symlink_data
+[2.061s] /usr/lib/python3/dist-packages/setuptools/dist.py:744: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[2.061s] !!
+[2.061s] 
+[2.061s]         ********************************************************************************
+[2.061s]         Usage of dash-separated 'script-dir' will not be supported in future
+[2.062s]         versions. Please use the underscore name 'script_dir' instead.
+[2.062s] 
+[2.062s]         This deprecation is overdue, please update your project and remove deprecated
+[2.062s]         calls to avoid build errors in the future.
+[2.062s] 
+[2.062s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[2.062s]         ********************************************************************************
+[2.062s] 
+[2.063s] !!
+[2.063s]   opt = self.warn_dash_deprecation(opt, section)
+[2.544s] running develop
+[3.050s] running egg_info
+[3.050s] creating tello.egg-info
+[3.102s] writing tello.egg-info/PKG-INFO
+[3.102s] writing dependency_links to tello.egg-info/dependency_links.txt
+[3.102s] writing entry points to tello.egg-info/entry_points.txt
+[3.102s] writing requirements to tello.egg-info/requires.txt
+[3.102s] writing top-level names to tello.egg-info/top_level.txt
+[3.102s] writing manifest file 'tello.egg-info/SOURCES.txt'
+[3.208s] reading manifest file 'tello.egg-info/SOURCES.txt'
+[3.209s] writing manifest file 'tello.egg-info/SOURCES.txt'
+[3.261s] running build_ext
+[3.261s] Creating /home/alix.degironde/Public/tello-ros2/workspace/install/tello/lib/python3.12/site-packages/tello.egg-link (link to .)
+[3.262s] Installing tello script to /home/alix.degironde/Public/tello-ros2/workspace/install/tello/lib/tello
+[3.262s] 
+[3.262s] Installed /home/alix.degironde/Public/tello-ros2/workspace/build/tello
+[3.262s] running symlink_data
+[3.263s] creating /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/ament_index
+[3.263s] creating /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/ament_index/resource_index
+[3.263s] creating /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/ament_index/resource_index/packages
+[3.263s] symbolically linking /home/alix.degironde/Public/tello-ros2/workspace/build/tello/resource/tello -> /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/ament_index/resource_index/packages
+[3.263s] symbolically linking /home/alix.degironde/Public/tello-ros2/workspace/build/tello/package.xml -> /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/tello
+[3.263s] symbolically linking /home/alix.degironde/Public/tello-ros2/workspace/build/tello/resource/ost.txt -> /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/tello
+[3.263s] symbolically linking /home/alix.degironde/Public/tello-ros2/workspace/build/tello/resource/ost.yaml -> /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/tello
+[3.341s] Invoked command in '/home/alix.degironde/Public/tello-ros2/workspace/build/tello' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T PYTHONPATH=/home/alix.degironde/Public/tello-ros2/workspace/build/tello/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alix.degironde/Public/tello-ros2/workspace/install/tello/lib/python3.12/site-packages:/home/alix.degironde/Public/tello-ros2/workspace/install/tello_msg/lib/python3.12/site-packages:/home/alix.degironde/Public/tello-ros2/workspace/build/controller:/home/alix.degironde/Public/tello-ros2/workspace/install/tello/lib/python3.12/site-packages:/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/alix.degironde/Public/tello-ros2/workspace/build/tello/build --no-deps symlink_data

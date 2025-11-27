@@ -1,0 +1,8 @@
+bool start
+---
+bool success
+string message
+---
+int32 current_step
+int32 total_steps
+float32 elapsed_time

@@ -1,0 +1,1 @@
+/home/alix.degironde/Public/tello-ros2/workspace/build/tello_msg/rosidl_generator_cpp/tello_msg/srv/detail/drone_mode__struct.hpp

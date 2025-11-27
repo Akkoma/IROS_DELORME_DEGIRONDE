@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "tello_msg/srv/DroneMode_Request",
+      "fields": [
+        {
+          "name": "mode",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "tello_msg/srv/DroneMode_Request",
+      "hash_string": "RIHS01_cbd8c2bb5549a45690fb7658c4660ec2acbc54217df09ebf738778dd48ae72a4"
+    }
+  ]
+}

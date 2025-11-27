@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from tello_msg/srv/Surveillance.srv
+// generated code does not contain a copyright notice
+
+
+module tello_msg {
+  module srv {
+    struct Surveillance_Request {
+      boolean data;
+    };
+    struct Surveillance_Response {
+      boolean success;
+    };
+  };
+};

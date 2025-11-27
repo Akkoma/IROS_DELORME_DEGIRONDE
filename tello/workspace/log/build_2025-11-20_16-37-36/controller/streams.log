@@ -1,0 +1,32 @@
+[1.664s] Invoking command in '/home/alix.degironde/Public/tello-ros2/workspace/build/controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T PYTHONPATH=/home/alix.degironde/Public/tello-ros2/workspace/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/alix.degironde/Public/tello-ros2/workspace/build/controller/build --no-deps symlink_data
+[2.801s] running develop
+[3.602s] running egg_info
+[3.602s] creating controller.egg-info
+[3.663s] writing controller.egg-info/PKG-INFO
+[3.664s] writing dependency_links to controller.egg-info/dependency_links.txt
+[3.664s] writing entry points to controller.egg-info/entry_points.txt
+[3.664s] writing requirements to controller.egg-info/requires.txt
+[3.664s] writing top-level names to controller.egg-info/top_level.txt
+[3.664s] writing manifest file 'controller.egg-info/SOURCES.txt'
+[3.803s] reading manifest file 'controller.egg-info/SOURCES.txt'
+[3.804s] writing manifest file 'controller.egg-info/SOURCES.txt'
+[3.864s] running build_ext
+[3.864s] Creating /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages/controller.egg-link (link to .)
+[3.868s] Installing manual_control script to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/controller
+[3.868s] Installing qr_code_follower script to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/controller
+[3.869s] Installing qr_code_reader script to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/controller
+[3.869s] Installing spielberg script to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/controller
+[3.878s] Installing surveillance script to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/controller
+[3.878s] Installing tello_behaviour script to /home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/controller
+[3.878s] 
+[3.879s] Installed /home/alix.degironde/Public/tello-ros2/workspace/build/controller
+[3.879s] running symlink_data
+[3.879s] creating /home/alix.degironde/Public/tello-ros2/workspace/install/controller/share
+[3.879s] creating /home/alix.degironde/Public/tello-ros2/workspace/install/controller/share/ament_index
+[3.879s] creating /home/alix.degironde/Public/tello-ros2/workspace/install/controller/share/ament_index/resource_index
+[3.879s] creating /home/alix.degironde/Public/tello-ros2/workspace/install/controller/share/ament_index/resource_index/packages
+[3.879s] symbolically linking /home/alix.degironde/Public/tello-ros2/workspace/build/controller/resource/controller -> /home/alix.degironde/Public/tello-ros2/workspace/install/controller/share/ament_index/resource_index/packages
+[3.879s] creating /home/alix.degironde/Public/tello-ros2/workspace/install/controller/share/controller
+[3.879s] symbolically linking /home/alix.degironde/Public/tello-ros2/workspace/build/controller/package.xml -> /home/alix.degironde/Public/tello-ros2/workspace/install/controller/share/controller
+[3.880s] creating /home/alix.degironde/Public/tello-ros2/workspace/install/controller/share/controller/action
+[4.012s] Invoked command in '/home/alix.degironde/Public/tello-ros2/workspace/build/controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com HISTTIMEFORMAT=%F %T PYTHONPATH=/home/alix.degironde/Public/tello-ros2/workspace/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alix.degironde/Public/tello-ros2/workspace/install/controller/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ven_IROS) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/alix.degironde/Public/tello-ros2/workspace/build/controller/build --no-deps symlink_data

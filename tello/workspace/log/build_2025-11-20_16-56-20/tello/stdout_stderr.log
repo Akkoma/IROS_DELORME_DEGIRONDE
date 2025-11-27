@@ -1,0 +1,39 @@
+/usr/lib/python3/dist-packages/setuptools/dist.py:744: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'script-dir' will not be supported in future
+        versions. Please use the underscore name 'script_dir' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+running develop
+running egg_info
+creating tello.egg-info
+writing tello.egg-info/PKG-INFO
+writing dependency_links to tello.egg-info/dependency_links.txt
+writing entry points to tello.egg-info/entry_points.txt
+writing requirements to tello.egg-info/requires.txt
+writing top-level names to tello.egg-info/top_level.txt
+writing manifest file 'tello.egg-info/SOURCES.txt'
+reading manifest file 'tello.egg-info/SOURCES.txt'
+writing manifest file 'tello.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/alix.degironde/Public/tello-ros2/workspace/install/tello/lib/python3.12/site-packages/tello.egg-link (link to .)
+Installing tello script to /home/alix.degironde/Public/tello-ros2/workspace/install/tello/lib/tello
+
+Installed /home/alix.degironde/Public/tello-ros2/workspace/build/tello
+running symlink_data
+creating /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/ament_index
+creating /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/ament_index/resource_index
+creating /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/ament_index/resource_index/packages
+symbolically linking /home/alix.degironde/Public/tello-ros2/workspace/build/tello/resource/tello -> /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/ament_index/resource_index/packages
+symbolically linking /home/alix.degironde/Public/tello-ros2/workspace/build/tello/package.xml -> /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/tello
+symbolically linking /home/alix.degironde/Public/tello-ros2/workspace/build/tello/resource/ost.txt -> /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/tello
+symbolically linking /home/alix.degironde/Public/tello-ros2/workspace/build/tello/resource/ost.yaml -> /home/alix.degironde/Public/tello-ros2/workspace/install/tello/share/tello
